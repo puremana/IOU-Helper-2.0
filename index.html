@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Meta Elements -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Level">
+
+    <title>IOU Helper 2.0</title>
+	
+	<!-- Semantic UI Links -->
+	<link rel="stylesheet" type="text/css" href="semantic.min.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="semantic.min.js"></script>
+	
+	<!-- Electron Styles -->
+	<link rel="stylesheet" href="node_modules/electron-tabs/electron-tabs.css">
+	
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+	
+	<!-- Custom JS -->
+	<script src="script.js"></script>
+	
+    <!-- Custom Fonts -->
+	
+
+</head>
+<body>
+<div class="global">
+  	<div class="containerHeader">
+		<div class="ui inverted segment iHeader">
+			<div class="ui inverted secondary menu">
+			
+				<a class="item">File</a>
+				<a class="item">Settings</a>
+				<a class="item">Links</a>
+				<a class="item">Tools</a>
+				
+				<div class="right menu">
+					<div class="item">
+						<div id="min"><i class="inverted large minus icon red iNoDrag"></i></div>
+						<div id="max"><i class="inverted large square outline icon red iNoDrag"></i></div>
+						<div id="exit"><i class="inverted large remove circle outline icon red iNoDrag"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+  <div class="container">
+    <div class="left-panel">
+		<div class="etabs-tabgroup">
+			<div class="etabs-tabs"></div>
+			<div class="etabs-buttons"></div>
+		</div>
+		<div class="left-flex">
+		<div class="etabs-views"></div>
+    </div>
+		</div>
+    <!--<div class="right-panel">
+      Right
+    </div>-->
+  </div>
+</div>
+</body>
+
+</html>

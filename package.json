@@ -1,5 +1,13 @@
 {
-  "name"    : "pepper-flash-plugin-sample",
-  "version" : "1.1.0",
-  "main"    : "main.js"
+  "name": "iou-helper2.0",
+  "version": "0.1.0",
+  "description": "IOU Helper 2.0 client made with Electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "author": "Level",
+  "dependencies": {
+    "electron-tabs": "^0.6.0"
+  }
 }

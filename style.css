@@ -1,0 +1,47 @@
+.iHeader {
+	-webkit-app-region: drag;
+	border-radius: 0px !important;
+	margin-bottom: 0px !important;
+}
+.item, .iNoDrag {
+	-webkit-app-region: no-drag;
+}
+.etabs-tabgroup {
+	margin-top: 0px;
+	background-color: green;
+	height: 5%;
+	width: 100%;
+}
+.etabs-views {
+	height: 100%;
+	width: 100%;
+}
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+.global {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.container {
+  flex: 1;
+  display: flex;
+  height: 100%;
+}
+.left-panel, .right-panel {
+  flex: 1;
+}
+.left-panel {
+  background: red;
+}
+.right-panel {
+  background: blue;
+}
+.left-flex {
+	flex: 1;
+	display: flex;
+	height: 95%;
+}
