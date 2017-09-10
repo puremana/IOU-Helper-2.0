@@ -1,3 +1,7 @@
+    var gameCode = "";
+    var gameVersion = "";
+    var rayVersion = "";
+
 window.onload = function() {
 	
     const {remote} = require('electron');
@@ -5,9 +9,6 @@ window.onload = function() {
     var fs = require('fs');
     const {BrowserWindow} = remote;
     const win = BrowserWindow.getFocusedWindow();
-    var gameCode = "";
-    var gameVersion = "";
-    var rayVersion = "";
     
     document.getElementById("exit").onclick = function() {
         win.close();
@@ -31,7 +32,7 @@ window.onload = function() {
         ri.setZoomFactor(0.5);
     }
 	
-    function getVersions() {
+    function setVersions() {
         var http = require('http');
 
         var options = {
@@ -59,26 +60,17 @@ window.onload = function() {
                         gameVersion = sa[0];
                     }
                 }
-                
-                
-                
-                fs.writeFile("test.txt", infoArray, function(err) {
-                    if(err) {
-                        return console.log(err);
-                    }
-
-                    //alert("The file was saved!");
-                }); 
-                //alert(infoArray);
+                alert(gameCode + ", " + gameVersion);
             });
         });
         request.on('error', function (e) {
             alert(e.message);
         });
         request.end();
+        
     }
     
-    function getRayVersion() {
+    function setRayVersion() {
         var ranHost = "/v.txt?d=506" + Math.floor((Math.random() * 1000) + 1);
         
         var http = require('http');
@@ -102,19 +94,49 @@ window.onload = function() {
         request.end();
     }
     
-    getVersions();
-    getRayVersion();
-    
-	let tabGroup = new TabGroup();
-	let tab = tabGroup.addTab({
-        title: "Electron",
-        //src: "http://chat.kongregate.com/gamez/0022/7576/live/iou.swf?adroll_pix_id='K4TGNDGRN5BBLEIDMF2Q6O&v=0.1.33&kongregate_username=Level1Pro&kongregate_user_id=23483082&kongregate_game_auth_token=77080b261b7f66b0e982e05670ac9f0ecca4391bbd3e2a830b3c0f13dc264843&kongregate_api_path=http:%2F%2Fchat.kongregate.com%2Fflash%2FAPI_AS3_9dd7566dd62ffc3204bfbf6e2781ce2e.swf",
-        src: "http://www.google.com",
-        visible: true,
-        active: true,
-        webviewAttributes: {
-            plugins: true
-        }
-	});
+    function saveJSON() {
+        fs.writeFile("test.txt", infoArray, function(err) {
+            if(err) {
+                return console.log(err);
+            }
 
+            //alert("The file was saved!");
+        }); 
+    }
+    
+    setVersions();
+    setRayVersion();
+    
+    function loadPlayers() {
+        var jack = new Player("asd", "sad", "das");
+        var url = jack.getUsername();
+        alert(gameCode);
+
+        let tabGroup = new TabGroup();
+        let tab = tabGroup.addTab({
+            title: "Electron",
+            //src: "http://chat.kongregate.com/gamez/0022/7576/live/iou.swf?adroll_pix_id='K4TGNDGRN5BBLEIDMF2Q6O&v=0.1.33&kongregate_username=Level1Pro&kongregate_user_id=23483082&kongregate_game_auth_token=77080b261b7f66b0e982e05670ac9f0ecca4391bbd3e2a830b3c0f13dc264843&kongregate_api_path=http:%2F%2Fchat.kongregate.com%2Fflash%2FAPI_AS3_9dd7566dd62ffc3204bfbf6e2781ce2e.swf",
+            src: "http://www.google.com",
+            visible: true,
+            active: true,
+            webviewAttributes: {
+                plugins: true
+            }
+        });
+    }
+    
+    
+
+}
+
+function getGameCode() {
+    return gameCode;
+}
+
+function getGameVersion() {
+    return gameVersion;
+}
+
+function getRayVersion() {
+    return rayVersion;
 }
