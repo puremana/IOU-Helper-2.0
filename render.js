@@ -2,16 +2,24 @@ window.onload = function() {
 	
     const {remote} = require('electron');
     const TabGroup = require("electron-tabs");
+    var fs = require('fs');
     const {BrowserWindow} = remote;
     const win = BrowserWindow.getFocusedWindow();
-
+    var gameCode = "";
+    var gameVersion = "";
+    var rayVersion = "";
+    
     document.getElementById("exit").onclick = function() {
         win.close();
     }
 
     document.getElementById("max").onclick = function() {
-        zoomOut();
-        win.isMaximized() ? win.unmaximize() : win.maximize();
+        if (win.isMaximized()) {
+            win.unmaximize();
+        }
+        else {
+            win.maximize();
+        }
     }
 
     document.getElementById("min").onclick = function() {
@@ -23,6 +31,80 @@ window.onload = function() {
         ri.setZoomFactor(0.5);
     }
 	
+    function getVersions() {
+        var http = require('http');
+
+        var options = {
+            host: 'www.kongregate.com',
+            path: '/games/iouRPG/idle-online-universe'
+        }
+        var request = http.request(options, function (res) {
+            var data = '';
+            res.on('data', function (chunk) {
+                data += chunk;
+            });
+            res.on('end', function () {
+                var dataArray = data.split("_");
+                for (d in dataArray) {
+                    if (d == 1390) {
+                        var as = dataArray[d].split(".");
+                        gameCode = as[0];
+                    }  
+                }
+                
+                var infoArray = data.split(":");
+                for (i in infoArray) {
+                    if (i == 541) {
+                        var sa = infoArray[i].split(",");
+                        gameVersion = sa[0];
+                    }
+                }
+                
+                
+                
+                fs.writeFile("test.txt", infoArray, function(err) {
+                    if(err) {
+                        return console.log(err);
+                    }
+
+                    //alert("The file was saved!");
+                }); 
+                //alert(infoArray);
+            });
+        });
+        request.on('error', function (e) {
+            alert(e.message);
+        });
+        request.end();
+    }
+    
+    function getRayVersion() {
+        var ranHost = "/v.txt?d=506" + Math.floor((Math.random() * 1000) + 1);
+        
+        var http = require('http');
+
+        var options = {
+            host: 'd2452urjrn3oas.cloudfront.net',
+            path: ranHost
+        }
+        var request = http.request(options, function (res) {
+            var data = '';
+            res.on('data', function (chunk) {
+                data += chunk;
+            });
+            res.on('end', function () {
+                rayVersion = data;
+            });
+        });
+        request.on('error', function (e) {
+            alert(e.message);
+        });
+        request.end();
+    }
+    
+    getVersions();
+    getRayVersion();
+    
 	let tabGroup = new TabGroup();
 	let tab = tabGroup.addTab({
         title: "Electron",

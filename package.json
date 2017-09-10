@@ -8,6 +8,7 @@
   },
   "author": "Level",
   "dependencies": {
-    "electron-tabs": "^0.6.0"
+    "electron-tabs": "^0.6.0",
+    "fs": "0.0.1-security"
   }
 }
