@@ -1,19 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http,//www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html lang="en" xml,lang="en" xmlns="http,//www.w3.org/1999/xhtml" xmlns,og="http,//opengraphprotocol.org/schema/" xmlns,fb="http,//www.facebook.com/2008/fbml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
   <meta http-equiv="x-ua-compatible" content="IE=Edge"/> 
   <title>Play Idle Online Universe, a free online game on Kongregate</title>
   <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="OSkUfhAhTkKQbmqfCzRSOl9uIddEj9jFpYyM5IryBEB/ACe2ccc0telV09mMrG+FQQXJVhLBIOaKMUxCmn+Awg==" />
+<meta name="csrf-token" content="ffMIaVwQcQcXjOrV87hu/iymbjRR2xX95KHLxW4r3mlD64nRrZ8lc1UY01bSmc0OvczOwY3sgE6BybyExlXSQg==" />
   <script type="text/javascript">
   //<![CDATA[
     var cookie = document.cookie.match(new RegExp('(^|;)\\s*' + encodeURIComponent('previous_referrer') + '=([^;\\s]*)'));
-    var previous_referrer = (cookie ? decodeURIComponent(cookie[2].replace(/\+/g, ' ')) , null);
-    var spillno_regex = /^http,\/\/www.123spill\.no/
+    var previous_referrer = (cookie ? decodeURIComponent(cookie[2].replace(/\+/g, ' ')) : null);
+    var spillno_regex = /^http:\/\/www.123spill\.no/
     if(previous_referrer && previous_referrer.match(spillno_regex)){
       setTimeout(function(){
         Cookie.erase('previous_referrer')
-        var script_element = new Element('script', { async, true, src, window.location.protocol + '//www.123spill.no/assets/js/statusbar.object.min.js' });
+        var script_element = new Element('script', { async: true, src: window.location.protocol + '//www.123spill.no/assets/js/statusbar.object.min.js' });
         $$('head')[0].insert(script_element)
       }, 1000);
     } else if(document.referrer.match(spillno_regex)){
@@ -24,58 +24,58 @@
   </script>
   <script>
 //<![CDATA[
-var _lts=+new Date();parent.frames.length&&function(){var d=document.location;top.location.replace(d.search.match('fb_sig')?d.href.split('?')[0],d)}();
+var _lts=+new Date();parent.frames.length&&function(){var d=document.location;top.location.replace(d.search.match('fb_sig')?d.href.split('?')[0]:d)}();
 //]]>
 </script>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon","bam.nr-data.net","errorBeacon","bam.nr-data.net","licenseKey","a24e512fa2","applicationID","11183949","transactionName","clgKEUANWw4GSx1WVVxSF0pBClgVQxQSUlVSXwEBEk8XFw1aU1JcVFM=","queueTime",0,"applicationTime",215,"agent",""}</script>
-<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports,{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1,[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null,this,t),n?void 0,this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer,function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"","no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2,[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3,[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length,0);for(var r=-1,o=t-n||0,i=Array(o<0?0,o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4,[function(e,n,t){n.exports={exists,"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee,[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e,e?f(e,u,i),i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on,l,emit,t,get,w,listeners,m,context,n,buffer,g,abort,a,aborted,!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos,[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value,r,writable,!0,enumerable,!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle,[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id,[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1,e===window?0,a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader,[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https,//"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()),(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST,setTimeout,SI,p.setImmediate,CT,clearTimeout,XHR,w,REQ,p.Request,EV,p.Event,PR,p.Promise,MO,p.MutationObserver};var v=""+location,y={beacon,"bam.nr-data.net",errorBeacon,"bam.nr-data.net",agent,"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset,u,now,a,origin,v,features,{},xhrWrappable,b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)),(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a24e512fa2","applicationID":"11183949","transactionName":"clgKEUANWw4GSx1WVVxSF0pBClgVQxQSUlVSXwEBEk8XFw1aU1JcVFM=","queueTime":1,"applicationTime":230,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
   <link rel="search" href="/opensearch_desc.xml" type="application/opensearchdescription+xml" title="Kongregate" />
   <!--[if lte IE 7]>
-    <link rel="shortcut icon" type="image/x-icon" href="https,//cdn2.kongcdn.com/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn2.kongcdn.com/favicon.ico" />
   <![endif]-->
     <!--[if !IE]><!-->
-      <link rel="stylesheet" media="screen" href="https,//cdn1.kongcdn.com/compiled-assets/gamepage_merged-fe22ac9ca4458ea8e72da5b7d891ad58.css" />
+      <link rel="stylesheet" media="screen" href="https://cdn1.kongcdn.com/compiled-assets/gamepage_merged-fe22ac9ca4458ea8e72da5b7d891ad58.css" />
     <!--<![endif]-->
     <!--[if gt IE 9]>
-      <link rel="stylesheet" media="screen" href="https,//cdn1.kongcdn.com/compiled-assets/gamepage_merged-fe22ac9ca4458ea8e72da5b7d891ad58.css" />
+      <link rel="stylesheet" media="screen" href="https://cdn1.kongcdn.com/compiled-assets/gamepage_merged-fe22ac9ca4458ea8e72da5b7d891ad58.css" />
     <![endif]-->
     <!--[if lt IE 10]>
-      <link rel="stylesheet" media="screen" href="https,//cdn3.kongcdn.com/compiled-assets/sitewide-ec4d7f6005fc37bb1a55198c3beb3d1e.css" />
-      <link rel="stylesheet" media="screen" href="https,//cdn4.kongcdn.com/compiled-assets/gamepage-b30a8cf7f71d04dfcc9bf32b6a27e74e.css" />
+      <link rel="stylesheet" media="screen" href="https://cdn3.kongcdn.com/compiled-assets/sitewide-ec4d7f6005fc37bb1a55198c3beb3d1e.css" />
+      <link rel="stylesheet" media="screen" href="https://cdn4.kongcdn.com/compiled-assets/gamepage-b30a8cf7f71d04dfcc9bf32b6a27e74e.css" />
     <![endif]-->
-  <!--[if lte IE 7]><link rel="stylesheet" media="screen" href="https,//cdn2.kongcdn.com/compiled-assets/ie6-da96050d78fe3dce7d8eca761da67927.css" /><![endif]--><!--[if IE 8]><link rel="stylesheet" media="screen" href="https,//cdn4.kongcdn.com/compiled-assets/ie8-ce15666067f63b126404d467028027e0.css" /><![endif]-->
+  <!--[if lte IE 7]><link rel="stylesheet" media="screen" href="https://cdn2.kongcdn.com/compiled-assets/ie6-da96050d78fe3dce7d8eca761da67927.css" /><![endif]--><!--[if IE 8]><link rel="stylesheet" media="screen" href="https://cdn4.kongcdn.com/compiled-assets/ie8-ce15666067f63b126404d467028027e0.css" /><![endif]-->
   <!-- Favico Start -->
-  <link rel="shortcut icon" type="image/png" href="https,//cdn1.kongcdn.com/favicon.png" />
-  <link href="https,//cdn2.kongcdn.com/compiled-assets/favicos/favico-57-21025a1e0c5551f2eb79f01b5f0f7379.png" rel="apple-touch-icon" sizes="57x57" />
-  <link href="https,//cdn4.kongcdn.com/compiled-assets/favicos/favico-114-4b1cf575b729faa3f730517f24cb947a.png" rel="apple-touch-icon" sizes="114x114" />
-  <link href="https,//cdn1.kongcdn.com/compiled-assets/favicos/favico-72-62cd0ef6f022fc0eb496b01735d3f606.png" rel="apple-touch-icon" sizes="72x72" />
-  <link href="https,//cdn2.kongcdn.com/compiled-assets/favicos/favico-144-cdb1a724637aef86593ba53bebe21374.png" rel="apple-touch-icon" sizes="144x144" />
-  <link href="https,//cdn2.kongcdn.com/compiled-assets/favicos/favico-60-075018d87bff2b4259cfd5f7326ee543.png" rel="apple-touch-icon" sizes="60x60" />
-  <link href="https,//cdn1.kongcdn.com/compiled-assets/favicos/favico-120-05f01ef1dfbb104b6865e29e73eaf5a2.png" rel="apple-touch-icon" sizes="120x120" />
-  <link href="https,//cdn2.kongcdn.com/compiled-assets/favicos/favico-76-f8fdd60c7a7dfb8089c3d371fa2be0cd.png" rel="apple-touch-icon" sizes="76x76" />
-  <link href="https,//cdn2.kongcdn.com/compiled-assets/favicos/favico-152-589861dd1bed9a97158cf42e6f8dac78.png" rel="apple-touch-icon" sizes="152x152" />
-  <link href="https,//cdn2.kongcdn.com/compiled-assets/favicos/favico-196-c1e6334c0c8784026b73d6c5f00a37aa.png" rel="icon" sizes="196x196" type="image/png" />
-  <link href="https,//cdn3.kongcdn.com/compiled-assets/favicos/favico-160-a4a5718315d52fd721a499b9a14e4f4e.png" rel="icon" sizes="160x160" type="image/png" />
-  <link href="https,//cdn3.kongcdn.com/compiled-assets/favicos/favico-48-66197e1c656f3308a3a5017213aeb789.png" rel="icon" sizes="48x48" type="image/png" />
-  <link href="https,//cdn3.kongcdn.com/compiled-assets/favicos/favico-96-e86beb05f2fa8925ddab1152437d912b.png" rel="icon" sizes="96x96" type="image/png" />
-  <link href="https,//cdn1.kongcdn.com/compiled-assets/favicos/favico-16-a34c9ea10c55d5f485c8cac03e058013.png" rel="icon" sizes="16x16" type="image/png" />
-  <link href="https,//cdn2.kongcdn.com/compiled-assets/favicos/favico-32-50abc8d2b01fcef28ee82b63d2acde3c.png" rel="icon" sizes="32x32" type="image/png" />
+  <link rel="shortcut icon" type="image/png" href="https://cdn1.kongcdn.com/favicon.png" />
+  <link href="https://cdn2.kongcdn.com/compiled-assets/favicos/favico-57-21025a1e0c5551f2eb79f01b5f0f7379.png" rel="apple-touch-icon" sizes="57x57" />
+  <link href="https://cdn4.kongcdn.com/compiled-assets/favicos/favico-114-4b1cf575b729faa3f730517f24cb947a.png" rel="apple-touch-icon" sizes="114x114" />
+  <link href="https://cdn1.kongcdn.com/compiled-assets/favicos/favico-72-62cd0ef6f022fc0eb496b01735d3f606.png" rel="apple-touch-icon" sizes="72x72" />
+  <link href="https://cdn2.kongcdn.com/compiled-assets/favicos/favico-144-cdb1a724637aef86593ba53bebe21374.png" rel="apple-touch-icon" sizes="144x144" />
+  <link href="https://cdn2.kongcdn.com/compiled-assets/favicos/favico-60-075018d87bff2b4259cfd5f7326ee543.png" rel="apple-touch-icon" sizes="60x60" />
+  <link href="https://cdn1.kongcdn.com/compiled-assets/favicos/favico-120-05f01ef1dfbb104b6865e29e73eaf5a2.png" rel="apple-touch-icon" sizes="120x120" />
+  <link href="https://cdn2.kongcdn.com/compiled-assets/favicos/favico-76-f8fdd60c7a7dfb8089c3d371fa2be0cd.png" rel="apple-touch-icon" sizes="76x76" />
+  <link href="https://cdn2.kongcdn.com/compiled-assets/favicos/favico-152-589861dd1bed9a97158cf42e6f8dac78.png" rel="apple-touch-icon" sizes="152x152" />
+  <link href="https://cdn2.kongcdn.com/compiled-assets/favicos/favico-196-c1e6334c0c8784026b73d6c5f00a37aa.png" rel="icon" sizes="196x196" type="image/png" />
+  <link href="https://cdn3.kongcdn.com/compiled-assets/favicos/favico-160-a4a5718315d52fd721a499b9a14e4f4e.png" rel="icon" sizes="160x160" type="image/png" />
+  <link href="https://cdn3.kongcdn.com/compiled-assets/favicos/favico-48-66197e1c656f3308a3a5017213aeb789.png" rel="icon" sizes="48x48" type="image/png" />
+  <link href="https://cdn3.kongcdn.com/compiled-assets/favicos/favico-96-e86beb05f2fa8925ddab1152437d912b.png" rel="icon" sizes="96x96" type="image/png" />
+  <link href="https://cdn1.kongcdn.com/compiled-assets/favicos/favico-16-a34c9ea10c55d5f485c8cac03e058013.png" rel="icon" sizes="16x16" type="image/png" />
+  <link href="https://cdn2.kongcdn.com/compiled-assets/favicos/favico-32-50abc8d2b01fcef28ee82b63d2acde3c.png" rel="icon" sizes="32x32" type="image/png" />
   <meta name="msapplication-TileColor" content="#990000" />
-  <meta name="msapplication-TileImage" content="https,//cdn2.kongcdn.com/compiled-assets/favicos/favico-144-cdb1a724637aef86593ba53bebe21374.png" />
+  <meta name="msapplication-TileImage" content="https://cdn2.kongcdn.com/compiled-assets/favicos/favico-144-cdb1a724637aef86593ba53bebe21374.png" />
   <!-- Favico End -->
-  <script src="https,//cdn3.kongcdn.com/compiled-assets/sitewide_javascripts-9c9149109bdbdcde82c1ae50baf4f094.js"></script>
+  <script src="https://cdn3.kongcdn.com/compiled-assets/sitewide_javascripts-9c9149109bdbdcde82c1ae50baf4f094.js"></script>
   <script>
 //<![CDATA[
-      var active_user = new ActiveUser({"domain","kongregate.com","single_cdn_domain","cdn1.kongcdn.com","trusted_domain","internal.kongregate.com","kong_user_data",{"username","Guest","id",0,"chat_username","Guest_bf56ed1bd92b0e7e3f9f53a2f7cca6e0","chat_password","d541b8faab71256055c2529a891f756c","mobile_user_agent",false,"generated_at",1505045289000,"version",1,"country_code","NZ","gameplays_count",0,"ratings_count",0,"level",null,"last_levelup_at",null,"first_visit_date",null,"kong_source",null,"split_treatments",{"feature_roll",{},"104962302_show_non_translated_site","control","143905321_reboot_no_bumper_skip_button","control"},"kred_buyer_type","non-buyer","facebook_url","https,//www.kongregate.com/facebook_connection_requests","current_locale","en-US","current_locale_is_default",true,"current_preffered_locale","en-US","underage",null,"hide_rate_this_game_tab",false,"current_challenge_tiny_image","/assets/items/0014/9302/swordsandsoulsitem_40x40.png","current_challenge_uri","http,//www.kongregate.com/games/synapticon/spellstone","current_challenge_id",3410,"current_challenge_name","Swords and Spells","current_challenge_description","Complete the third campaign node to unlock the Ragnarok spell in \"Swords and Souls\"!","botd_badge_id",385,"botd_name","Tactless Assassin","botd_description","Complete each mission","botd_icon_uri","https,//cdn2.kongcdn.com/badge_icons/0000/0769/scopebadge2.png","botd_game_uri","http,//www.kongregate.com/games/TheGameHomepage/scope-first-blood","botd_game_name","Scope, First Blood","botd_reward_points",15,"user_agent",{"browser","Mozilla","version","4.0","platform",null}},"load_toolbar",true,"game_page",true}),
-          page_data = {"autofill_username",null,"kred_verification_required",false};
+      var active_user = new ActiveUser({"domain":"kongregate.com","single_cdn_domain":"cdn1.kongcdn.com","trusted_domain":"internal.kongregate.com","kong_user_data":{"username":"Guest","id":0,"chat_username":"Guest_d4fdbd38df68e2c79a0e1a00271e0b6d","chat_password":"66efddc24b3f3093cc4767a9c3ca7d89","mobile_user_agent":false,"generated_at":1505188549000,"version":1,"country_code":"NZ","gameplays_count":0,"ratings_count":0,"level":null,"last_levelup_at":null,"first_visit_date":null,"kong_source":null,"split_treatments":{"feature_roll":{},"104962302_show_non_translated_site":"control","143905321_reboot_no_bumper_skip_button":"control"},"kred_buyer_type":"non-buyer","facebook_url":"https://www.kongregate.com/facebook_connection_requests","current_locale":"en-US","current_locale_is_default":true,"current_preffered_locale":"en-US","underage":null,"hide_rate_this_game_tab":false,"current_challenge_tiny_image":"/assets/items/0014/9302/swordsandsoulsitem_40x40.png","current_challenge_uri":"http://www.kongregate.com/games/synapticon/spellstone","current_challenge_id":3410,"current_challenge_name":"Swords and Spells","current_challenge_description":"Complete the third campaign node to unlock the Ragnarok spell in \"Swords and Souls\"!","botd_badge_id":416,"botd_name":"Reefer Management","botd_description":"Rebuild the destroyed reef","botd_icon_uri":"https://cdn4.kongcdn.com/badge_icons/0000/0831/reefbadge2.png","botd_game_uri":"http://www.kongregate.com/games/Trickysheep/kaleidoscope-reef","botd_game_name":"Kaleidoscope Reef","botd_reward_points":15,"user_agent":{"browser":"Mozilla","version":"4.0","platform":null}},"load_toolbar":true,"game_page":true}),
+          page_data = {"autofill_username":null,"kred_verification_required":false};
 
 //]]>
 </script>
   <script>
 //<![CDATA[
 
-    navigationData = Kongregate.navigationData(active_user, {"user",{},"forums",{"kongregate","/forums/1-kongregate","game_forums","/forums/games","general_gaming","/forums/3-general-gaming","technical_support","/forums/7-technical-support","game_programming","/forums/4-game-programming","off_topic","/forums/2-off-topic","forum_games","/forums/36-forum-games","all_forums","/forums"},"games",{},"achievements",{"badge_of_the_day",{"icon_path","https,//cdn2.kongcdn.com/badge_icons/0000/0769/scopebadge2.png","description","Complete each mission","title","Tactless Assassin","game_path","/games/TheGameHomepage/scope-first-blood","game_title","Scope, First Blood","badge_id",385,"earned_class","incomplete"},"current_challenge",{"icon_path","https,//cdn3.kongcdn.com/assets/items/0014/9302/swordsandsoulsitem_40x40.png","title","Swords and Spells","description","Complete the third campaign node to unlock the Ragnarok spell in \"Swords and Souls\"!","game_path","/games/synapticon/spellstone","game_title","Spellstone"},"current_kongpanion",{"icon_path","https,//cdn1.kongcdn.com/assets/kongpanion_icons/0000/0381/drum.png?i10c=img.resize(height,60)","name","Tom"},"recently_badged_games",[{"title","Beam Ball","icon_path","https,//cdn2.kongcdn.com/game_icons/0066/8292/Rivalry.jpg?i10c=img.resize(width,250)","game_path","/games/zyxstand/beam-ball","badge_count","4 Badges"},{"title","Faraway, Puzzle Escape","icon_path","https,//cdn2.kongcdn.com/game_icons/0066/7436/250x200.png?i10c=img.resize(width,250)","game_path","/games/Mousecity_Apps/faraway-puzzle-escape","badge_count","1 Badge"},{"title","Castle Wars 2.5","icon_path","https,//cdn3.kongcdn.com/game_icons/0066/5794/kongregate_logo.png?i10c=img.resize(width,250)","game_path","/games/m0rkeulv/castle-wars-2-5","badge_count","3 Badges"}],"expiration_time","2017-09-10T06,00,03.012-07,00"}});
+    navigationData = Kongregate.navigationData(active_user, {"user":{},"forums":{"kongregate":"/forums/1-kongregate","game_forums":"/forums/games","general_gaming":"/forums/3-general-gaming","technical_support":"/forums/7-technical-support","game_programming":"/forums/4-game-programming","off_topic":"/forums/2-off-topic","forum_games":"/forums/36-forum-games","all_forums":"/forums"},"games":{},"achievements":{"badge_of_the_day":{"icon_path":"https://cdn4.kongcdn.com/badge_icons/0000/0831/reefbadge2.png","description":"Rebuild the destroyed reef","title":"Reefer Management","game_path":"/games/Trickysheep/kaleidoscope-reef","game_title":"Kaleidoscope Reef","badge_id":416,"earned_class":"incomplete"},"current_challenge":{"icon_path":"https://cdn3.kongcdn.com/assets/items/0014/9302/swordsandsoulsitem_40x40.png","title":"Swords and Spells","description":"Complete the third campaign node to unlock the Ragnarok spell in \"Swords and Souls\"!","game_path":"/games/synapticon/spellstone","game_title":"Spellstone"},"current_kongpanion":{"icon_path":"https://cdn2.kongcdn.com/assets/kongpanion_icons/0000/0385/coral.png?i10c=img.resize(height:60)","name":"Barry"},"recently_badged_games":[{"title":"Dead Detective vs Nine Deaths Cat","icon_path":"https://cdn1.kongcdn.com/game_icons/0066/8899/thumb_kong2.png?i10c=img.resize(width:250)","game_path":"/games/Lu_Muja/dead-detective-vs-nine-deaths-cat","badge_count":"1 Badge"},{"title":"Beam Ball","icon_path":"https://cdn2.kongcdn.com/game_icons/0066/8292/Rivalry.jpg?i10c=img.resize(width:250)","game_path":"/games/zyxstand/beam-ball","badge_count":"4 Badges"},{"title":"Faraway: Puzzle Escape","icon_path":"https://cdn2.kongcdn.com/game_icons/0066/7436/250x200.png?i10c=img.resize(width:250)","game_path":"/games/Mousecity_Apps/faraway-puzzle-escape","badge_count":"1 Badge"}],"expiration_time":"2017-09-11T21:25:30.443-07:00"}});
 
 //]]>
 </script>  <script type="text/javascript">
@@ -108,9 +108,9 @@ active_user.addRunWhenAuthenticatedObserver(function(user) {
       global_skin_lock = true;
       if(ad_payload.url && !active_user.isPremium()){
         var click_url = ad_payload.url;
-        $('skin_left_of_game').setStyle("cursor, pointer; cursor, hand;");
+        $('skin_left_of_game').setStyle("cursor: pointer; cursor: hand;");
         $('skin_left_of_game').observe('click', clickAdSkin.curry(click_url));
-        $('skin_right_of_game').setStyle("cursor, pointer; cursor, hand;");
+        $('skin_right_of_game').setStyle("cursor: pointer; cursor: hand;");
         $('skin_right_of_game').observe('click', clickAdSkin.curry(click_url));
       }
     };
@@ -177,28 +177,28 @@ active_user.addRunWhenAuthenticatedObserver(function(user) {
     // hide regular ad for now; no-offer callback will show it
     $('game_leaderboad_banner_holder').hide();
 
-    var vic = ad_payload.game_vic ? ad_payload.game_vic , 'f18b2800751f51f18b87307bf0ebbbc7';
+    var vic = ad_payload.game_vic ? ad_payload.game_vic : 'f18b2800751f51f18b87307bf0ebbbc7';
 
     var script_tag_loaded = function() {
         TRIALPAY.social.render_dealspot_swf({
-        id , ad_payload.dealspot_ad_slot_id,
-        sid , active_user.id(),
-        tp_params , active_user.dealspotParams(),
-        tp_signature, active_user.dealspotSignature(),
-        game_id , active_user.gameId(),
-        width , ad_payload.width,
-        height , ad_payload.height,
-        mode , "tpdirect",
-        vic , vic,
-        onOfferUnavailable , "kong_ads.onDealspotOfferUnavailable",
-        onOfferAvailable , "kong_ads.onDealspotOfferAvailable",
-        onOpen , "kong_ads.onDealspotOpen",
-        onClose , "kong_ads.onDealspotClose",
-        zIndex , 2000000
+        id : ad_payload.dealspot_ad_slot_id,
+        sid : active_user.id(),
+        tp_params : active_user.dealspotParams(),
+        tp_signature: active_user.dealspotSignature(),
+        game_id : active_user.gameId(),
+        width : ad_payload.width,
+        height : ad_payload.height,
+        mode : "tpdirect",
+        vic : vic,
+        onOfferUnavailable : "kong_ads.onDealspotOfferUnavailable",
+        onOfferAvailable : "kong_ads.onDealspotOfferAvailable",
+        onOpen : "kong_ads.onDealspotOpen",
+        onClose : "kong_ads.onDealspotClose",
+        zIndex : 2000000
       });
     };
 
-    var script_ele = new Element('script', { type , 'text/javascript', src , 'https,//s-assets.tp-cdn.com/static3/js/api/payment_overlay.js' });
+    var script_ele = new Element('script', { type : 'text/javascript', src : 'https://s-assets.tp-cdn.com/static3/js/api/payment_overlay.js' });
 
     if (script_ele.readyState) {  // IE
       script_ele.onreadystatechange = function() {
@@ -213,15 +213,15 @@ active_user.addRunWhenAuthenticatedObserver(function(user) {
       };
     }
 
-    $$('head').first().insert({ bottom, script_ele });
+    $$('head').first().insert({ bottom: script_ele });
   });
 
-  var googletag = { cmd, [function(){googletag.pending=false;}], pending, true }, renderingMode = "enableAsyncRendering";
+  var googletag = { cmd: [function(){googletag.pending=false;}], pending: true }, renderingMode = "enableAsyncRendering";
 
 //]]>
 </script>
 <!--[if lt IE 8]>
-  <script src="http,//www.googletagservices.com/tag/js/gpt.js"></script>
+  <script src="http://www.googletagservices.com/tag/js/gpt.js"></script>
   <script>
 //<![CDATA[
     renderingMode = "enableSyncRendering";
@@ -235,18 +235,18 @@ active_user.addRunWhenAuthenticatedObserver(function(user) {
   kong_url_host = "www.kongregate.com";
 
   var kong_ads = new KongDFPAds({
-    networkId, "1019038",
-    publisherId, "ca-pub-2543721856801245",
-    renderingMode, renderingMode,
-    refreshAds, true
+    networkId: "1019038",
+    publisherId: "ca-pub-2543721856801245",
+    renderingMode: renderingMode,
+    refreshAds: true
   });
   var ka = kong_ads; // for pages that still reference ka
 
-  kong_ads.setTargeting({"norollover","false","production","true","videoegg","false","game","idle-onlin","game_id","227576","category","multiplaye","gamegroup",["notable","mmo","game-room","kreds"],"tags",["Fish","Hunting","Dungeon","Space","Team","Animal","Minigames","Strategy","Arena Comb","Fighting","Mouse","Adventure","Mouse Only","Pet","Mining","Incrementa","RPG","Clicker","MMO","Multiplaye","Upgrades","Idle"],"shootorial","false","top-rated","1","wotc","1"});
+  kong_ads.setTargeting({"norollover":"false","production":"true","videoegg":"false","game":"idle-onlin","game_id":"227576","category":"multiplaye","gamegroup":["notable","mmo","game-room","kreds"],"tags":["Fish","Hunting","Dungeon","Space","Team","Animal","Minigames","Strategy","Arena Comb","Fighting","Mouse","Adventure","Mouse Only","Pet","Mining","Incrementa","RPG","Clicker","MMO","Multiplaye","Upgrades","Idle"],"shootorial":"false","top-rated":"1","wotc":"1"});
 
   if (window.active_user !== undefined) {
-    kong_ads.setTargeting('registered', active_user.isAuthenticated() ? 'true' , 'false').
-      setTargeting('premium', active_user.isPremium() ? 'true' , 'false').
+    kong_ads.setTargeting('registered', active_user.isAuthenticated() ? 'true' : 'false').
+      setTargeting('premium', active_user.isPremium() ? 'true' : 'false').
       setTargeting('gameplays', "" + (active_user.gameplaysCount() + 1));
 
     active_user.addRunWhenAuthenticatedObserver(function(user) {
@@ -291,8 +291,8 @@ if (!active_user.isPremium()) {
 //<![CDATA[
 
 swfobject.switchOffAutoHideShow();
-active_user.setAnalyticsInfo(encodeURIComponent(active_user.documentLocationSearchQuery().analytics_environment || "live"), {"live",{"swrve",{"application_id","2755","key","hyWh4gQ8DOHcFoAcXC"}},"analytics_mode","all"});
-active_user.setGame(227576, "/games/iouRPG/idle-online-universe", {"user_vars_sig","MSMWWUaYOAHO9T9QE7r4/w==","user_vars","[]","game_auth_token","84983c60f7daadc1cb8698621f802c0d9f9a3c3c295c810748fb048115c186ec","flash_postmessage",true,"mtx_api",true,"shared_content_api",true,"chat_api",false,"game_type","flash","game_name","Idle Online Universe","has_alternate_file",false,"game_permalink","idle-online-universe","requires_flash",true});
+active_user.setAnalyticsInfo(encodeURIComponent(active_user.documentLocationSearchQuery().analytics_environment || "live"), {"live":{"swrve":{"application_id":"2755","key":"hyWh4gQ8DOHcFoAcXC"}},"analytics_mode":"all"});
+active_user.setGame(227576, "/games/iouRPG/idle-online-universe", {"user_vars_sig":"MSMWWUaYOAHO9T9QE7r4/w==","user_vars":"[]","game_auth_token":"84983c60f7daadc1cb8698621f802c0d9f9a3c3c295c810748fb048115c186ec","flash_postmessage":true,"mtx_api":true,"shared_content_api":true,"chat_api":false,"game_type":"flash","game_name":"Idle Online Universe","has_alternate_file":false,"game_permalink":"idle-online-universe","requires_flash":true});
 var channel_id = uuid.v4();
 if (Prototype.Browser.Opera) {
   lightbox.prototype.hideGameInIFrame=function(){top.kongOldPageYOffset=window.pageYOffset;window.scrollTo(0,10000);}
@@ -317,41 +317,41 @@ function dispatchToKonduit() {
 }
 
 window.FAYE_CONFIG = {
-  KWAK_RAILS_URL,   "https,//kwak-rails.kongregate.com",
-  KWAK_SERVICE_URL, "https,//kwak-faye.kongregate.com"
+  KWAK_RAILS_URL:   "https://kwak-rails.kongregate.com",
+  KWAK_SERVICE_URL: "https://kwak-faye.kongregate.com"
 }
 
 //]]>
 </script>
-    <script src="https,//cdn3.kongcdn.com/compiled-assets/holodeck_javascripts-dd1376dc1c9731e2799dcce450504cd4.js"></script>
-  <script src="https,//cdn1.kongcdn.com/compiled-assets/single_page/tabset-c063891c2b49d9eb9e80de29eb372563.js"></script>
+    <script src="https://cdn3.kongcdn.com/compiled-assets/holodeck_javascripts-dd1376dc1c9731e2799dcce450504cd4.js"></script>
+  <script src="https://cdn1.kongcdn.com/compiled-assets/single_page/tabset-c063891c2b49d9eb9e80de29eb372563.js"></script>
   <!--[if gte IE 10]><!-->
-  <script src="https,//cdn1.kongcdn.com/compiled-assets/videojs_javascripts-d6f886b056757498cac6b5fcb9d956c8.js"></script>
+  <script src="https://cdn1.kongcdn.com/compiled-assets/videojs_javascripts-d6f886b056757498cac6b5fcb9d956c8.js"></script>
   <!--<![endif]-->
-  <script src="http,//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+  <script src="http://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
     <meta name="title" content="Play Idle Online Universe on Kongregate" />
   <meta name="facebook_label" content="Play Idle Online Universe on Kongregate" />
-    <meta property="og,title" content="Idle Online Universe" />
-    <meta property="og,type" content="game" />
-    <meta property="og,url" content="http,//www.kongregate.com/games/iouRPG/idle-online-universe" />
-    <meta property="og,image" content="https,//cdn1.kongcdn.com/game_icons/0065/9007/SaleLogo2.jpg?i10c=img.resize(width,250)" />
-    <meta property="og,site_name" content="Kongregate" />
-    <meta property="og,description" content="Kill monsters alone or with friends, upgrade your abilities, grow your pets, build your guild and more in this Idle MMORPG.
+    <meta property="og:title" content="Idle Online Universe" />
+    <meta property="og:type" content="game" />
+    <meta property="og:url" content="http://www.kongregate.com/games/iouRPG/idle-online-universe" />
+    <meta property="og:image" content="https://cdn1.kongcdn.com/game_icons/0065/9007/SaleLogo2.jpg?i10c=img.resize(width:250)" />
+    <meta property="og:site_name" content="Kongregate" />
+    <meta property="og:description" content="Kill monsters alone or with friends, upgrade your abilities, grow your pets, build your guild and more in this Idle MMORPG.
 
-Note ,, Everything is saved ON T..." />
-    <meta property="fb,app_id" content="218282488189771" />
-  <link rel="image_src" href="https,//cdn3.kongcdn.com/game_icons/0065/9007/SaleLogo2.jpg?i10c=img.resize(width,93)" />
-  <link rel="videothumbnail" href="https,//cdn3.kongcdn.com/game_icons/0065/9007/SaleLogo2.jpg?i10c=img.resize(width,93)" />
+Note :: Everything is saved ON T..." />
+    <meta property="fb:app_id" content="218282488189771" />
+  <link rel="image_src" href="https://cdn3.kongcdn.com/game_icons/0065/9007/SaleLogo2.jpg?i10c=img.resize(width:93)" />
+  <link rel="videothumbnail" href="https://cdn3.kongcdn.com/game_icons/0065/9007/SaleLogo2.jpg?i10c=img.resize(width:93)" />
   <meta name="description" content="Kongregate free online game Idle Online Universe - Kill monsters alone or with friends, upgrade your abilities, grow your pets, build your guild .... Play Idle Online Universe" />
   <meta name="keywords" content="Idle Online Universe, game, free, online, play, flash, Idle, Upgrades, Multiplayer, MMO, Clicker, RPG" />
-  <link rel="image_src" href="https,//cdn3.kongcdn.com/game_icons/0065/9007/SaleLogo2.jpg?i10c=img.resize(width,93)" />
-  <link rel="canonical" href="http,//www.kongregate.com/games/iourpg/idle-online-universe" />
+  <link rel="image_src" href="https://cdn3.kongcdn.com/game_icons/0065/9007/SaleLogo2.jpg?i10c=img.resize(width:93)" />
+  <link rel="canonical" href="http://www.kongregate.com/games/iourpg/idle-online-universe" />
 
     <script>
 //<![CDATA[
 
       if (active_user.isPremium()) {
-        document.observe('dom,loaded', function() {
+        document.observe('dom:loaded', function() {
           
         });
       }
@@ -364,46 +364,46 @@ Note ,, Everything is saved ON T..." />
 try{document.execCommand('BackgroundImageCache', false, true);}catch(e){}
 //]]>
 </script>
-  <!-- host web-i-0e6fdd228b655f32e.us-west-2.kongregate.com - pid 73301 -->
+  <!-- host web-i-0b28e815292e5031c.us-west-2.kongregate.com - pid 65050 -->
     <script>
 //<![CDATA[
 
-    var metricTracker = new MetricTracker({googleAnalytics,
-                                            {analyticsCode, 'UA-211785-2',
-                                             trackPageView, true,
-                                             setDomain, true,
-                                             maxEventTime, 60000}});
+    var metricTracker = new MetricTracker({googleAnalytics:
+                                            {analyticsCode: 'UA-211785-2',
+                                             trackPageView: true,
+                                             setDomain: true,
+                                             maxEventTime: 60000}});
 
 //]]>
 </script>
   <!-- Begin comScore Tag -->
 <script>
   var _comscore = _comscore || [];
-  _comscore.push({ c1, "2", c2, "8108451" });
+  _comscore.push({ c1: "2", c2: "8108451" });
   (function() {
     var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-    s.src = (document.location.protocol == "https," ? "https,//sb" , "http,//b") + ".scorecardresearch.com/beacon.js";
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
     el.parentNode.insertBefore(s, el);
   })();
 </script>
 <noscript>
-  <img src="http,//b.scorecardresearch.com/p?c1=2&c2=8108451&cv=2.0&cj=1" />
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=8108451&cv=2.0&cj=1" />
 </noscript>
 <!-- End comScore Tag -->
       <script>
       VKI_default_layout = "US International";
     </script>
-    <link rel="stylesheet" media="screen" href="https,//cdn4.kongcdn.com/compiled-assets/tr8n/keyboard_1_49-269e11f719ecae2fb3b9950dafde3058.css" />
-  <link rel="stylesheet" media="screen" href="https,//cdn2.kongcdn.com/compiled-assets/tr8n/tr8n-b0377203ed56a0f768c445cf17c5b5f6.css" />  <script src="https,//cdn3.kongcdn.com/compiled-assets/tr8n/tr8n-compiled-420cb34e01c4c2be92c604bef07b4835.js" charset="UTF-8"></script>
+    <link rel="stylesheet" media="screen" href="https://cdn4.kongcdn.com/compiled-assets/tr8n/keyboard_1_49-269e11f719ecae2fb3b9950dafde3058.css" />
+  <link rel="stylesheet" media="screen" href="https://cdn2.kongcdn.com/compiled-assets/tr8n/tr8n-b0377203ed56a0f768c445cf17c5b5f6.css" />  <script src="https://cdn3.kongcdn.com/compiled-assets/tr8n/tr8n-compiled-420cb34e01c4c2be92c604bef07b4835.js" charset="UTF-8"></script>
   <script type="text/javascript">
      initializeTr8n();
-     VKI_imageURI = 'https,//cdn1.kongcdn.com/compiled-assets/tr8n/keyboard-ab94d5edec8b09069c9abff002403b9a.png'
+     VKI_imageURI = 'https://cdn1.kongcdn.com/compiled-assets/tr8n/keyboard-ab94d5edec8b09069c9abff002403b9a.png'
      Tr8n.assets_path = '/compiled-assets'
   </script>
 
 
     <script>
-  var tr8nProxy = new Tr8n.Proxy({"default_source","application/JS","sources",["application/JS"],"scheduler_interval",5000,"enable_inline_translations",false,"default_decorations",{"strong","\u003Cstrong\u003E{$0}\u003C/strong\u003E","bold","\u003Cstrong\u003E{$0}\u003C/strong\u003E","b","\u003Cstrong\u003E{$0}\u003C/strong\u003E","em","\u003Cem\u003E{$0}\u003C/em\u003E","italic","\u003Ci\u003E{$0}\u003C/i\u003E","i","\u003Ci\u003E{$0}\u003C/i\u003E","span","\u003Cspan\u003E{$0}\u003C/span\u003E","link","\u003Ca href='{$1}' style='{$2}'\u003E{$0}\u003C/a\u003E","link1","\u003Ca href='{$1}' style='{$2}'\u003E{$0}\u003C/a\u003E","link2","\u003Ca href='{$1}' style='{$2}'\u003E{$0}\u003C/a\u003E","br","\u003Cbr\u003E{$0}","class","\u003Cspan class='{$1}'\u003E{$0}\u003C/span\u003E"},"default_tokens",{"ndash","\u0026ndash;","mdash","\u0026mdash;","iexcl","\u0026iexcl;","iquest","\u0026iquest;","quot","\u0026quot;","ldquo","\u0026ldquo;","rdquo","\u0026rdquo;","lsquo","\u0026lsquo;","rsquo","\u0026rsquo;","laquo","\u0026laquo;","raquo","\u0026raquo;","nbsp","\u0026nbsp;","lsaquo","\u0026lsaquo;","rsaquo","\u0026rsaquo;","br","\u003Cbr/\u003E","amp","\u0026amp;","lbrace","{","rbrace","}","trade","\u0026trade;","hellip","\u0026hellip;","pct","%"},"rules",{"number",{"token_suffixes",["count","num","age","hours","minutes","years","seconds","minimum","maximum"],"object_method","to_i"},"gender",{"token_suffixes",["user","profile","actor","target","partner","parent","child","sibling","manager"],"object_method","gender","method_values",{"female","Female","male","Male","neutral","neutral","unknown","unknown"}},"list",{"object_method","size","token_suffixes",["list"]},"date",{"token_suffixes",["date"],"object_method","to_date"}}});
+  var tr8nProxy = new Tr8n.Proxy({"default_source":"application/JS","sources":["application/JS"],"scheduler_interval":5000,"enable_inline_translations":false,"default_decorations":{"strong":"\u003Cstrong\u003E{$0}\u003C/strong\u003E","bold":"\u003Cstrong\u003E{$0}\u003C/strong\u003E","b":"\u003Cstrong\u003E{$0}\u003C/strong\u003E","em":"\u003Cem\u003E{$0}\u003C/em\u003E","italic":"\u003Ci\u003E{$0}\u003C/i\u003E","i":"\u003Ci\u003E{$0}\u003C/i\u003E","span":"\u003Cspan\u003E{$0}\u003C/span\u003E","link":"\u003Ca href='{$1}' style='{$2}'\u003E{$0}\u003C/a\u003E","link1":"\u003Ca href='{$1}' style='{$2}'\u003E{$0}\u003C/a\u003E","link2":"\u003Ca href='{$1}' style='{$2}'\u003E{$0}\u003C/a\u003E","br":"\u003Cbr\u003E{$0}","class":"\u003Cspan class='{$1}'\u003E{$0}\u003C/span\u003E"},"default_tokens":{"ndash":"\u0026ndash;","mdash":"\u0026mdash;","iexcl":"\u0026iexcl;","iquest":"\u0026iquest;","quot":"\u0026quot;","ldquo":"\u0026ldquo;","rdquo":"\u0026rdquo;","lsquo":"\u0026lsquo;","rsquo":"\u0026rsquo;","laquo":"\u0026laquo;","raquo":"\u0026raquo;","nbsp":"\u0026nbsp;","lsaquo":"\u0026lsaquo;","rsaquo":"\u0026rsaquo;","br":"\u003Cbr/\u003E","amp":"\u0026amp;","lbrace":"{","rbrace":"}","trade":"\u0026trade;","hellip":"\u0026hellip;","pct":"%"},"rules":{"number":{"token_suffixes":["count","num","age","hours","minutes","years","seconds","minimum","maximum"],"object_method":"to_i"},"gender":{"token_suffixes":["user","profile","actor","target","partner","parent","child","sibling","manager"],"object_method":"gender","method_values":{"female":"Female","male":"Male","neutral":"neutral","unknown":"unknown"}},"list":{"object_method":"size","token_suffixes":["list"]},"date":{"token_suffixes":["date"],"object_method":"to_date"}}});
   function reloadTranslations() { 
     tr8nProxy.initTranslations(true); 
   } 
@@ -428,35 +428,35 @@ try{document.execCommand('BackgroundImageCache', false, true);}catch(e){}
 //<![CDATA[
     if (metricTracker) {
       var first_now = new Date().getTime(),
-          first_time = (first_now > 0 && _lts && _lts > 0) ? (first_now - _lts) , -1;
+          first_time = (first_now > 0 && _lts && _lts > 0) ? (first_now - _lts) : -1;
       metricTracker.trackTimedEvent('GameHeader', "Idle Online Universe", first_time);
     }
     CinematicMode.initialize(false);
-    window.supersonicAdManager = new SupersonicAdManager({"enabled",false});
+    window.supersonicAdManager = new SupersonicAdManager({"enabled":false});
     (function() {
       window.imaVideoBumper = new IMAVideoBumper({
-        targetingParams, kong_ads.targetingParams(),
-        baseUrl, 'https,//pubads.g.doubleclick.net/gampad/ads?sz=600x400|600x400&iu=/1019038/kong_ima_bumper_preroll_600x400&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1',
-        metricTracker, metricTracker
+        targetingParams: kong_ads.targetingParams(),
+        baseUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=600x400|600x400&iu=/1019038/kong_ima_bumper_preroll_600x400&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1',
+        metricTracker: metricTracker
       });
       window.imaVideoBumper.loadGame(true);
     }).runWhenDomLoaded();
 
 //]]>
 </script>
-  <meta name="METRIKS_COGNITO_IDENTITY_POOL_ID" content="us-east-1,26ffb74a-8082-41a2-b9dc-f0ed1932c38d" />
-  <meta name="METRIKS_EVENT_MAP" content="{&quot;game-impression&quot;,&quot;impressionsDeliveryStreamProduction&quot;}" />
+  <meta name="METRIKS_COGNITO_IDENTITY_POOL_ID" content="us-east-1:26ffb74a-8082-41a2-b9dc-f0ed1932c38d" />
+  <meta name="METRIKS_EVENT_MAP" content="{&quot;game-impression&quot;:&quot;impressionsDeliveryStreamProduction&quot;}" />
 </head>
-<body id="play" class="no_subwrap grid960 adjusted new_gamepage   show_non_translated_site-control reboot_no_bumper_skip_button-control" style="min-width,1133px;">
+<body id="play" class="no_subwrap grid960 adjusted new_gamepage   show_non_translated_site-control reboot_no_bumper_skip_button-control" style="min-width:1133px;">
   <!-- Google Tag Manager -->
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-XFQL"
-      height="0" width="0" style="display,none;visibility,hidden"></iframe></noscript>
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script>
     dataLayer = [];
   </script>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start',
-    new Date().getTime(),event,'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l,'';j.async=true;j.src=
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-XFQL');</script>
   <!-- End Google Tag Manager -->
@@ -471,36 +471,36 @@ try{document.execCommand('BackgroundImageCache', false, true);}catch(e){}
 //]]>
 </script>  <div id="admin_links_placeholder"></div>
 
-  <div class="browser-notice" style="display, none;">
+  <div class="browser-notice" style="display: none;">
   <h1>We have reduced support for legacy browsers.</h1>
   <p><strong>What does this mean for me?</strong> You will always be able to play your favorite games on Kongregate. However, certain site features may suddenly stop working and leave you with a severely degraded experience.</p>
   <p><strong>What should I do?</strong> We strongly urge all our users to upgrade to modern browsers for a better experience and improved security.</p>
-  <p><em>We suggest you install the latest version of one of these browsers,</em></p>
+  <p><em>We suggest you install the latest version of one of these browsers:</em></p>
   <ul class="browser-notice--downloads">
     <li class="browser-notice--download chrome">
-      <a href="http,//www.google.com/chrome/" target="_blank" data-metric-tracker="js-wa-tc-BrowserUpgrade-Chrome">
+      <a href="http://www.google.com/chrome/" target="_blank" data-metric-tracker="js-wa-tc-BrowserUpgrade-Chrome">
         Download <strong>Google Chrome</strong>
       </a>
     </li>
     <li class="browser-notice--download firefox">
-      <a href="http,//www.mozilla.org/" target="_blank" data-metric-tracker="js-wa-tc-BrowserUpgrade-Firefox">
+      <a href="http://www.mozilla.org/" target="_blank" data-metric-tracker="js-wa-tc-BrowserUpgrade-Firefox">
         Download <strong>Mozilla Firefox</strong>
       </a>
     </li>
     <li class="browser-notice--download msedge">
-      <a href="https,//www.microsoft.com/en-us/download/internet-explorer.aspx" target="_blank" data-metric-tracker="js-wa-tc-BrowserUpgrade-IE">
+      <a href="https://www.microsoft.com/en-us/download/internet-explorer.aspx" target="_blank" data-metric-tracker="js-wa-tc-BrowserUpgrade-IE">
         Download <strong>Microsoft Edge</strong>
       </a>
     </li>
     <li class="browser-notice--download safari">
-      <a href="http,//www.apple.com/safari/" target="_blank" data-metric-tracker="js-wa-tc-BrowserUpgrade-Safari">
+      <a href="http://www.apple.com/safari/" target="_blank" data-metric-tracker="js-wa-tc-BrowserUpgrade-Safari">
         Download <strong>Apple Safari</strong>
       </a>
     </li>
   </ul>
   <p class="browser-notice--hide"><a href="#">No Thanks</a></p>
 </div>
-<div class="browser-notice--overlay" style="display, none;"></div>
+<div class="browser-notice--overlay" style="display: none;"></div>
 
 <script type="text/javascript">
   if(Prototype.Browser.IE6 || Prototype.Browser.IE7 || Prototype.Browser.IE8 || Prototype.Browser.IE9 || Prototype.Browser.IE10) {
@@ -518,7 +518,7 @@ try{document.execCommand('BackgroundImageCache', false, true);}catch(e){}
         <div id="header_logo">
   <h3 id="playing">&hellip;</h3>
   <h2 title="Kongregate">
-    <a class="spritesite spriteall" title="Kongregate" id="kong_header_link" href="http,//www.kongregate.com/">Kongregate</a>
+    <a class="spritesite spriteall" title="Kongregate" id="kong_header_link" href="http://www.kongregate.com/">Kongregate</a>
   </h2>
 </div>
 
@@ -528,7 +528,7 @@ try{document.execCommand('BackgroundImageCache', false, true);}catch(e){}
 <div id="welcome">
 
   <!-- User Welcome Start -->
-  <ul id="nav_welcome_box" class="welcome-user" style="display,none">
+  <ul id="nav_welcome_box" class="welcome-user" style="display:none">
     <!-- Mini Profile Start -->
     <li class="profile profile_control">
       <a href="/accounts/Guest">
@@ -585,8 +585,8 @@ try{document.execCommand('BackgroundImageCache', false, true);}catch(e){}
               }
 
               new Ajax.Request("/session", {
-                method, 'delete',
-                onComplete, function(request) {
+                method: 'delete',
+                onComplete: function(request) {
                   var newLoc = request.responseJSON.path;
 
                   if (newLoc != document.location) {
@@ -601,7 +601,7 @@ try{document.execCommand('BackgroundImageCache', false, true);}catch(e){}
             }
 
 //]]>
-</script>          <span id="welcome_box_sign_out_indicator" class="spinner spinner_inverse" style="display,none" title="loading&hellip;">&#8203;</span>
+</script>          <span id="welcome_box_sign_out_indicator" class="spinner spinner_inverse" style="display:none" title="loading&hellip;">&#8203;</span>
         </li>
       </ul>
     </li>
@@ -610,28 +610,28 @@ try{document.execCommand('BackgroundImageCache', false, true);}catch(e){}
   <!-- User Welcome End -->
 
   <!-- Guest Welcome Start -->
-  <div id="guest_user_welcome_content" class="welcome-guest regtextSml" style="display,none;">
-    <form id="nav_sign_in" onsubmit="if(window.DynamicFrameTarget){ new DynamicFrameTarget({form, this, callback, user_status.sessionStatus});}" action="https,//www.kongregate.com/session" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="OSkUfhAhTkKQbmqfCzRSOl9uIddEj9jFpYyM5IryBEB/ACe2ccc0telV09mMrG+FQQXJVhLBIOaKMUxCmn+Awg==" />
+  <div id="guest_user_welcome_content" class="welcome-guest regtextSml" style="display:none;">
+    <form id="nav_sign_in" onsubmit="if(window.DynamicFrameTarget){ new DynamicFrameTarget({form: this, callback: user_status.sessionStatus});}" action="https://www.kongregate.com/session" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ffMIaVwQcQcXjOrV87hu/iymbjRR2xX95KHLxW4r3mlD64nRrZ8lc1UY01bSmc0OvczOwY3sgE6BybyExlXSQg==" />
       <input type="hidden" name="game_id" id="game_id" />
       <input type="hidden" name="from_welcome_box" id="from_welcome_box" value="true" />
       <a title="Sign in with Facebook" class="facebook_signin_small sprite_facebook mrs" onclick="new FacebookAuthenticator({}); return false;" href="#">Sign in</a>
-        <strong><a href="#" onclick="lightbox.prototype.initializeKongregateLightboxFromAjax(&#39;/accounts/new/behind_login?game_id=&#39; + active_user.gameId(), { afterStaticContentLoad,lightbox.prototype.toggleRegistration });; return false;">Register</a></strong>
+        <strong><a href="#" onclick="lightbox.prototype.initializeKongregateLightboxFromAjax(&#39;/accounts/new/behind_login?game_id=&#39; + active_user.gameId(), { afterStaticContentLoad:lightbox.prototype.toggleRegistration });; return false;">Register</a></strong>
       or
-      <label for="welcome_username_label">Sign in,</label>
+      <label for="welcome_username_label">Sign in:</label>
       <span class="fields">
         <span class="field">
-          <label id="welcome_username_label" for="welcome_username" class="text_label" style="display,none;">Username or email</label>
+          <label id="welcome_username_label" for="welcome_username" class="text_label" style="display:none;">Username or email</label>
           <input type="text" name="username" id="welcome_username" value="" title="Username or email" tabindex="3" class="text_field" />
         </span>
         <span class="field">
-          <label id="welcome_password_label" for="welcome_password" class="text_label" style="display,none;">Password</label>
+          <label id="welcome_password_label" for="welcome_password" class="text_label" style="display:none;">Password</label>
           <input type="password" name="password" id="welcome_password" value="" title="Password" tabindex="4" class="text_field" />
         </span>
-        <input type="submit" value="Sign In" tabindex="5" id="welcome_box_sign_in_button" class="submit spriteall spritesite" onclick="try{}catch(e){};if(!this.elem_welcome_box_sign_in_button){this.elem_welcome_box_sign_in_button=$(&#39;welcome_box_sign_in_button&#39;);this.spin_welcome_box_sign_in_button=$(&#39;welcome_box_sign_in_button_spinner&#39;);this.restore=function(t){return function(){t.elem_welcome_box_sign_in_button.show();t.spin_welcome_box_sign_in_button.hide();Event.stopObserving(window, &#39;unload&#39;, t.restore);}}(this);}this.elem_welcome_box_sign_in_button.hide();this.spin_welcome_box_sign_in_button.show();Event.observe(window, &#39;unload&#39;, this.restore);" /><span id="welcome_box_sign_in_button_spinner" class="spinner spinner_inverse" style="display,none" title="loading&hellip;">&#8203;</span>
-        <span id="remember_holder" style="display,none;">
+        <input type="submit" value="Sign In" tabindex="5" id="welcome_box_sign_in_button" class="submit spriteall spritesite" onclick="try{}catch(e){};if(!this.elem_welcome_box_sign_in_button){this.elem_welcome_box_sign_in_button=$(&#39;welcome_box_sign_in_button&#39;);this.spin_welcome_box_sign_in_button=$(&#39;welcome_box_sign_in_button_spinner&#39;);this.restore=function(t){return function(){t.elem_welcome_box_sign_in_button.show();t.spin_welcome_box_sign_in_button.hide();Event.stopObserving(window, &#39;unload&#39;, t.restore);}}(this);}this.elem_welcome_box_sign_in_button.hide();this.spin_welcome_box_sign_in_button.show();Event.observe(window, &#39;unload&#39;, this.restore);" /><span id="welcome_box_sign_in_button_spinner" class="spinner spinner_inverse" style="display:none" title="loading&hellip;">&#8203;</span>
+        <span id="remember_holder" style="display:none;">
           <input type="checkbox" name="remember_me" id="welcome_remember_me" value="true" class="imgMini" tabindex="6" checked="checked" /> <label for="welcome_remember_me" id="welcome_remember_label" class="bd">Remember me</label>
         </span>
-        <span id="forgot_holder" style="display,none;">
+        <span id="forgot_holder" style="display:none;">
           <a class="password_recovery" tabindex="7" href="#" onclick="active_user.activatePasswordRecovery();; return false;">Forgot password?</a>
         </span>
       </span>
@@ -761,21 +761,21 @@ try{document.execCommand('BackgroundImageCache', false, true);}catch(e){}
 
     <!-- Start Dev -->
 <li id="main_nav_dev" class="main_nav_item">
-  <a class="main_nav_top_item" href="http,//developers.kongregate.com">Dev</a>
+  <a class="main_nav_top_item" href="http://developers.kongregate.com">Dev</a>
   <div class="main_nav_menu">
     <div class="main_nav_menu_inner">
       <ul class="nav--dev-links">
         <li>
           <h3>Host Your Game on Kongregate</h3>
           <p class="mbm">An open platform for all web games! Get your games in front of thousands of users while monetizing through ads and virtual goods.</p>
-          <p>Find <a href="https,//docs.kongregate.com/">documentation and support</a> to get you started.</p>
+          <p>Find <a href="https://docs.kongregate.com/">documentation and support</a> to get you started.</p>
           <a class="nav--dev-btn" href="/games/new">Upload Your Game</a>
         </li>
         <li>
           <h3>Our Publishing Program</h3>
           <p class="mbm">With our publishing program, we can help get your games to millions of users on multiple platforms!<p>
-          <p>Also check our <a href="https,//blog.kongregate.com/">developers blog</a>, where we publish new content weekly on game/data analysis, engineering and design insights, and more.</p>
-          <a class="nav--dev-btn" href="http,//developers.kongregate.com">Visit Our Developers Site</a>
+          <p>Also check our <a href="https://blog.kongregate.com/">developers blog</a>, where we publish new content weekly on game/data analysis, engineering and design insights, and more.</p>
+          <a class="nav--dev-btn" href="http://developers.kongregate.com">Visit Our Developers Site</a>
         </li>
       </ul>
     </div>
@@ -786,12 +786,12 @@ try{document.execCommand('BackgroundImageCache', false, true);}catch(e){}
     <!-- #search -->
 <li class="search" id="search_bar">
 <form onsubmit="$(&#39;nav_search_submit_button&#39;).onclick();" id="search" class="search" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />    <dl>
-      <dt><div style="position,relative" id="game_title_chooser_outer"><input type="text" name="q" id="game_title" value="" tabindex="1" class="hintable game_title" title="Search games &amp; more" /><div style="display,none;" id="game_title_snapshot" class="game_chooser_selected"></div><div style="z-index, 20000;" id="game_title_auto_complete" class="game_chooser"></div><script>
+      <dt><div style="position:relative" id="game_title_chooser_outer"><input type="text" name="q" id="game_title" value="" tabindex="1" class="hintable game_title" title="Search games &amp; more" /><div style="display:none;" id="game_title_snapshot" class="game_chooser_selected"></div><div style="z-index: 20000;" id="game_title_auto_complete" class="game_chooser"></div><script>
 //<![CDATA[
-var game_title_auto_completer=new Ajax.CachedAutocompleter("game_title","game_title_auto_complete","/games/search?site_search=true",{"paramName","search","method","get","onShow",function(element,update){update.show();},"onHide",function(element,update){update.hide();},"minChars",3,"noAutoDefault",false,"forceActivation",true,"frequency",0.1,"callback",function(element,value){return game_indicator(element,value)},"afterUpdateElement",function(element,value){(function(m) { $("nav_search_submit_button").onclick(); game_title_auto_completer.submitted = true; document.location = m.url; })(eval('(' + value.down('.metadata').innerHTML + ')'));}});$('game_title').up('form').observe('submit', function() { if ('' == $('game_title').value) { $('search_game_id').value = ''; }});
+var game_title_auto_completer=new Ajax.CachedAutocompleter("game_title","game_title_auto_complete","/games/search?site_search=true",{"paramName":"search","method":"get","onShow":function(element,update){update.show();},"onHide":function(element,update){update.hide();},"minChars":3,"noAutoDefault":false,"forceActivation":true,"frequency":0.1,"callback":function(element,value){return game_indicator(element,value)},"afterUpdateElement":function(element,value){(function(m) { $("nav_search_submit_button").onclick(); game_title_auto_completer.submitted = true; document.location = m.url; })(eval('(' + value.down('.metadata').innerHTML + ')'));}});$('game_title').up('form').observe('submit', function() { if ('' == $('game_title').value) { $('search_game_id').value = ''; }});
 //]]>
 </script></div></dt>
-    <dd><input type="submit" value="Search" id="nav_search_submit_button" tabindex="2" class="spritesite" onclick="try{}catch(e){};if(!this.elem_nav_search_submit_button){this.elem_nav_search_submit_button=$(&#39;nav_search_submit_button&#39;);this.spin_nav_search_submit_button=$(&#39;nav_search_submit_button_spinner&#39;);this.restore=function(t){return function(){t.elem_nav_search_submit_button.show();t.spin_nav_search_submit_button.hide();Event.stopObserving(window, &#39;unload&#39;, t.restore);}}(this);}this.elem_nav_search_submit_button.hide();this.spin_nav_search_submit_button.show();Event.observe(window, &#39;unload&#39;, this.restore);" /><span id="nav_search_submit_button_spinner" class="spinner spinner_inverse" style="display,none" title="loading&hellip;">&#8203;</span></dd>
+    <dd><input type="submit" value="Search" id="nav_search_submit_button" tabindex="2" class="spritesite" onclick="try{}catch(e){};if(!this.elem_nav_search_submit_button){this.elem_nav_search_submit_button=$(&#39;nav_search_submit_button&#39;);this.spin_nav_search_submit_button=$(&#39;nav_search_submit_button_spinner&#39;);this.restore=function(t){return function(){t.elem_nav_search_submit_button.show();t.spin_nav_search_submit_button.hide();Event.stopObserving(window, &#39;unload&#39;, t.restore);}}(this);}this.elem_nav_search_submit_button.hide();this.spin_nav_search_submit_button.show();Event.observe(window, &#39;unload&#39;, this.restore);" /><span id="nav_search_submit_button_spinner" class="spinner spinner_inverse" style="display:none" title="loading&hellip;">&#8203;</span></dd>
   </dl>
   <script>
 //<![CDATA[
@@ -840,14 +840,14 @@ var game_title_auto_completer=new Ajax.CachedAutocompleter("game_title","game_ti
     }
 
 //]]>
-</script>  <div id="game_chooser_loading" style="display,none"><ul>
+</script>  <div id="game_chooser_loading" style="display:none"><ul>
   <li class='loading'><div><span class="spinner">​</span></div></li>
-    <li class="all"><a href="#" onclick="return false;"><span style="display,none"></span><span class="informal"><strong>see more results &raquo;</strong>
-        <span class="metadata" style="display,none;">{"url","/search"}</span>
+    <li class="all"><a href="#" onclick="return false;"><span style="display:none"></span><span class="informal"><strong>see more results &raquo;</strong>
+        <span class="metadata" style="display:none;">{"url":"/search"}</span>
         <div class="clear"></div></span></a>
     </li>
 </ul>
-<span style="display,block;clear,both;"></span>
+<span style="display:block;clear:both;"></span>
 </div>
 </form></li><!-- /#search -->
 
@@ -865,7 +865,7 @@ var game_title_auto_completer=new Ajax.CachedAutocompleter("game_title","game_ti
         <td class="maincontent">
           
           
-          <div id="user_progress_bar_container" class="user_progress_pod_outer" style="display,none;">
+          <div id="user_progress_bar_container" class="user_progress_pod_outer" style="display:none;">
   <div class="user-progress">
     <p class="progress-box">
       <a id="progress_bar_hide_control" class="close" href=""><span class="icon sprite_new_user textreplace">X</span></a>
@@ -891,7 +891,7 @@ var game_title_auto_completer=new Ajax.CachedAutocompleter("game_title","game_ti
       <p>Keep exploring Kongregate with more <a href="/badges" target="_blank">badges</a> and <a href="/top-rated-games?sort=newest" target="_blank">games</a>!</p>
     </div>
   </div>
-  <p id="progress_never_show_again_message" class="remove regtext" style="display,none;">
+  <p id="progress_never_show_again_message" class="remove regtext" style="display:none;">
     Hide the progress bar forever?
     <a id="progress_never_show_again_confirm" class="remove-link" href="">Yes</a>
     <a id="progress_never_show_again_deny" class="remove-link" href="">No</a>
@@ -902,7 +902,7 @@ var game_title_auto_completer=new Ajax.CachedAutocompleter("game_title","game_ti
 </div>
 
             
-<div id="ie7_kong_game_bf_300x250_2" style="display,none;">
+<div id="ie7_kong_game_bf_300x250_2" style="display:none;">
    <div id="kong_game_bf_300x250_2-ad-slot" class="ad-container"><script>
 //<![CDATA[
 if (!active_user.isPremium()) {
@@ -910,26 +910,26 @@ if (!active_user.isPremium()) {
 
 //]]>
 </script></div></div>
-  <div id="ie7_kong_game_bf_281x95_rec_games_pod_1" style="display,none;">
+  <div id="ie7_kong_game_bf_281x95_rec_games_pod_1" style="display:none;">
      <div id="kong_game_bf_281x95_rec_games_pod_1-ad-slot" class="ad-container premium_viewable"><script>
 //<![CDATA[
 kong_ads.displayAd("kong_game_bf_281x95_rec_games_pod_1");
 //]]>
 </script></div>  </div>
-  <div id="ie7_kong_game_bf_281x95_rec_games_pod_2" style="display,none;">
+  <div id="ie7_kong_game_bf_281x95_rec_games_pod_2" style="display:none;">
      <div id="kong_game_bf_281x95_rec_games_pod_2-ad-slot" class="ad-container premium_viewable"><script>
 //<![CDATA[
 kong_ads.displayAd("kong_game_bf_281x95_rec_games_pod_2");
 //]]>
 </script></div>  </div>
-  <div id="ie7_kong_game_bf_281x95_rec_games_pod_3" style="display,none;">
+  <div id="ie7_kong_game_bf_281x95_rec_games_pod_3" style="display:none;">
      <div id="kong_game_bf_281x95_rec_games_pod_3-ad-slot" class="ad-container premium_viewable"><script>
 //<![CDATA[
 kong_ads.displayAd("kong_game_bf_281x95_rec_games_pod_3");
 //]]>
 </script></div>  </div>
 
-<div id="ie7_gamespotlight_container" style="display,none;">
+<div id="ie7_gamespotlight_container" style="display:none;">
     <div id="kong_game_bf_284x90_1-ad-slot" class="ad-container premium_viewable"><script>
 //<![CDATA[
 kong_ads.displayAd("kong_game_bf_284x90_1");
@@ -961,12 +961,12 @@ kong_ads.displayAd("kong_game_bf_284x90_4");
 //]]>
 </script>
 <!-- Game Microdata Container Start -->
-<div itemscope="" itemtype="http,//schema.org/WebApplication">
-  <link itemprop="SoftwareApplicationCategory" href="http,//schema.org/GameApplication">
-  <span itemprop="offers" itemscope="" itemtype="http,//schema.org/Offer">
+<div itemscope="" itemtype="http://schema.org/WebApplication">
+  <link itemprop="SoftwareApplicationCategory" href="http://schema.org/GameApplication">
+  <span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
     <meta itemprop="price" content="$0">
     <meta itemprop="priceCurrency" content="USD">
-    <link itemprop="availability" href="http,//schema.org/InStock">
+    <link itemprop="availability" href="http://schema.org/InStock">
   </span>
   <!-- Game Upper Start -->
   <div class="upper_gamepage">
@@ -976,7 +976,7 @@ kong_ads.displayAd("kong_game_bf_284x90_4");
         <div class="gamepage_categories_outer">
           <ul id="gamepage_categories_list" class="gamepage_categories_list">
             <li class="gamepage_category"><a href="/top-rated-games?sort=newest">Top New</a></li>
-            <li id="gamepage_category_five_min" class="gamepage_category" style="display,none;"><a href="/5-minute-games">5 Minute</a></li> <!-- Guests -->
+            <li id="gamepage_category_five_min" class="gamepage_category" style="display:none;"><a href="/5-minute-games">5 Minute</a></li> <!-- Guests -->
             <li id="gamepage_category_fav" class="gamepage_category"><a href="/my_favorites">Favorites</a></li> <!-- Registered Users -->
             <li class="gamepage_category"><a href="/idle-games">Idle</a></li>
             <li class="gamepage_category"><a href="/shooter-games">Shooter</a></li>
@@ -992,10 +992,10 @@ kong_ads.displayAd("kong_game_bf_284x90_4");
         <div id="progress_bar_target"></div>
         <!-- Game Page Title Block Start -->
         <div class="gamepage_title_block">
-          <div style="position,fixed;top,0px;left,0px;">
+          <div style="position:fixed;top:0px;left:0px;">
             <div id="konduit"></div><script>
 //<![CDATA[
-var swf_location = "//www.kongregate.com/flash/konduit_879c400fe63cbe251958f0edb1cdd3c9.swf";swfobject.embedSWF(swf_location, "konduit","1","1","9",null,{"chat_ip","of1.kongregate.com","chat_host","of1.kongregate.com","chat_port","5222","chat_bosh_host","bosh1.kongregate.com","chat_bosh_port","80","chat_username",encodeURIComponent(active_user.chatUsername()),"chat_password",encodeURIComponent(active_user.chatPassword()),"api_host","http%3A%2F%2Fapi.kongregate.com","base_domain","kongregate.com","connect","false","enable_bosh","true","enable_compression","true","enable_json_uservars","true","game_id","227576","game_permalink","idle-online-universe","game_title","Idle%20Online%20Universe","game_url","http%3A%2F%2Fwww.kongregate.com%2Fgames%2FiouRPG%2Fidle-online-universe","javascript_listener","konduitToHolodeck","channel_id",encodeURIComponent(channel_id),"debug_level",encodeURIComponent(active_user.debugLevel()),"game_auth_token",encodeURIComponent(active_user.gameAuthToken()),"user_id",encodeURIComponent(active_user.id()),"permission_slk","false","permission_mtx_api","true","permission_chat_api","false","permission_sc_api","true","user_vars",encodeURIComponent(active_user.userVars()),"user_vars_sig",encodeURIComponent(active_user.userVarsSig()),"special_chat_vars",encodeURIComponent(Object.toJSON(active_user.specialChatVars())),"analytics_info","%7B%22live%22%3A%7B%22swrve%22%3A%7B%22application_id%22%3A%222755%22%2C%22key%22%3A%22hyWh4gQ8DOHcFoAcXC%22%7D%7D%2C%22analytics_mode%22%3A%22all%22%7D","analytics_environment",encodeURIComponent(active_user.documentLocationSearchQuery().analytics_environment || "live"),"javascript_api","true"},{"allowscriptaccess","always","allownetworking","all","wmode","transparent"},{});
+var swf_location = "//www.kongregate.com/flash/konduit_879c400fe63cbe251958f0edb1cdd3c9.swf";swfobject.embedSWF(swf_location, "konduit","1","1","9",null,{"chat_ip":"of1.kongregate.com","chat_host":"of1.kongregate.com","chat_port":"5222","chat_bosh_host":"bosh1.kongregate.com","chat_bosh_port":"80","chat_username":encodeURIComponent(active_user.chatUsername()),"chat_password":encodeURIComponent(active_user.chatPassword()),"api_host":"http%3A%2F%2Fapi.kongregate.com","base_domain":"kongregate.com","connect":"false","enable_bosh":"true","enable_compression":"true","enable_json_uservars":"true","game_id":"227576","game_permalink":"idle-online-universe","game_title":"Idle%20Online%20Universe","game_url":"http%3A%2F%2Fwww.kongregate.com%2Fgames%2FiouRPG%2Fidle-online-universe","javascript_listener":"konduitToHolodeck","channel_id":encodeURIComponent(channel_id),"debug_level":encodeURIComponent(active_user.debugLevel()),"game_auth_token":encodeURIComponent(active_user.gameAuthToken()),"user_id":encodeURIComponent(active_user.id()),"permission_slk":"false","permission_mtx_api":"true","permission_chat_api":"false","permission_sc_api":"true","user_vars":encodeURIComponent(active_user.userVars()),"user_vars_sig":encodeURIComponent(active_user.userVarsSig()),"special_chat_vars":encodeURIComponent(Object.toJSON(active_user.specialChatVars())),"analytics_info":"%7B%22live%22%3A%7B%22swrve%22%3A%7B%22application_id%22%3A%222755%22%2C%22key%22%3A%22hyWh4gQ8DOHcFoAcXC%22%7D%7D%2C%22analytics_mode%22%3A%22all%22%7D","analytics_environment":encodeURIComponent(active_user.documentLocationSearchQuery().analytics_environment || "live"),"javascript_api":"true"},{"allowscriptaccess":"always","allownetworking":"all","wmode":"transparent"},{});
 //]]>
 </script>
           </div>
@@ -1011,7 +1011,7 @@ if (!active_user.isPremium()) {
             </div>
           <div id="dealspot_target"></div>
           <h1 itemprop="name">Idle Online Universe</h1>
-          <span style="display,none">
+          <span style="display:none">
             Multiplayer
           </span>
         </div>
@@ -1023,24 +1023,24 @@ if (!active_user.isPremium()) {
     
     <div id="floating_game_holder">
       <!-- #maingame -->
-      <div id="maingame" style="width,1103px;height,626px;">
+      <div id="maingame" style="width:1103px;height:626px;">
           <!-- #maingamecontent -->
-          <div id="maingamecontent" style="width,1103px;height,626px">
-            <div id="flashframecontent" style="width,1103px;height,626px">
+          <div id="maingamecontent" style="width:1103px;height:626px">
+            <div id="flashframecontent" style="width:1103px;height:626px">
               <table class="game_table">
                 <tbody>
                   <tr>
                      <td colspan="2" class="links_connect">
                        <div class="user_connection hinted_value">
-                         <em class="logged_in_user mrs" style="display,none;">(<span class="logged_in_user_username"></span>)</em>
-                         <span id="chat_connected_indicator" class="spritegame spriteall" style="display,none;">Connected</span>
-                         <span id="chat_limited_connection_indicator" class="spritegame spriteall" style="display,none;">Limited connection</span>
+                         <em class="logged_in_user mrs" style="display:none;">(<span class="logged_in_user_username"></span>)</em>
+                         <span id="chat_connected_indicator" class="spritegame spriteall" style="display:none;">Connected</span>
+                         <span id="chat_limited_connection_indicator" class="spritegame spriteall" style="display:none;">Limited connection</span>
                          <span id="chat_disconnected_indicator" class="spritegame spriteall">Disconnected</span>
-                         <span id="cloud_localOnly_indicator" class="spritecloud textreplace js-cloud-indicator" style="display,none;" title="Not Connected">Not Connected</span>
-                         <span id="cloud_remoteOnly_indicator" class="spritecloud textreplace js-cloud-indicator" style="display,none;" title="Not Connected">Remote Only</span>
-                         <span id="cloud_error_indicator" class="spritecloud textreplace js-cloud-indicator" style="display,none;" title="Error">Error</span>
-                         <span id="cloud_sync_indicator" class="spritecloud textreplace js-cloud-indicator" style="display,none;" title="Connected">Connected</span>
-                         <span id="cloud_syncing_indicator" class="spritecloud textreplace js-cloud-indicator" style="display,none;" title="Syncing">Syncing</span>
+                         <span id="cloud_localOnly_indicator" class="spritecloud textreplace js-cloud-indicator" style="display:none;" title="Not Connected">Not Connected</span>
+                         <span id="cloud_remoteOnly_indicator" class="spritecloud textreplace js-cloud-indicator" style="display:none;" title="Not Connected">Remote Only</span>
+                         <span id="cloud_error_indicator" class="spritecloud textreplace js-cloud-indicator" style="display:none;" title="Error">Error</span>
+                         <span id="cloud_sync_indicator" class="spritecloud textreplace js-cloud-indicator" style="display:none;" title="Connected">Connected</span>
+                         <span id="cloud_syncing_indicator" class="spritecloud textreplace js-cloud-indicator" style="display:none;" title="Syncing">Syncing</span>
                        </div>
                        <script id="cloud_save_info_template" type="text/html">
                         <div class="hover_item hover_top hover_right cloud_hover">
@@ -1060,7 +1060,7 @@ if (!active_user.isPremium()) {
     <a id="cinematic_mode_link" class="disabled" href="#">Cinematic Mode</a>
     <script>
 //<![CDATA[
-      Event.observe(document, 'game,activated', function() { 
+      Event.observe(document, 'game:activated', function() { 
         CinematicMode.hookUpCinematicQuicklink();
       });
 
@@ -1073,8 +1073,8 @@ if (!active_user.isPremium()) {
     </li>
   <li class="favorite spritegame" id="quicklinks_favorite_block">
     
-<a id="quicklinks_favorite_game" class="user_specific" href="/accounts/KongregateHolodeckTemplateUsername/favorites.js?game_id=227576" onclick="$(&#39;quicklinks_favorite_game_indicator&#39;).show(); holodeck.recordAnalyticsEvent(&#39;Quick&#39;, &#39;Favorite&#39;); new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, method,&#39;post&#39;, parameters,&#39;authenticity_token=&#39; + encodeURIComponent(&#39;INBuMsfhwqO7rkLzuxuFYTwVmQfu14bwpT6fTXMKmc9m+V36pge4VMKV+7U8g7jeIn5xhriZftOKg1/rY4cdTQ==&#39;)}); return false;">Favorite</a>
-<span id="quicklinks_favorite_game_indicator" class="spinner spinner_inverse" style="display,none" title="loading&hellip;">&#8203;</span>
+<a id="quicklinks_favorite_game" class="user_specific" href="/accounts/KongregateHolodeckTemplateUsername/favorites.js?game_id=227576" onclick="$(&#39;quicklinks_favorite_game_indicator&#39;).show(); holodeck.recordAnalyticsEvent(&#39;Quick&#39;, &#39;Favorite&#39;); new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, method:&#39;post&#39;, parameters:&#39;authenticity_token=&#39; + encodeURIComponent(&#39;AqNBMoTuN3DWCdGITf25V9XGkbId5OSKO9ZVdye68kE8u8CKdWFjBJSd6Ats3BqnRKwxR8HTcTleviI2j8T+ag==&#39;)}); return false;">Favorite</a>
+<span id="quicklinks_favorite_game_indicator" class="spinner spinner_inverse" style="display:none" title="loading&hellip;">&#8203;</span>
 <script>
 //<![CDATA[
       active_user.addCapturedSelector('#quicklinks_favorite_block', true);
@@ -1083,10 +1083,10 @@ if (!active_user.isPremium()) {
 </script>
 
   </li>
-  <li class="play_later" id="quicklinks_play_later_block" style="display,none;">
+  <li class="play_later" id="quicklinks_play_later_block" style="display:none;">
     
-<a id="quicklinks_play_later_game" class="user_specific pln" href="/play_laters" onclick="$(&#39;quicklinks_play_later_game_indicator&#39;).show();; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, method,&#39;post&#39;, onSuccess,function(request){$(&#39;quicklinks_play_later_game_indicator&#39;).hide();}, parameters,&#39;game_id=227576&#39; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;Ma0QuzdZVm9AK4gbpUIA4YQlu4BA7AD4ovBvFdLQfM13hCNzVr8smDkQMV0i2j1emk5TARai+NuNTa+zwl34Tw==&#39;)}); return false;"><span aria-hidden="true" class="kong_ico default prs">p</span><span aria-hidden="true" class="kong_ico add prs">+</span><span aria-hidden="true" class="kong_ico remove prs">-</span>Playlist</a>
-<span id="quicklinks_play_later_game_indicator" class="spinner spinner_inverse" style="display,none" title="loading&hellip;">&#8203;</span>
+<a id="quicklinks_play_later_game" class="user_specific pln" href="/play_laters" onclick="$(&#39;quicklinks_play_later_game_indicator&#39;).show();; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, method:&#39;post&#39;, onSuccess:function(request){$(&#39;quicklinks_play_later_game_indicator&#39;).hide();}, parameters:&#39;game_id=227576&#39; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;razOjy2IUF4tHf942DlUyvgEaWlwauIgq2VN0R6GLBKTtE833AcEKm+Jxvv5GPc6aW7JnKxdd5PODTqQtvggOQ==&#39;)}); return false;"><span aria-hidden="true" class="kong_ico default prs">p</span><span aria-hidden="true" class="kong_ico add prs">+</span><span aria-hidden="true" class="kong_ico remove prs">-</span>Playlist</a>
+<span id="quicklinks_play_later_game_indicator" class="spinner spinner_inverse" style="display:none" title="loading&hellip;">&#8203;</span>
 <script>
 //<![CDATA[
       active_user.addCapturedSelector('#quicklinks_play_later_block', true);
@@ -1096,7 +1096,7 @@ if (!active_user.isPremium()) {
 
   </li>
     <li id="quicklinks_facebook" class="socialshare">
-      <div class="fb-like" data-href="http,//www.kongregate.com/games/iouRPG/idle-online-universe" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" colorscheme="light"></div>
+      <div class="fb-like" data-href="http://www.kongregate.com/games/iouRPG/idle-online-universe" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" colorscheme="light"></div>
     </li>
   <script>
 //<![CDATA[
@@ -1109,39 +1109,39 @@ if (!active_user.isPremium()) {
                     </td>
                   </tr>
                   <tr>
-                    <td id="gameholder" style="width,800px;">
+                    <td id="gameholder" style="width:800px;">
                       <script>
 //<![CDATA[
                         if(metricTracker) {
                           var now = new Date().getTime(),
-                              time = (now > 0 && _lts && _lts > 0) ? (now - _lts) , -1;
+                              time = (now > 0 && _lts && _lts > 0) ? (now - _lts) : -1;
                           metricTracker.trackTimedEvent('BeforeGameEmbed', "Idle Online Universe", time);
                         }
 
 //]]>
-</script>                      <div id="bumper_premium_header" style="display,none;">
+</script>                      <div id="bumper_premium_header" style="display:none;">
                         <a href="#" onclick="lightbox.prototype.initializePremiumMembershipPurchase('preroll', 'ad_free_tab'); return false;" class="phm pvs kplus-upsell">
                         Tired of ads on Kongregate? You can now be <strong>Ad-Free</strong>! <span class='learn_more'>Learn more about <span class="kplus_logo">KONG PLUS</span> &raquo;</span>
                         </a>
                       </div>
-                      <video id="ima_bumper" style="display,none;"
+                      <video id="ima_bumper" style="display:none;"
                              class="video-js vjs-default-skin"
                              autoplay="false" autostart="false">
                       </video>
-                      <p class="ad_skip_outer" id="ad_skip_controls" style="display,none">
+                      <p class="ad_skip_outer" id="ad_skip_controls" style="display:none">
                         <span class="ad_skip_left_arrow"></span>
                         <span class="ad_skip_inner">
-                          Your game will start after this message <a id="bumper_close_link" style="display,none;">&#40;close&#41;</a>
+                          Your game will start after this message <a id="bumper_close_link" style="display:none;">&#40;close&#41;</a>
                         </span>
                         <span class="ad_skip_right_arrow"></span>
                       </p>
-                      <div id="game" style="width,800px;height,600px" class="-ce-ignore">
-                        <p id="cinematic_close_container"><a style="display,none" id="cinematic_close_link" class="spritegame textreplace" href="#" onclick="CinematicMode.deactivateCinematicMode(); return false;">close</a></p>
+                      <div id="game" style="width:800px;height:600px" class="-ce-ignore">
+                        <p id="cinematic_close_container"><a style="display:none" id="cinematic_close_link" class="spritegame textreplace" href="#" onclick="CinematicMode.deactivateCinematicMode(); return false;">close</a></p>
                           <span id="gameiframe"></span><script>
 //<![CDATA[
               gameLoader = {
-          loadGame, function(urlOptions) {
-                  new GameIframe({"iframe_url",'http,//game227576.konggames.com/games/iouRPG/idle-online-universe/frame/' + channel_id + '/?kongregate_host=www.kongregate.com',"alternate_game_file_url",null,"game_width",800,"game_height",600,"max_game_width",null,"max_game_height",null,"game_left",0,"game_top",0,"iframe_class","dont_hide","host","http,//www.kongregate.com","api_host","http,//api.kongregate.com","ansible_path","//chat.kongregate.com/flash/ansible_0b5a05cc72a9f3825734754f66100645.swf","api_path","http,//chat.kongregate.com/flash/API_AS3_9dd7566dd62ffc3204bfbf6e2781ce2e.swf","preview",false,"game_permalink","idle-online-universe","game_id",227576,"game_url","http,//www.kongregate.com/games/iouRPG/idle-online-universe","game_version",1504717937,"flash_var_prefix","kv_","post_message",true,"iframe_host","http,//game227576.konggames.com","game_host","http,//chat.kongregate.com","channel_id",encodeURIComponent(channel_id),"svid",null,"game_type","flash","analytics_mode","all"}, urlOptions, channel_id).createGameIframeElement();
+          loadGame: function(urlOptions) {
+                  new GameIframe({"iframe_url":'http://game227576.konggames.com/games/iouRPG/idle-online-universe/frame/' + channel_id + '/?kongregate_host=www.kongregate.com',"alternate_game_file_url":null,"game_width":800,"game_height":600,"max_game_width":null,"max_game_height":null,"game_left":0,"game_top":0,"iframe_class":"dont_hide","host":"http://www.kongregate.com","api_host":"http://api.kongregate.com","ansible_path":"//chat.kongregate.com/flash/ansible_0b5a05cc72a9f3825734754f66100645.swf","api_path":"http://chat.kongregate.com/flash/API_AS3_9dd7566dd62ffc3204bfbf6e2781ce2e.swf","preview":false,"game_permalink":"idle-online-universe","game_id":227576,"game_url":"http://www.kongregate.com/games/iouRPG/idle-online-universe","game_version":1504717937,"flash_var_prefix":"kv_","post_message":true,"iframe_host":"http://game227576.konggames.com","game_host":"http://chat.kongregate.com","channel_id":encodeURIComponent(channel_id),"svid":null,"game_type":"flash","analytics_mode":"all"}, urlOptions, channel_id).createGameIframeElement();
 
           }
         }
@@ -1157,25 +1157,25 @@ if (!active_user.isPremium()) {
           urlOptions = '';
         }
         gameLoader.loadGame(urlOptions);
-        document.fire('game,activated');
+        document.fire('game:activated');
       };
 
 //]]>
 </script>
-                        <p class="bug_game cinemode_bug_link footnote" id='cinematic_bug_report' style='display, none'>
-                          <span id="cinematic_bug_link"><a href="/cinematic_bug_counters/increment?game_id=227576" onclick="$(&#39;cinematic_bug_link&#39;).hide(); $(&#39;cinematic_bug_spinner&#39;).show(); new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, onFailure,function(request){new Effect.Highlight(&#39;cinematic_bug_report&#39;, {startcolor, &#39;#cc2222&#39;});$(&#39;cinematic_bug_spinner&#39;).hide()}, onSuccess,function(request){$(&#39;cinematic_bug_link&#39;).update(&#39;Thank You!&#39;).show(); $(&#39;cinematic_bug_spinner&#39;).hide()}, parameters,&#39;authenticity_token=&#39; + encodeURIComponent(&#39;UN1sOB2UMmX6HqmcsglvxEEVXPznVpH6yk9gMng/q0QW9F/wfHJIkoMlENo1kVJ7X360fbEYadnl8qCUaLIvxg==&#39;)}); return false;">Report Cinematic Bug</a></span><span class="spinner" id="cinematic_bug_spinner" style="display, none">...</span>
+                        <p class="bug_game cinemode_bug_link footnote" id='cinematic_bug_report' style='display: none'>
+                          <span id="cinematic_bug_link"><a href="/cinematic_bug_counters/increment?game_id=227576" onclick="$(&#39;cinematic_bug_link&#39;).hide(); $(&#39;cinematic_bug_spinner&#39;).show(); new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, onFailure:function(request){new Effect.Highlight(&#39;cinematic_bug_report&#39;, {startcolor: &#39;#cc2222&#39;});$(&#39;cinematic_bug_spinner&#39;).hide()}, onSuccess:function(request){$(&#39;cinematic_bug_link&#39;).update(&#39;Thank You!&#39;).show(); $(&#39;cinematic_bug_spinner&#39;).hide()}, parameters:&#39;authenticity_token=&#39; + encodeURIComponent(&#39;vpFF9OvhgMH7HQuLO+mhZWR7uav9OlO245ON3n5NYfWAicRMGm7UtbmJMggayAKV9REZXiENxgWG+/qf1jNt3g==&#39;)}); return false;">Report Cinematic Bug</a></span><span class="spinner" id="cinematic_bug_spinner" style="display: none">...</span>
                         </p>
                       </div>
                       <noscript>
   <div class="noscript">
     <p>To play games on Kongregate, you must have Javascript enabled and be using a current version of Adobe's Flash Player.</p>
-    <p><a href="http,//www.adobe.com/go/getflashplayer">
-      <img src="http,//www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" style="margin, 12px; border, none;" width="112" height="33" /></a></p>
+    <p><a href="http://www.adobe.com/go/getflashplayer">
+      <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" style="margin: 12px; border: none;" width="112" height="33" /></a></p>
   </div>
 </noscript>
-<div id="noflash" class="noscript" style="display,none;">
+<div id="noflash" class="noscript" style="display:none;">
   <p>To play games on Kongregate, you must have Javascript enabled and be using a current version of Adobe's Flash Player.</p>
-  <p><a href="http,//www.adobe.com/go/getflashplayer" class="noflash_img spritegame textreplace">Get Adobe Flash player</a></p>
+  <p><a href="http://www.adobe.com/go/getflashplayer" class="noflash_img spritegame textreplace">Get Adobe Flash player</a></p>
 </div>
 <script type="text/javascript">
   var hasFlash = swfobject.getFlashPlayerVersion().major >= 6; // matches version in _game.html.erb
@@ -1187,16 +1187,16 @@ if (!active_user.isPremium()) {
 
                     </td>
                     <td id="chat_container_cell">
-                      <div id="chat_container" class="chatholder" style="width,300px;height,600px;">
+                      <div id="chat_container" class="chatholder" style="width:300px;height:600px;">
                       </div>
                       <script id="accomplishments_tab_pane_template" type="text/html">
                         <div id="accomplishments_tab_content">
                         </div>
-                        <div id="high_scores_container" style="display,none;">
+                        <div id="high_scores_container" style="display:none;">
                           <div id="high_scores">
                           </div>
                         </div>
-                        <div id="high_scores_spinner" style="display,none;">
+                        <div id="high_scores_spinner" style="display:none;">
                           <span class="spinner spinner_big">loading</span>
                         </div>
                       </script>
@@ -1204,22 +1204,22 @@ if (!active_user.isPremium()) {
                         <!-- #game_info -->
 <div id="game_info_panel" class="collapsible_panel">
   <p class="panel_handle spritegame closed_link mts"><a>Info</a></p>
-  <div id="game_info" class="panel_body cntrToggle media" style="display,none">
+  <div id="game_info" class="panel_body cntrToggle media" style="display:none">
     <h3 class="mbs hasLayout">Idle Online Universe</h3>
 
     <div class="creatorinfo unit size1of2 hasLayout">
-      <em>Created by,</em>
+      <em>Created by:</em>
       <p class="media">
-        <a class="imgMini" href="http,//www.kongregate.com/accounts/iouRPG"><img class="user_avatar " title="iouRPG" alt="avatar for iouRPG" src="https,//cdn4.kongcdn.com/user_avatars/2080/6584/300x300_chat.png?i10c=img.resize(width,16)" /></a>
-        <a class="bd" onclick="window.open(this.href);return false;" href="http,//www.kongregate.com/accounts/iouRPG">iouRPG</a>
+        <a class="imgMini" href="http://www.kongregate.com/accounts/iouRPG"><img class="user_avatar " title="iouRPG" alt="avatar for iouRPG" src="https://cdn4.kongcdn.com/user_avatars/2080/6584/300x300_chat.png?i10c=img.resize(width:16)" /></a>
+        <a class="bd" onclick="window.open(this.href);return false;" href="http://www.kongregate.com/accounts/iouRPG">iouRPG</a>
       </p>
     </div>
     <div id="game_rating" class="gamerating unit size1of2 mbm">
       <div class="plm">
-        <em id="rating_message">Rate this game,</em>
+        <em id="rating_message">Rate this game:</em>
         <div id="user_star_rating">
           <div id="star_ratings_block">
-            <!--[if lte IE 7]><span class="inlinefix">.</span><![endif]--><span id="rating-indicator" class="spinner" style="display,none" title="loading&hellip;">&#8203;</span><ul id="star-rating-227576" class="star-rating spritegame"> <!-- leave inline for IE -->
+            <!--[if lte IE 7]><span class="inlinefix">.</span><![endif]--><span id="rating-indicator" class="spinner" style="display:none" title="loading&hellip;">&#8203;</span><ul id="star-rating-227576" class="star-rating spritegame"> <!-- leave inline for IE -->
 
   <li><a class="star-1" title="Hated it" href="/ratings" onclick="if (      (function() {
         if(!active_user.allowedToRateGame()){
@@ -1230,7 +1230,7 @@ if (!active_user.isPremium()) {
           return true;
         }
       })()
-) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Rate&#39;);;}, parameters,&quot;prefix=\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=1\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;mgb9DA/WBY+NAMs3WjeYjRqJLUmVsRAJjdriXlqvElfcL87EbjB/ePQ7cnHdr6UyBOLFyMP/6CqiZyL4SiKW1Q==&#39;)}); }; return false;">1</a></li>
+) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Rate&#39;);;}, parameters:&quot;prefix=\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=1\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;TntwQP5/+TYbAdPx7bLqD0BWNyMpr1zAi1Vt3jaPJuFwY/H4D/CtQlmV6nLMk0n/0TyX1vWYyXPuPRqfnvEqyg==&#39;)}); }; return false;">1</a></li>
   <li><a class="star-2" title="Didn&#39;t like it" href="/ratings" onclick="if (      (function() {
         if(!active_user.allowedToRateGame()){
           var msg = &#39;You must have the Flash plugin installed to rate this game.&#39;
@@ -1240,7 +1240,7 @@ if (!active_user.isPremium()) {
           return true;
         }
       })()
-) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Rate&#39;);;}, parameters,&quot;prefix=\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=2\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;ycZAiL8O0wfcQDFKhRJ04uTiMx6WpMi63HFpWSLHcI+P73NA3uip8KV7iAwCikld+onbn8DqMJnzzKn/Mkr0DQ==&#39;)}); }; return false;">2</a></li>
+) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Rate&#39;);;}, parameters:&quot;prefix=\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=2\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;rnHLbbJD+CRxWS6sVMuSBz53xepS2AbLzpgzsANu8a+QaUrVQ8ysUDPNFy916jH3rx1lH47vk3ir8ETxqxD9hA==&#39;)}); }; return false;">2</a></li>
   <li><a class="star-3" title="Liked it" href="/ratings" onclick="if (      (function() {
         if(!active_user.allowedToRateGame()){
           var msg = &#39;You must have the Flash plugin installed to rate this game.&#39;
@@ -1250,7 +1250,7 @@ if (!active_user.isPremium()) {
           return true;
         }
       })()
-) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Rate&#39;);;}, parameters,&quot;prefix=\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=3\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;FCBTG6Gp4Kef0Ki+BFrYgQq+qQNBZ/k3Pq3IgQnPmA5SCWDTwE+aUObrEfiDwuU+FNVBghcpARQREAgnGUIcjA==&#39;)}); }; return false;">3</a></li>
+) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Rate&#39;);;}, parameters:&quot;prefix=\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=3\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;e/9l/stD9mKuq4UevESbEDhCOxBN5aQ0tIMn7Ab4Q4dF5+RGOsyiFuw/vJ2dZTjgqSib5ZHSMYfR61CtroZPrA==&#39;)}); }; return false;">3</a></li>
   <li><a class="star-4" title="Really liked it" href="/ratings" onclick="if (      (function() {
         if(!active_user.allowedToRateGame()){
           var msg = &#39;You must have the Flash plugin installed to rate this game.&#39;
@@ -1260,7 +1260,7 @@ if (!active_user.isPremium()) {
           return true;
         }
       })()
-) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Rate&#39;);;}, parameters,&quot;prefix=\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=4\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;Da1w66eo/O1NOBH45ckBM/gpqykZszjSRWGF5MIsyHVLhEMjxk6GGjQDqL5iUTyM5kJDqE/9wPFq3EVC0qFM9w==&#39;)}); }; return false;">4</a></li>
+) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Rate&#39;);;}, parameters:&quot;prefix=\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=4\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;AYNioSmw1yugdYxsmk94/dKJpEKDyY8lDQDUwMXlxeE/m+MZ2D+DX+Lhte+7btsNQ+MEt1/+GpZoaKOBbZvJyg==&#39;)}); }; return false;">4</a></li>
   <li><a class="star-5" title="Loved it" href="/ratings" onclick="if (      (function() {
         if(!active_user.allowedToRateGame()){
           var msg = &#39;You must have the Flash plugin installed to rate this game.&#39;
@@ -1270,7 +1270,7 @@ if (!active_user.isPremium()) {
           return true;
         }
       })()
-) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Rate&#39;);;}, parameters,&quot;prefix=\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=5\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;mmVkvc7r6ZXmjZHUn1GU1vIcDMxW5STmEFoLUXhsWDvcTFd1rw2TYp+2KJIYyalp7HfkTQCr3MU/58v3aOHcuQ==&#39;)}); }; return false;">5</a></li>
+) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Rate&#39;);;}, parameters:&quot;prefix=\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=5\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;YzT4JfCOdkZ9/rxL+bzXXHvdjZ3NBJNsEH2XcWxOybRdLHmdAQEiMj9qhcjYnXSs6rctaBEzBt91FeAwxDDFnw==&#39;)}); }; return false;">5</a></li>
 </ul>
 
           </div>
@@ -1286,8 +1286,8 @@ if (!active_user.isPremium()) {
             <a href="#" onclick="holodeck.recordAnalyticsEvent(&#39;Quick&#39;, &#39;Share&#39;);holodeck.showShareTab(); return false;">Share game</a>
           </li>
         <li class="favorite spritegame" id="favorite_game">
-          <a id="favorite_link" class="user_specific" href="/accounts/KongregateHolodeckTemplateUsername/favorites?game_id=227576" onclick="$(&#39;favorite_link&#39;).hide(); $(&#39;favorite_indicator&#39;).show(); new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, method,&#39;post&#39;, onComplete,function(request){holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Favorite&#39;);}, parameters,&#39;authenticity_token=&#39; + encodeURIComponent(&#39;LjBLrcnvZmAHvtRQ9lpyNBxbD6lNp5dJTZgL9y2w9ytoGXhlqAkcl36FbRZxwk+LAjDnKBvpb2piJctRPT1zqQ==&#39;)}); return false;"><span class='kong_ico' aria-hidden='true'>l </span>Favorite</a> <!--[if lte IE 7]><span class="inlinefix">.</span><![endif]-->
-<span id="favorite_indicator" class="spinner" style="display,none" title="loading&hellip;">&#8203;</span>
+          <a id="favorite_link" class="user_specific" href="/accounts/KongregateHolodeckTemplateUsername/favorites?game_id=227576" onclick="$(&#39;favorite_link&#39;).hide(); $(&#39;favorite_indicator&#39;).show(); new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, method:&#39;post&#39;, onComplete:function(request){holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Favorite&#39;);}, parameters:&#39;authenticity_token=&#39; + encodeURIComponent(&#39;EnHQlJPJy78kOpQ6Mo6Q0UAwsL4apXDjP6OlOHOyJbYsaVEsYkafy2aurbkTrzMh0VoQS8aS5VBay9J528wpnQ==&#39;)}); return false;"><span class='kong_ico' aria-hidden='true'>l </span>Favorite</a> <!--[if lte IE 7]><span class="inlinefix">.</span><![endif]-->
+<span id="favorite_indicator" class="spinner" style="display:none" title="loading&hellip;">&#8203;</span>
 
           <span class="favorites_count_indicator"><span class="favorites_count"></span>&nbsp;Favorites</span>
         </li>
@@ -1301,8 +1301,8 @@ if (!active_user.isPremium()) {
 " method="POST" action="/feedbacks/new" target="_blank"><input type="hidden" name="game_id" value="227576" /><input type="hidden" name="log" class="bug_report_log" /><a href="#" onclick="var f=this.up(&#39;form&#39;);if(f.onsubmit()){f.submit()}; return false;"><span class='kong_ico' aria-hidden='true'>i </span>Game bug</a></form>
           </li>
         <li class="flag_game spritegame" id="flag_game_holder">
-          <a rel="nofollow" href="http,//www.kongregate.com/games/iouRPG/idle-online-universe/flags" onclick="Element.show(&#39;flag_indicator&#39;); new Ajax.Updater(&#39;flag_game_holder&#39;, this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Flag&#39;); Element.update(&#39;game_flag&#39;, &#39;Game flagged&#39;); Element.hide(&#39;flag_indicator&#39;);}, parameters,&#39;authenticity_token=&#39; + encodeURIComponent(&#39;sW+m5bY3lsXk+d1OF8bf5Shs3+hWID0TOW8PnJJQ/pD3RpUt19HsMp3CZAiQXuJaNgc3aQBuxTAW0s86gt16Eg==&#39;)}); return false;">Flag this game</a>
-          <span id="flag_indicator" class="spinner" style="display,none" title="loading&hellip;">&#8203;</span>
+          <a rel="nofollow" href="http://www.kongregate.com/games/iouRPG/idle-online-universe/flags" onclick="Element.show(&#39;flag_indicator&#39;); new Ajax.Updater(&#39;flag_game_holder&#39;, this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){holodeck.recordAnalyticsEvent(&#39;Game&#39;, &#39;Flag&#39;); Element.update(&#39;game_flag&#39;, &#39;Game flagged&#39;); Element.hide(&#39;flag_indicator&#39;);}, parameters:&#39;authenticity_token=&#39; + encodeURIComponent(&#39;N78MZlKsBg7pLw3G8jphONNd7KXyvpcQHQUb5gcjTg0Jp43eoyNSequ7NEXTG8LIQjdMUC6JAqN4bWynr11CJg==&#39;)}); return false;">Flag this game</a>
+          <span id="flag_indicator" class="spinner" style="display:none" title="loading&hellip;">&#8203;</span>
         </li>
     </ul>
     </div>
@@ -1314,11 +1314,11 @@ if (!active_user.isPremium()) {
 <!-- #game_description -->
 <div id="game_description_panel" class="collapsible_panel">
   <p class="panel_handle mvs spritegame closed_link"><a>Description</a></p>
-  <div id="game_description" class="panel_body cntrToggle splittext smltxt-reset" style="display,none">
+  <div id="game_description" class="panel_body cntrToggle splittext smltxt-reset" style="display:none">
     <div class="show_more_text_block"><div class="truncated_text"><p>Kill monsters alone or with friends, upgrade your abilities, grow your pets, build your guild and mo&hellip;</p><a class="show_more spritegame" href="#" onclick="    $(this).up(&#39;.truncated_text&#39;).hide();
     $(this).up(&#39;.show_more_text_block&#39;).down(&#39;.full_text&#39;).show();
-; return false;">show more</a></div><div class="full_text" style="display,none;"><p>Kill monsters alone or with friends, upgrade your abilities, grow your pets, build your guild and more in this Idle <span>MMORPG</span>.</p>
-<p>Note ,, Everything is saved ON <span>THE</span> <span>SERVERS</span>, and you can play with other players. The purpose of the creation of this game was to let players feel safe about their accounts, and get to add multi-user interaction.</p><a class="show_less spritegame" href="#" onclick="    $(this).up(&#39;.full_text&#39;).hide();
+; return false;">show more</a></div><div class="full_text" style="display:none;"><p>Kill monsters alone or with friends, upgrade your abilities, grow your pets, build your guild and more in this Idle <span>MMORPG</span>.</p>
+<p>Note :: Everything is saved ON <span>THE</span> <span>SERVERS</span>, and you can play with other players. The purpose of the creation of this game was to let players feel safe about their accounts, and get to add multi-user interaction.</p><a class="show_less spritegame" href="#" onclick="    $(this).up(&#39;.full_text&#39;).hide();
     $(this).up(&#39;.show_more_text_block&#39;).down(&#39;.truncated_text&#39;).show();
 ; return false;">show less</a></div></div>
   </div>
@@ -1331,10 +1331,10 @@ if (!active_user.isPremium()) {
   <!-- #game_instructions -->
   <div id="game_instructions_panel" class="collapsible_panel">
     <p class="panel_handle mvs spritegame closed_link"><a>Instructions</a></p>
-    <div id="game_instructions" class="panel_body cntrToggle splittext smltxt-reset" style="display,none">
+    <div id="game_instructions" class="panel_body cntrToggle splittext smltxt-reset" style="display:none">
       <div class="show_more_text_block"><div class="truncated_text"><p>Start the auto attack. Click to deal additional damage, use learned abilities become even more effec&hellip;</p><a class="show_more spritegame" href="#" onclick="    $(this).up(&#39;.truncated_text&#39;).hide();
     $(this).up(&#39;.show_more_text_block&#39;).down(&#39;.full_text&#39;).show();
-; return false;">show more</a></div><div class="full_text" style="display,none;"><p>Start the auto attack. Click to deal additional damage, use learned abilities become even more effective.</p><a class="show_less spritegame" href="#" onclick="    $(this).up(&#39;.full_text&#39;).hide();
+; return false;">show more</a></div><div class="full_text" style="display:none;"><p>Start the auto attack. Click to deal additional damage, use learned abilities become even more effective.</p><a class="show_less spritegame" href="#" onclick="    $(this).up(&#39;.full_text&#39;).hide();
     $(this).up(&#39;.show_more_text_block&#39;).down(&#39;.truncated_text&#39;).show();
 ; return false;">show less</a></div></div>
     </div>
@@ -1344,7 +1344,7 @@ if (!active_user.isPremium()) {
                       </script>
                       <script type="text/html" id="chat_notification_received_private_message">
                         <p class="whisper received_whisper">
-                          <span class="username chat_message_window_username">#{username}</span><span class="separator">, </span>
+                          <span class="username chat_message_window_username">#{username}</span><span class="separator">: </span>
                             <span class="message">
                               Want to join my private chat room?
                               <a href='#' class='yes'>Join</a>/<a href='#' class='no'>Ignore</a>
@@ -1377,25 +1377,25 @@ if (!active_user.isPremium()) {
                           <span class="kong_ico btn_target" aria-hidden="true">s</span>
                           <span>Tools</span>
                         </span>
-                        <ul class="chat_actions_list" style="display,none">
+                        <ul class="chat_actions_list" style="display:none">
                           <li data-chat-action="leave_private" class="action exclude_game exclude_chat exclude_guild">Leave private chat</li>
                           <li data-chat-action="leave_guild" class="action exclude_game exclude_chat exclude_private">Leave guild chat</li>
                           <li data-chat-action="room_chooser" class="action exclude_private">Change chat rooms</li>
                           <li data-chat-action="friends_online" class="action">See friends online</li>
                           <li data-chat-action="room_details" class="action exclude_game exclude_private exclude_guild">Room info & help</li>
                           <li data-chat-action="favorite_room" class="action favorite_room hasLayout exclude_game exclude_private exclude_guild">Favorite this room</li>
-                          <li data-chat-action="set_status" class="action set_status hasLayout">Set status, Away</li>
+                          <li data-chat-action="set_status" class="action set_status hasLayout">Set status: Away</li>
                         </ul>
                       </script>
                       <script id="signup_tab_pane_template" type="text/html">
                         <div id="signup_tab_form" class="signup_tab_form hasLayout">
-                          <div id="facebook-connect-wrapper" style="display, none;">
+                          <div id="facebook-connect-wrapper" style="display: none;">
   <h3 class="fb_signup_title sprite_facebook h2 mts mbm">Welcome to Kongregate</h3>
 <p class="mts mbm">Register now to save your earned badges, chat with other players, and share your progress with your friends.</p>
 <div class="cntrToggle pam fb_signup_cta">
-  <h4 class="h2 mvm fb_signup_header sprite_facebook"><span class="fb_signup_header_text"><span class="sprite_facebook fb_signup_header_icon"></span>Sign up now,</span></h4>
+  <h4 class="h2 mvm fb_signup_header sprite_facebook"><span class="fb_signup_header_text"><span class="sprite_facebook fb_signup_header_icon"></span>Sign up now:</span></h4>
   <a title="Sign in with Facebook" class="facebook_signin_large sprite_facebook mvl" onclick="new FacebookAuthenticator({}); return false;" href="#">Connect with Facebook</a>
-  <iframe id="facebook-facepile" src="//www.facebook.com/plugins/facepile.php?action&amp;size=medium&amp;max_rows=1&amp;width=249&amp;colorscheme=light&amp;app_id=218282488189771" scrolling="no" frameborder="0" style="border,none; overflow,hidden; width,264px;" allowTransparency="true"></iframe>
+  <iframe id="facebook-facepile" src="//www.facebook.com/plugins/facepile.php?action&amp;size=medium&amp;max_rows=1&amp;width=249&amp;colorscheme=light&amp;app_id=218282488189771" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:264px;" allowTransparency="true"></iframe>
   <p class="mts mbl">or <a id="email-signup-link" href="#">Sign Up with Email</a></p>
 </div>
 
@@ -1406,11 +1406,11 @@ if (!active_user.isPremium()) {
     Sign up now to save your badges, points and progress. You'll also be eligible for free video games and prizes!!!
     <em>&#40;<a href="#" onclick="active_user.activateInlineLogin(); return false;">Already a member?</a>&#41;</em>
   </p>
-  <p class="signup_tab_form_submit_error mbs ctnr ctnrError" id="submit_error_message" style="display, none;">
+  <p class="signup_tab_form_submit_error mbs ctnr ctnrError" id="submit_error_message" style="display: none;">
     We encountered a problem. Please try again.
   </p>
   <div class="cntrToggle baseform">
-    <form id="registration_form" onsubmit="if(window.DynamicFrameTarget){ new DynamicFrameTarget({form, this, callback, function(response) { if (response.success) { user_status.accountCreationSuccess(response) } else { user_status.accountCreationFailure(response)  } }});}" class="new_user" action="https,//www.kongregate.com/accounts" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="OSkUfhAhTkKQbmqfCzRSOl9uIddEj9jFpYyM5IryBEB/ACe2ccc0telV09mMrG+FQQXJVhLBIOaKMUxCmn+Awg==" />
+    <form id="registration_form" onsubmit="if(window.DynamicFrameTarget){ new DynamicFrameTarget({form: this, callback: function(response) { if (response.success) { user_status.accountCreationSuccess(response) } else { user_status.accountCreationFailure(response)  } }});}" class="new_user" action="https://www.kongregate.com/accounts" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ffMIaVwQcQcXjOrV87hu/iymbjRR2xX95KHLxW4r3mlD64nRrZ8lc1UY01bSmc0OvczOwY3sgE6BybyExlXSQg==" />
     
 
 <input type="hidden" name="game_id" id="game_id" value="227576" />
@@ -1598,7 +1598,7 @@ if (!active_user.isPremium()) {
 
 
     <div class="submit_button form_block">
-      <p class="cta-outer"><input type="submit" value="Sign Up" id="registration_form_submit_button" class="btn btn_action" onclick="try{}catch(e){};if(!this.elem_registration_form_submit_button){this.elem_registration_form_submit_button=$(&#39;registration_form_submit_button&#39;);this.spin_registration_form_submit_button=$(&#39;registration_form_submit_button_spinner&#39;);this.restore=function(t){return function(){t.elem_registration_form_submit_button.show();t.spin_registration_form_submit_button.hide();Event.stopObserving(window, &#39;unload&#39;, t.restore);}}(this);}this.elem_registration_form_submit_button.hide();this.spin_registration_form_submit_button.show();Event.observe(window, &#39;unload&#39;, this.restore);" /><span id="registration_form_submit_button_spinner" class="spinner" style="display,none" title="loading&hellip;">&#8203;</span></p>
+      <p class="cta-outer"><input type="submit" value="Sign Up" id="registration_form_submit_button" class="btn btn_action" onclick="try{}catch(e){};if(!this.elem_registration_form_submit_button){this.elem_registration_form_submit_button=$(&#39;registration_form_submit_button&#39;);this.spin_registration_form_submit_button=$(&#39;registration_form_submit_button_spinner&#39;);this.restore=function(t){return function(){t.elem_registration_form_submit_button.show();t.spin_registration_form_submit_button.hide();Event.stopObserving(window, &#39;unload&#39;, t.restore);}}(this);}this.elem_registration_form_submit_button.hide();this.spin_registration_form_submit_button.show();Event.observe(window, &#39;unload&#39;, this.restore);" /><span id="registration_form_submit_button_spinner" class="spinner" style="display:none" title="loading&hellip;">&#8203;</span></p>
       <p class="tos">By clicking &ldquo;Sign Up&rdquo;, you agree to adhere to our <a onclick="window.open(this.href);return false;" href="/pages/terms">Terms of Service</a>.</p>
     </div>
 </form>
@@ -1618,7 +1618,7 @@ if (!active_user.isPremium()) {
                               <span id="hololevel_next_level_message">
                                 Earn #{points_away} more points to reach level #{next_level}!
                               </span>
-                              <span id="hololevel_max_level_message" style="display, none;">
+                              <span id="hololevel_max_level_message" style="display: none;">
                                 Congratulations, you've reached Kongregate's level cap!
                               </span>
                             </p>
@@ -1659,10 +1659,10 @@ if (!active_user.isPremium()) {
     <ul class="game_stats_cont" id="game_statistics">
         <li class="game_stat game_stat_rating w_rate_count" 
       title="average rating 3.96"
-        itemprop="aggregateRating" itemscope="" itemtype="http,//schema.org/AggregateRating">
+        itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
     <span class="game_stat_ico kong_ico" aria-hidden="true">*</span>
     <span class="game_stat_num" itemprop="ratingValue">4.0</span>
-      <span class="game_stat_rate_count"><span itemprop='ratingCount'>34,474</span><br/> ratings</span>
+      <span class="game_stat_rate_count"><span itemprop='ratingCount'>34,494</span><br/> ratings</span>
       <meta itemprop="worstRating" content = "1">
       <meta itemprop="bestRating" content = "5">
   </li>
@@ -1679,7 +1679,7 @@ if (!active_user.isPremium()) {
               <li class="tag"><a rel="tag" class="term" href="/idle-games">Idle</a></li><li class="tag"><a rel="tag" class="term" href="/upgrades-games">Upgrades</a></li><li class="tag"><a rel="tag" class="term" href="/multiplayer-games">Multiplayer</a></li><li class="tag"><a rel="tag" class="term" href="/mmo-games">MMO</a></li><li class="tag"><a rel="tag" class="term" href="/clicker-games">Clicker</a></li>
             </ul>
             <script>
-              document.observe("fold,loaded", function(e) {
+              document.observe("fold:loaded", function(e) {
                 var t = $$(".game_details_inner .tag");
                 t.each(function(i){
                   var o = i.positionedOffset();
@@ -1694,9 +1694,9 @@ if (!active_user.isPremium()) {
         <!-- Game Tags End -->
         <!-- User Rating Start -->
         <div class="game_user_rating game_detail">
-          <p class="game_rating_label">Your Rating,</p>
+          <p class="game_rating_label">Your Rating:</p>
           <div id="below_game_star_ratings_block" class="my_rating">
-            <!--[if lte IE 7]><span class="inlinefix">.</span><![endif]--><span id="below_game_rating-indicator" class="spinner" style="display,none" title="loading&hellip;">&#8203;</span><ul id="star-rating-227576" class="star-rating spritegame"> <!-- leave inline for IE -->
+            <!--[if lte IE 7]><span class="inlinefix">.</span><![endif]--><span id="below_game_rating-indicator" class="spinner" style="display:none" title="loading&hellip;">&#8203;</span><ul id="star-rating-227576" class="star-rating spritegame"> <!-- leave inline for IE -->
 
   <li><a class="star-1" title="Hated it" href="/ratings" onclick="if (      (function() {
         if(!active_user.allowedToRateGame()){
@@ -1707,7 +1707,7 @@ if (!active_user.isPremium()) {
           return true;
         }
       })()
-) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;below_game_rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;below_game_rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Rate&#39;);;}, parameters,&quot;prefix=below_game_\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=1\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;yAe5Y3gUaC7d2TYeF5UR4MuMduwLf5WEGz2/JWuBKt+OLoqrGfIS2aTij1iQDSxf1eeebV0xbac0gH+DewyuXQ==&#39;)}); }; return false;">1</a></li>
+) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;below_game_rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;below_game_rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Rate&#39;);;}, parameters:&quot;prefix=below_game_\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=1\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;VDXghGaBQUH/r3REHmt4BIt5QmiUBVuZY/rP/nXeqWxqLWE8lw4VNb07Tcc/Stv0GhPinUgyzioGkri/3aClRw==&#39;)}); }; return false;">1</a></li>
   <li><a class="star-2" title="Didn&#39;t like it" href="/ratings" onclick="if (      (function() {
         if(!active_user.allowedToRateGame()){
           var msg = &#39;You must have the Flash plugin installed to rate this game.&#39;
@@ -1717,7 +1717,7 @@ if (!active_user.isPremium()) {
           return true;
         }
       })()
-) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;below_game_rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;below_game_rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Rate&#39;);;}, parameters,&quot;prefix=below_game_\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=2\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;bVcwyn7qUsz8DBkod6MNdr4G4/mbT52Y/ac+tO+xT+crfgMCHwwoO4U3oG7wOzDJoG0LeM0BZbvSGv4S/zzLZQ==&#39;)}); }; return false;">2</a></li>
+) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;below_game_rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;below_game_rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Rate&#39;);;}, parameters:&quot;prefix=below_game_\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=2\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;jqmYVtlWZpeYTrGqwwEpy9T0izgX1WJA5lS+Tm5E1u6wsRnuKNky49raiCniIIo7RZ4rzcvi9/ODPMkPxjraxQ==&#39;)}); }; return false;">2</a></li>
   <li><a class="star-3" title="Liked it" href="/ratings" onclick="if (      (function() {
         if(!active_user.allowedToRateGame()){
           var msg = &#39;You must have the Flash plugin installed to rate this game.&#39;
@@ -1727,7 +1727,7 @@ if (!active_user.isPremium()) {
           return true;
         }
       })()
-) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;below_game_rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;below_game_rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Rate&#39;);;}, parameters,&quot;prefix=below_game_\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=3\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;2pp1t8cI39C2oadMpy30NB4MqVKk6e+HdWP2tW+Xxrqcs0Z/pu6lJ8+aHgogtcmLAGdB0/KnF6Ra3jYTfxpCOA==&#39;)}); }; return false;">3</a></li>
+) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;below_game_rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;below_game_rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Rate&#39;);;}, parameters:&quot;prefix=below_game_\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=3\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;CO5/xrKkQfUgeWSo1sxliyLKj7gxF3isbCB0Uj01Q6I29v5+QysVgWLtXSv37cZ7s6AvTe0g7R8JSAMTlUtPiQ==&#39;)}); }; return false;">3</a></li>
   <li><a class="star-4" title="Really liked it" href="/ratings" onclick="if (      (function() {
         if(!active_user.allowedToRateGame()){
           var msg = &#39;You must have the Flash plugin installed to rate this game.&#39;
@@ -1737,7 +1737,7 @@ if (!active_user.isPremium()) {
           return true;
         }
       })()
-) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;below_game_rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;below_game_rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Rate&#39;);;}, parameters,&quot;prefix=below_game_\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=4\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;r/LNiYMFYt+sizqXsiuY5bzVYCfyRg5RvZUNXG+aCZzp2/5B4uMYKNWwg9E1s6Vaor6IpqQI9nKSKM36fxeNHg==&#39;)}); }; return false;">4</a></li>
+) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;below_game_rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;below_game_rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Rate&#39;);;}, parameters:&quot;prefix=below_game_\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=4\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;tWWYBadH1AqVV2aTfjab+HzbI1OiX5/UDHpvLTATeAmLfRm9VsiAftfDXxBfFzgI7bGDpn5oCmdpEhhsmG10Ig==&#39;)}); }; return false;">4</a></li>
   <li><a class="star-5" title="Loved it" href="/ratings" onclick="if (      (function() {
         if(!active_user.allowedToRateGame()){
           var msg = &#39;You must have the Flash plugin installed to rate this game.&#39;
@@ -1747,7 +1747,7 @@ if (!active_user.isPremium()) {
           return true;
         }
       })()
-) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;below_game_rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;below_game_rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Rate&#39;);;}, parameters,&quot;prefix=below_game_\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=5\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;6mLl4NJYl9Xt7lW3bUWI1OLKqcxkwNu/aMn96owAv1KsS9Yos77tIpTV7PHq3bVr/KFBTTKOI5xHdD1MnI070A==&#39;)}); }; return false;">5</a></li>
+) { $$(&#39;#star-rating-227576&#39;).each(Element.hide); Element.show(&#39;below_game_rating-indicator&#39;);; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){$$(&#39;#star-rating-227576 a&#39;).each(Element.show); Element.hide(&#39;below_game_rating-indicator&#39;); holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Rate&#39;);;}, parameters:&quot;prefix=below_game_\u0026rateable_id=227576\u0026rateable_type=Game\u0026rating=5\u0026star_rating_class=star-rating&quot; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;nuciTH3caIv+NdrazI4NzxPdIdBDnNg3PvB0++l8H/Gg/6P0jFM8/7yh41ntr64/greBJZ+rTYRbmAO6QQIT2g==&#39;)}); }; return false;">5</a></li>
 </ul>
 
           </div>
@@ -1762,18 +1762,18 @@ if (!active_user.isPremium()) {
         <!-- Favorite Game Start -->
         <div class="game_user_fav game_detail contributetools">
           <p class="favorite" id="below_game_favorite_game">
-            <a id="below_game_favorite_link" class="user_specific" href="/accounts/KongregateHolodeckTemplateUsername/favorites?game_id=227576" onclick="$(&#39;below_game_favorite_link&#39;).hide(); $(&#39;below_game_favorite_indicator&#39;).show(); new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, method,&#39;post&#39;, onComplete,function(request){holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Favorite&#39;);}, parameters,&#39;authenticity_token=&#39; + encodeURIComponent(&#39;ij9GiQE37zjpcpCfBqQP64jfsQKvMZrXQtl/cBDwECXMFnVBYNGVz5BJKdmBPDJUlrRZg/l/YvRtZL/WAH2Upw==&#39;)}); return false;"><span class='kong_ico' aria-hidden='true'>l </span>Favorite</a> <!--[if lte IE 7]><span class="inlinefix">.</span><![endif]-->
-<span id="below_game_favorite_indicator" class="spinner" style="display,none" title="loading&hellip;">&#8203;</span>
+            <a id="below_game_favorite_link" class="user_specific" href="/accounts/KongregateHolodeckTemplateUsername/favorites?game_id=227576" onclick="$(&#39;below_game_favorite_link&#39;).hide(); $(&#39;below_game_favorite_indicator&#39;).show(); new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, method:&#39;post&#39;, onComplete:function(request){holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Favorite&#39;);}, parameters:&#39;authenticity_token=&#39; + encodeURIComponent(&#39;KCGn5FaBCDOr4F5X1ZoqJlABGOXThNAKnFyWcbUHN1EWOSZcpw5cR+l0Z9T0u4nWwWu4EA+zRbn5NOEwHXk7eg==&#39;)}); return false;"><span class='kong_ico' aria-hidden='true'>l </span>Favorite</a> <!--[if lte IE 7]><span class="inlinefix">.</span><![endif]-->
+<span id="below_game_favorite_indicator" class="spinner" style="display:none" title="loading&hellip;">&#8203;</span>
 
           </p>
         </div>
         <!-- Favorite Game End -->
         <!-- Play Later Start -->
         <div class="game_user_play_later game_detail contributetools">
-          <p class="play_later" id="below_game_play_later_block" style="display,none">
+          <p class="play_later" id="below_game_play_later_block" style="display:none">
             
-<a id="below_game_play_later_game" class="user_specific pln" href="/play_laters" onclick="$(&#39;below_game_play_later_game_indicator&#39;).show();; new Ajax.Request(this.href, {asynchronous,true, evalScripts,true, method,&#39;post&#39;, onSuccess,function(request){$(&#39;below_game_play_later_game_indicator&#39;).hide();}, parameters,&#39;game_id=227576&#39; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;dTG57qto04poj9jLHqZa3ryeWCt0h4yPiPM2cZZrx3ozGIomyo6pfRG0YY2ZPmdhovWwqiLJdKynTvbXhuZD+A==&#39;)}); return false;"><span aria-hidden="true" class="kong_ico default prs">p</span><span aria-hidden="true" class="kong_ico add prs">+</span><span aria-hidden="true" class="kong_ico remove prs">-</span>Playlist</a>
-<span id="below_game_play_later_game_indicator" class="spinner" style="display,none" title="loading&hellip;">&#8203;</span>
+<a id="below_game_play_later_game" class="user_specific pln" href="/play_laters" onclick="$(&#39;below_game_play_later_game_indicator&#39;).show();; new Ajax.Request(this.href, {asynchronous:true, evalScripts:true, method:&#39;post&#39;, onSuccess:function(request){$(&#39;below_game_play_later_game_indicator&#39;).hide();}, parameters:&#39;game_id=227576&#39; + &#39;&amp;authenticity_token=&#39; + encodeURIComponent(&#39;DeGdZ1uNsb8aY6cH0o8qPfQ2wIHedCQ3grkjzaR88d4z+RzfqgLly1j3noTzronNZVxgdAJDsYTn0VSMDAL99Q==&#39;)}); return false;"><span aria-hidden="true" class="kong_ico default prs">p</span><span aria-hidden="true" class="kong_ico add prs">+</span><span aria-hidden="true" class="kong_ico remove prs">-</span>Playlist</a>
+<span id="below_game_play_later_game_indicator" class="spinner" style="display:none" title="loading&hellip;">&#8203;</span>
 <script>
 //<![CDATA[
       active_user.addCapturedSelector('#below_game_play_later_block', true);
@@ -1790,11 +1790,11 @@ if (!active_user.isPremium()) {
       <div class="game_details_lower">
         <!-- Game Developer Start -->
         <div class="game_developer game_detail pln prm media ">
-          <p class="game_dev_title img mrm">Game By,</p>
+          <p class="game_dev_title img mrm">Game By:</p>
           <ul class="game_dev_list bd">
             <li class="game_dev pll">
-              <a class="game_dev_img hover_profile" href="http,//www.kongregate.com/accounts/iouRPG"><img class="user_chat_avatar " title="iouRPG" height="16" width="16" src="https,//cdn4.kongcdn.com/user_avatars/2080/6584/300x300_chat.png?i10c=img.resize(width,16)" alt="300x300 chat.png?i10c=img" /></a>
-              <a class="game_dev_name hover_profile" itemprop="creator" onclick="window.open(this.href);return false;" href="http,//www.kongregate.com/accounts/iouRPG">iouRPG</a>
+              <a class="game_dev_img hover_profile" href="http://www.kongregate.com/accounts/iouRPG"><img class="user_chat_avatar " title="iouRPG" height="16" width="16" src="https://cdn4.kongcdn.com/user_avatars/2080/6584/300x300_chat.png?i10c=img.resize(width:16)" alt="300x300 chat.png?i10c=img" /></a>
+              <a class="game_dev_name hover_profile" itemprop="creator" onclick="window.open(this.href);return false;" href="http://www.kongregate.com/accounts/iouRPG">iouRPG</a>
             </li>
           </ul>
         </div>
@@ -1817,8 +1817,8 @@ if (!active_user.isPremium()) {
 " method="POST" action="/feedbacks/new" target="_blank"><input type="hidden" name="game_id" value="227576" /><input type="hidden" name="log" class="bug_report_log" /><a href="#" onclick="var f=this.up(&#39;form&#39;);if(f.onsubmit()){f.submit()}; return false;"><span class='kong_ico' aria-hidden='true'>i </span>Game bug</a></form>
               </li>
             <li class="game_link flag_game" id="game_flag">
-              <a rel="nofollow" href="http,//www.kongregate.com/games/iouRPG/idle-online-universe/flags" onclick="Element.show(&#39;below_game_flag_indicator&#39;); new Ajax.Updater(&#39;game_flag&#39;, this.href, {asynchronous,true, evalScripts,true, onComplete,function(request){holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Flag&#39;); Element.update(&#39;flag_game_holder&#39;, &#39;&lt;span class=&quot;kong_ico&quot;&gt;! &lt;/span&gt;Flagged&#39;); Element.hide(&#39;below_game_flag_indicator&#39;);}, parameters,&#39;authenticity_token=&#39; + encodeURIComponent(&#39;0Hx7hm+PRCFzcNJoKatUh5uL8TF4pZkguupVs4FI8t6WVUhODmk+1gpLay6uM2k4heAZsC7rYQOVV5UVkcV2XA==&#39;)}); return false;"><span class="kong_ico" aria-hidden="true">! </span>Flag</a>
-              <span id="below_game_flag_indicator" class="spinner" style="display,none" title="loading&hellip;">&#8203;</span>
+              <a rel="nofollow" href="http://www.kongregate.com/games/iouRPG/idle-online-universe/flags" onclick="Element.show(&#39;below_game_flag_indicator&#39;); new Ajax.Updater(&#39;game_flag&#39;, this.href, {asynchronous:true, evalScripts:true, onComplete:function(request){holodeck.recordAnalyticsEvent(&#39;BelowGame&#39;, &#39;Flag&#39;); Element.update(&#39;flag_game_holder&#39;, &#39;&lt;span class=&quot;kong_ico&quot;&gt;! &lt;/span&gt;Flagged&#39;); Element.hide(&#39;below_game_flag_indicator&#39;);}, parameters:&#39;authenticity_token=&#39; + encodeURIComponent(&#39;clqeBjdp1ktwX7bE9jLJ24hjoCBCPIhLKsOR1sHU5YpMQh++xuaCPzLLj0fXE2orGQkA1Z4LHfhPq+aXaarpoQ==&#39;)}); return false;"><span class="kong_ico" aria-hidden="true">! </span>Flag</a>
+              <span id="below_game_flag_indicator" class="spinner" style="display:none" title="loading&hellip;">&#8203;</span>
               <script>
 //<![CDATA[
       active_user.addCapturedSelector('#game_flag', true);
@@ -1856,7 +1856,7 @@ if (!active_user.isPremium()) {
   
   <!--============ #footer ============-->
   <div id="footer" class="clearfix">
-    <div class="kongregate-logo mbl"><a class="spriteall spritesite kongregate-logo" href="http,//www.kongregate.com">Kongregate</a></div>
+    <div class="kongregate-logo mbl"><a class="spriteall spritesite kongregate-logo" href="http://www.kongregate.com">Kongregate</a></div>
 <div class="line">
   <div class="unit size1of2">
     <div class="prs">
@@ -1864,45 +1864,45 @@ if (!active_user.isPremium()) {
         <div class="unit size1of3">
           <ul>
             <li>
-              <a href="https,//www.facebook.com/kongregate">Be a Facebook Fan</a>
-              <a class="icon" href="https,//www.facebook.com/kongregate">
+              <a href="https://www.facebook.com/kongregate">Be a Facebook Fan</a>
+              <a class="icon" href="https://www.facebook.com/kongregate">
                 <span class="spriteall spritesite facebook_icon"></span>
 </a>            </li>
             <li>
-              <a href="http,//www.twitter.com/kongregate">Follow Us on Twitter</a>
-              <a class="icon" href="http,//www.twitter.com/kongregate">
+              <a href="http://www.twitter.com/kongregate">Follow Us on Twitter</a>
+              <a class="icon" href="http://www.twitter.com/kongregate">
                 <span class="spriteall spritesite twitter_icon"></span>
 </a>            </li>
-            <li><a href="http,//www.kongregate.com/pages/about">About Us</a></li>
-            <li><a href="http,//www.kongregate.com/feedbacks/new">Contact Us</a></li>
+            <li><a href="http://www.kongregate.com/pages/about">About Us</a></li>
+            <li><a href="http://www.kongregate.com/feedbacks/new">Contact Us</a></li>
           </ul>
         </div>
         <div class="unit size1of3">
           <ul class="mhm">
-            <li><a target="_blank" href="https,//kong.zendesk.com/hc">Help/FAQ</a></li>
-            <li><a href="http,//www.kongregate.com/pages/conduct">Conduct Guidelines</a></li>
-            <li><a href="http,//www.kongregate.com/pages/terms">Terms of Service</a></li>
-            <li><a href="http,//www.kongregate.com/pages/privacy">Privacy Policy</a></li>
+            <li><a target="_blank" href="https://kong.zendesk.com/hc">Help/FAQ</a></li>
+            <li><a href="http://www.kongregate.com/pages/conduct">Conduct Guidelines</a></li>
+            <li><a href="http://www.kongregate.com/pages/terms">Terms of Service</a></li>
+            <li><a href="http://www.kongregate.com/pages/privacy">Privacy Policy</a></li>
           </ul>
         </div>
         <div class="unit size1of3 lastUnit">
           <ul>
-            <li><a href="http,//www.kongregate.com/games_for_your_site">Games for Your Site</a></li>
-            <li><a href="http,//www.kongregate.com/pages/logos-and-branding">Link to Kongregate</a></li>
-            <li><a href="http,//www.kongregate.com/pages/jobs">Job Opportunities</a></li>
+            <li><a href="http://www.kongregate.com/games_for_your_site">Games for Your Site</a></li>
+            <li><a href="http://www.kongregate.com/pages/logos-and-branding">Link to Kongregate</a></li>
+            <li><a href="http://www.kongregate.com/pages/jobs">Job Opportunities</a></li>
             <li><a class="developer_icon spritesite" href="/games/new">Upload your Game</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <dl class="mtl footer_lang_selector" style="display,none;">
-  <dt><strong>Language,</strong></dt>
+    <dl class="mtl footer_lang_selector" style="display:none;">
+  <dt><strong>Language:</strong></dt>
     <dd class='selector-locale-fr'><a href="#" data-lang="fr">Français</a></dd>
-    <dd class='selected-locale-fr' style='display,none;'><strong><span class="flag_ico fr_lang spritesite"></span>Français</strong></dd>
+    <dd class='selected-locale-fr' style='display:none;'><strong><span class="flag_ico fr_lang spritesite"></span>Français</strong></dd>
     <dd class='selector-locale-en-US'><a href="#" data-lang="en-US">English</a></dd>
-    <dd class='selected-locale-en-US' style='display,none;'><strong><span class="flag_ico en-US_lang spritesite"></span>English</strong></dd>
+    <dd class='selected-locale-en-US' style='display:none;'><strong><span class="flag_ico en-US_lang spritesite"></span>English</strong></dd>
     <dd class='selector-locale-de'><a href="#" data-lang="de">Deutsch</a></dd>
-    <dd class='selected-locale-de' style='display,none;'><strong><span class="flag_ico de_lang spritesite"></span>Deutsch</strong></dd>
+    <dd class='selected-locale-de' style='display:none;'><strong><span class="flag_ico de_lang spritesite"></span>Deutsch</strong></dd>
 </dl>
 
 <script>
@@ -1912,9 +1912,9 @@ if (!active_user.isPremium()) {
 
       Kongregate.languages = [];
 
-        Kongregate.languages.push({'language', 'Français', 'locale', 'fr', 'default', false});
-        Kongregate.languages.push({'language', 'English', 'locale', 'en-US', 'default', true});
-        Kongregate.languages.push({'language', 'Deutsch', 'locale', 'de', 'default', false});
+        Kongregate.languages.push({'language': 'Français', 'locale': 'fr', 'default': false});
+        Kongregate.languages.push({'language': 'English', 'locale': 'en-US', 'default': true});
+        Kongregate.languages.push({'language': 'Deutsch', 'locale': 'de', 'default': false});
 
        $j('.footer_lang_selector').show();
        $j.each(Kongregate.languages, function(index, value){
@@ -1931,10 +1931,10 @@ if (!active_user.isPremium()) {
         var queryString = $j(location)[0].search;
         var anchor = $j(location)[0].hash;
 
-        lang = ((lang == 'en-US') ? '' , '/' + lang);
+        lang = ((lang == 'en-US') ? '' : '/' + lang);
 
         if (queryString.indexOf('set_locale=true') == -1) {
-          queryString += ((queryString.length > 0) ? '&' , '?') + 'set_locale=true';
+          queryString += ((queryString.length > 0) ? '&' : '?') + 'set_locale=true';
         }
 
         var processed = false;
@@ -1973,7 +1973,7 @@ if (!active_user.isPremium()) {
   </div>
 </div>
 
-<a class="dev-footer-upsell" href="http,//developers.kongregate.com">
+<a class="dev-footer-upsell" href="http://developers.kongregate.com">
   <span class="logo textreplace">Kongregate Develoeprs</span>
   <span class="message">Are you a game developer? Visit our <em>Developers Site</em> where you can find documentation on our APIs and more information about publishing opportunities to further promote your game.</span>
   <span class="link textreplace">Learn More</span>
@@ -1981,7 +1981,7 @@ if (!active_user.isPremium()) {
 <ul class="footer_sub clearfix">
   <li class="kongregate_copyright">
     <span>&copy; 2017 </span>
-    <a class="spriteall spritesite" href="http,//www.kongregate.com">Kongregate</a>
+    <a class="spriteall spritesite" href="http://www.kongregate.com">Kongregate</a>
   </li>
 </ul>
 
@@ -1989,21 +1989,21 @@ if (!active_user.isPremium()) {
   <!--============ /#footer ============-->
 
 </div><!--============ /#subwrap ============-->
-<div id="overlay" style="display, none;"></div>
-<div id="lightbox" class="done" style="display, none;">
+<div id="overlay" style="display: none;"></div>
+<div id="lightbox" class="done" style="display: none;">
   <div id="lbLoadMessage">
     <p id="lightbox_loading_cancel_link">
       <a href="#" onclick="lightbox.prototype.deactivate(); return false;">X</a>
     </p>
     <p>
-      Loading <span id="lightbox-indicator" class="spinner" style="display,none" title="loading&hellip;">&#8203;</span>
+      Loading <span id="lightbox-indicator" class="spinner" style="display:none" title="loading&hellip;">&#8203;</span>
     </p>
   </div>
 </div>
 <script>
 //<![CDATA[
   try{
-    window.lightboxSecureProtocol = "https,//";
+    window.lightboxSecureProtocol = "https://";
   }catch(e){}
 
 //]]>
@@ -2011,7 +2011,7 @@ if (!active_user.isPremium()) {
 <div id="kongregate_lightbox_wrapper">
   <div class="header_bar">
     <h3>Kongregate</h3>
-    <a onclick="lightbox.prototype.deactivate({success,top.kredPurchaseSuccess});return false" class="close_link" href="/games/iourpg/idle-online-universe">close &#215;</a>
+    <a onclick="lightbox.prototype.deactivate({success:top.kredPurchaseSuccess});return false" class="close_link" href="/games/iourpg/idle-online-universe">close &#215;</a>
   </div>
   <div id="kongregate_lightbox_iframe_loading_spinner"><span class="spinner spinner_big">loading</span></div>
   <iframe id="kongregate_lightbox_wrapper_iframe" src="#{iframe_src}" frameborder="0" onload="$('kongregate_lightbox_iframe_loading_spinner').hide();"></iframe>
@@ -2022,7 +2022,7 @@ if (!active_user.isPremium()) {
 <div id="kongregate_lightbox_wrapper">
   <div class="header_bar">
     <h3>Kongregate</h3>
-    <a onclick="lightbox.prototype.deactivate({success,top.kredPurchaseSuccess});return false" class="close_link" href="/games/iourpg/idle-online-universe">close &#215;</a>
+    <a onclick="lightbox.prototype.deactivate({success:top.kredPurchaseSuccess});return false" class="close_link" href="/games/iourpg/idle-online-universe">close &#215;</a>
   </div>
   <div id="kongregate_lightbox_spinner"><span class="spinner spinner_big">loading</span></div>
   <div id="lightbox_form"></div>
@@ -2032,44 +2032,44 @@ if (!active_user.isPremium()) {
 
             <script>
 //<![CDATA[
-      document.observe('game_tab_pane,loaded', function(event) { active_user.addCapturedSelector('#user_star_rating', true); });
+      document.observe('game_tab_pane:loaded', function(event) { active_user.addCapturedSelector('#user_star_rating', true); });
 
 //]]>
 </script>
             <script>
 //<![CDATA[
-      document.observe('game_tab_pane,loaded', function(event) { active_user.addCapturedSelector('#quick_share_link', true); });
+      document.observe('game_tab_pane:loaded', function(event) { active_user.addCapturedSelector('#quick_share_link', true); });
 
 //]]>
 </script>
     <script>
 //<![CDATA[
-      document.observe('game_tab_pane,loaded', function(event) { active_user.addCapturedSelector('#favorite_game', true); });
+      document.observe('game_tab_pane:loaded', function(event) { active_user.addCapturedSelector('#favorite_game', true); });
 
 //]]>
 </script>
             <script>
 //<![CDATA[
-      document.observe('game_tab_pane,loaded', function(event) { active_user.addCapturedSelector('#flag_game_holder', true); });
+      document.observe('game_tab_pane:loaded', function(event) { active_user.addCapturedSelector('#flag_game_holder', true); });
 
 //]]>
 </script>
   <script>
 //<![CDATA[
 
-    document.observe('chat_tabs,ready', function() {
+    document.observe('chat_tabs:ready', function() {
       holodeck.addOnTabLoadCallback('game_tab_pane', function() {
         $$('.collapsible_panel').each(function(e) { new CollapsiblePanel(e, function() { holodeck.recordMappedEventAnalytic(e.id); } ); });
 
         var opened_panel;
 
         var panel_mappings = {
-          'info'            , 'game_info_panel',
-          'desc'            , 'game_description_panel',
-          'sysr'            , 'game_system_requirements_panel',
-          'upds'            , 'game_updates_panel',
-          'inst'            , 'game_instructions_panel',
-          'shared_content'  , 'game_shared_contents_panel'
+          'info'            : 'game_info_panel',
+          'desc'            : 'game_description_panel',
+          'sysr'            : 'game_system_requirements_panel',
+          'upds'            : 'game_updates_panel',
+          'inst'            : 'game_instructions_panel',
+          'shared_content'  : 'game_shared_contents_panel'
         };
         opened_panel = Cookie.get('kong_opened_panel');
         opened_panel = panel_mappings[opened_panel];
@@ -2094,7 +2094,7 @@ if (!active_user.isPremium()) {
 //]]>
 </script>  <script>
 //<![CDATA[
-    document.observe('chat_tabs,ready', function() {
+    document.observe('chat_tabs:ready', function() {
       holodeck.addOnTabLoadCallback('signup_tab_pane', function() {
         var params = ("" + window.location).toQueryParams();
         if (!active_user.isAuthenticated()) {
@@ -2120,7 +2120,7 @@ if (!active_user.isPremium()) {
 //]]>
 </script>
 <!-- metrics updater writes favorites update js into here -->
-<span id="combined_favorites_js" style="display,none;"></span>
+<span id="combined_favorites_js" style="display:none;"></span>
 
 <script>
 //<![CDATA[
@@ -2134,7 +2134,7 @@ if (!active_user.isPremium()) {
 
 <!-- game tracking pixels -->
 
-<div class="ad" id="dealspot_banner_holder" style="top,-10000px;left,-10000px"><div id="kong_game_dealspot_728x90-ad-slot" class="ad-container"><script>
+<div class="ad" id="dealspot_banner_holder" style="top:-10000px;left:-10000px"><div id="kong_game_dealspot_728x90-ad-slot" class="ad-container"><script>
 //<![CDATA[
 if (!active_user.isPremium()) {
 	kong_ads.displayAd("kong_game_dealspot_728x90");}
@@ -2144,7 +2144,7 @@ if (!active_user.isPremium()) {
 
 <!-- google duration pixel rendered in iframe -->
 <script type="text/html" id="google_duration_tracking_iframe">
-<iframe src="/duration_tracking_content.html" style="display,none;" />
+<iframe src="/duration_tracking_content.html" style="display:none;" />
 </script>
 <span id="google_duration_tracking_iframe_target"></span>
 <script type="text/javascript">
@@ -2188,19 +2188,19 @@ if (!active_user.isPremium()) {
 
 //]]>
 </script></div></span></div>
-<!--[if gte IE 8]><script src="http,//www.googletagservices.com/tag/js/gpt.js"></script><![endif]-->
-<!--[if !IE]><!--><script src="http,//www.googletagservices.com/tag/js/gpt.js"></script><!--<![endif]-->
+<!--[if gte IE 8]><script src="http://www.googletagservices.com/tag/js/gpt.js"></script><![endif]-->
+<!--[if !IE]><!--><script src="http://www.googletagservices.com/tag/js/gpt.js"></script><!--<![endif]-->
 
 
 
   <script type="text/javascript">
-    var ce2_reg_string = active_user.isAuthenticated() ? 'Signed in' , 'Guest',
+    var ce2_reg_string = active_user.isAuthenticated() ? 'Signed in' : 'Guest',
         CE_SNAPSHOT_NAME = null;
     if (active_user.crazyEggSplitTreatment()) {
       CE_SNAPSHOT_NAME = active_user.crazyEggSplitTreatment();
     }
     document.write(unescape('%3Cscript type="text/javascript" src="'+document.location.protocol+'//dnn506yrbagrg.cloudfront.net/pages/scripts/0009/7470.js"%3E%3C%2Fscript%3E'));
-    document.observe('dom,loaded', function() { if(typeof(CE2) != "undefined") { CE2.set(2,  ce2_reg_string); } });
+    document.observe('dom:loaded', function() { if(typeof(CE2) != "undefined") { CE2.set(2,  ce2_reg_string); } });
   </script>
 
   <!-- adroll retargeting without conversion -->
@@ -2212,7 +2212,7 @@ if (!active_user.isPremium()) {
     window.onload = function(){
        __adroll_loaded=true;
        var scr = document.createElement("script");
-       var host = (("https," == document.location.protocol) ? "https,//s.adroll.com" , "http,//a.adroll.com");
+       var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
        scr.setAttribute('async', 'true');
        scr.type = "text/javascript";
        scr.src = host + "/j/roundtrip.js";
@@ -2229,27 +2229,27 @@ if (!active_user.isPremium()) {
     javascripts.pop();
     if(javascripts.length == 0) {
       document.javascript_loaded = true
-      Event.fire(document, 'dom,javascript_loaded');
+      Event.fire(document, 'dom:javascript_loaded');
     }
   }
 
-  javascripts = ['https,//cdn1.kongcdn.com/compiled-assets/sitewide_async_javascripts-3cf3a83482088764ad16c066c3c4de0b.js'];
-  AsyncLoader.load('js', 'https,//cdn1.kongcdn.com/compiled-assets/sitewide_async_javascripts-3cf3a83482088764ad16c066c3c4de0b.js', isJavascriptLoaded);
+  javascripts = ['https://cdn1.kongcdn.com/compiled-assets/sitewide_async_javascripts-3cf3a83482088764ad16c066c3c4de0b.js'];
+  AsyncLoader.load('js', 'https://cdn1.kongcdn.com/compiled-assets/sitewide_async_javascripts-3cf3a83482088764ad16c066c3c4de0b.js', isJavascriptLoaded);
 
   if (!Prototype.Browser.IE8) {
-    AsyncLoader.load('js', 'https,//cdn3.kongcdn.com/compiled-assets/metriks_javascripts-7cea2b20203d8306e8b2aa66f7d2c0b8.js');
+    AsyncLoader.load('js', 'https://cdn3.kongcdn.com/compiled-assets/metriks_javascripts-7cea2b20203d8306e8b2aa66f7d2c0b8.js');
   }
 
   (function() {
-    document.observe('signup_tab_pane,loaded', function() {
+    document.observe('signup_tab_pane:loaded', function() {
     if (!active_user.isAuthenticated()) {
       window.registration_form_validator = new RegistrationFormValidator('registration_form');
       new RegistrationBirthDateDisplay($('registration_form'));
     }
-});  holodeck = new Holodeck({"active_user",active_user,"chat_host","of1.kongregate.com","chat_proxy_websocket","wss,//chat-proxy.kongregate.com","chat_proxy_bosh","https,//chat-proxy.kongregate.com/http-bind/","game_id",227576,"statistics",[{"id",117225,"name","ascensionTier","description","Highest Ascension Reached (0 - 3)","stat_type","Replace","display_in_table",false,"accomplishment_tasks",[]},{"id",117226,"name","highestPetTier","description","Highest Tier obtained on a pet","stat_type","Replace","display_in_table",false,"accomplishment_tasks",[]},{"id",115937,"name","initialized","description","","stat_type","Add","display_in_table",false,"accomplishment_tasks",[]},{"id",117227,"name","iouscore","description","IOU Score","stat_type","Replace","display_in_table",true,"display_name","Total IOU Score","accomplishment_tasks",[]},{"id",117224,"name","level","description","Highest Level Achieved","stat_type","Replace","display_in_table",false,"display_name","Level","accomplishment_tasks",[]},{"id",117612,"name","levelFixed","description","Level","stat_type","Replace","display_in_table",true,"display_name","Level","accomplishment_tasks",[]},{"id",117297,"name","mining","description","Lowest depth reached","stat_type","Replace","display_in_table",true,"display_name","Mining Depth","accomplishment_tasks",[]},{"id",117296,"name","woodcutting","description","Highest forest area in woodcutting unlocked","stat_type","Replace","display_in_table",true,"display_name","Woodcutting Unlocked","accomplishment_tasks",[]}],"achievements",[],"challenges",[],"chat_bootstrap_url","/games/iouRPG/idle-online-universe/chat.js","holodeck_url","/games/iouRPG/idle-online-universe/holodeck","accomplishments_bootstrap_url","/games/iouRPG/idle-online-universe/chat_achievements","game_path","/games/iouRPG/idle-online-universe","html_dimensions",{"game_width",800,"game_height",600,"max_game_width",null,"max_game_height",null,"game_left",0,"game_top",0,"chat_width",300,"chat_height",600,"flash_frame_width",1103,"flash_frame_height",626,"game_frame_width",800,"game_frame_height",600,"min_chat_width",300,"min_chat_height",527,"divider_width",3,"quicklinks_height",26,"chat_window_non_content_height",254,"avatar_image_gutter_height",120,"chat_pane_tab_height",41},"login_url","/accounts/new/behind_login.js?game_id=227576","shared_content_type_permalinks",[],"shared_content_type_names",[],"permissions",{"session_lookup_key",false,"no_file_size_limit",false,"chat_api",false,"premium_game",false,"served_from_internal",false,"microtransaction_api",true,"save_shared_content",true,"save_external_shared_content",true,"authenticated_users_only",false,"hide_comments",false,"dont_hide_iframe",true,"shout_api",false,"mass_messages_api",false,"shared_links",false,"disallow_cinematic",false,"disable_instart",false,"guilds_api",false,"generate_guest_characters",false,"allow_script_access",false,"periscope_dashboard",true,"incentivized_web_ads",null,"host_in_top_frame",false,"force_localconnection",false,"truex_web_ads",false},"has_game_specific_forum",true,"multiplayer_game",true,"authenticated_only_shared_content_sorts",["by_own","by_friends"],"in_beta",false,"in_preview",false,"extra_interpolation",null});
+});  holodeck = new Holodeck({"active_user":active_user,"chat_host":"of1.kongregate.com","chat_proxy_websocket":"wss://chat-proxy.kongregate.com","chat_proxy_bosh":"https://chat-proxy.kongregate.com/http-bind/","game_id":227576,"statistics":[{"id":117225,"name":"ascensionTier","description":"Highest Ascension Reached (0 - 3)","stat_type":"Replace","display_in_table":false,"accomplishment_tasks":[]},{"id":117226,"name":"highestPetTier","description":"Highest Tier obtained on a pet","stat_type":"Replace","display_in_table":false,"accomplishment_tasks":[]},{"id":115937,"name":"initialized","description":"","stat_type":"Add","display_in_table":false,"accomplishment_tasks":[]},{"id":117227,"name":"iouscore","description":"IOU Score","stat_type":"Replace","display_in_table":true,"display_name":"Total IOU Score","accomplishment_tasks":[]},{"id":117224,"name":"level","description":"Highest Level Achieved","stat_type":"Replace","display_in_table":false,"display_name":"Level","accomplishment_tasks":[]},{"id":117612,"name":"levelFixed","description":"Level","stat_type":"Replace","display_in_table":true,"display_name":"Level","accomplishment_tasks":[]},{"id":117297,"name":"mining","description":"Lowest depth reached","stat_type":"Replace","display_in_table":true,"display_name":"Mining Depth","accomplishment_tasks":[]},{"id":117296,"name":"woodcutting","description":"Highest forest area in woodcutting unlocked","stat_type":"Replace","display_in_table":true,"display_name":"Woodcutting Unlocked","accomplishment_tasks":[]}],"achievements":[],"challenges":[],"chat_bootstrap_url":"/games/iouRPG/idle-online-universe/chat.js","holodeck_url":"/games/iouRPG/idle-online-universe/holodeck","accomplishments_bootstrap_url":"/games/iouRPG/idle-online-universe/chat_achievements","game_path":"/games/iouRPG/idle-online-universe","html_dimensions":{"game_width":800,"game_height":600,"max_game_width":null,"max_game_height":null,"game_left":0,"game_top":0,"chat_width":300,"chat_height":600,"flash_frame_width":1103,"flash_frame_height":626,"game_frame_width":800,"game_frame_height":600,"min_chat_width":300,"min_chat_height":527,"divider_width":3,"quicklinks_height":26,"chat_window_non_content_height":254,"avatar_image_gutter_height":120,"chat_pane_tab_height":41},"login_url":"/accounts/new/behind_login.js?game_id=227576","shared_content_type_permalinks":[],"shared_content_type_names":[],"permissions":{"session_lookup_key":false,"no_file_size_limit":false,"chat_api":false,"premium_game":false,"served_from_internal":false,"microtransaction_api":true,"save_shared_content":true,"save_external_shared_content":true,"authenticated_users_only":false,"hide_comments":false,"dont_hide_iframe":true,"shout_api":false,"mass_messages_api":false,"shared_links":false,"disallow_cinematic":false,"disable_instart":false,"guilds_api":false,"generate_guest_characters":false,"allow_script_access":false,"periscope_dashboard":true,"incentivized_web_ads":null,"host_in_top_frame":false,"force_localconnection":false,"truex_web_ads":false},"has_game_specific_forum":true,"multiplayer_game":true,"authenticated_only_shared_content_sorts":["by_own","by_friends"],"in_beta":false,"in_preview":false,"extra_interpolation":null});
   if (document && document.location && document.location.search && document.location.search.match(/watch_stats/)) { holodeck.startWatchingStats(); }
 
-  document.observe('holodeck,ready', function(){
+  document.observe('holodeck:ready', function(){
       holodeck.recordAnalyticsEvent('GamePage', 'Load');
       holodeck.recordMappedEventAnalytic(holodeck._tab_from_cookie);
       var share_param = Cookie.get('kong_shared_from');
@@ -2258,7 +2258,7 @@ if (!active_user.isPremium()) {
       }
       if (metricTracker) {
         var dl_now = new Date().getTime(),
-            dl_time = (dl_now > 0 && _lts && _lts > 0) ? (dl_now - _lts) , -1;
+            dl_time = (dl_now > 0 && _lts && _lts > 0) ? (dl_now - _lts) : -1;
         metricTracker.trackTimedEvent('GameDomLoaded', "Idle Online Universe", dl_time);
       }
 
@@ -2281,7 +2281,7 @@ if (!active_user.isPremium()) {
     if (below_fold_loaded) {
       holodeck.showPlayLaterLinks();
     } else {
-      document.observe('fold,loaded', function(e) {
+      document.observe('fold:loaded', function(e) {
         holodeck.showPlayLaterLinks();
       });
     }
@@ -2297,8 +2297,8 @@ if (!active_user.isPremium()) {
         if (!slc_init) {
           slc_init = true;
           shared_links_controller = new SharedLinksController({
-            id, 'shared_links',
-            url, "/games/iouRPG/idle-online-universe/shared_links"
+            id: 'shared_links',
+            url: "/games/iouRPG/idle-online-universe/shared_links"
           });
           shared_links_controller.fetch();
         }
@@ -2322,37 +2322,37 @@ if (!active_user.isPremium()) {
 
   active_user.occasionallyShowRegistrationLightbox.bind(active_user).runWhenReady();
 
-    document.observe('fold,loaded', function(e) {
+    document.observe('fold:loaded', function(e) {
       var params = document.location.toString().parseQuery(),
           comment_id = params['game_comment_id'],
           comment;
 
       if (comment_id) {
         if (comment = $('comment_' + comment_id)) {
-          $$('.top_comments .comment_list').first().insert({top, comment});
+          $$('.top_comments .comment_list').first().insert({top: comment});
         } else {
-          new Ajax.Request('http,//www.kongregate.com/games/iouRPG/idle-online-universe/comments/' + params['game_comment_id'] + '/highlight', {
-            method, 'get',
-            onSuccess, function(res) {
-              $$('.top_comments .comment_list').first().insert({top, res.responseText});
+          new Ajax.Request('http://www.kongregate.com/games/iouRPG/idle-online-universe/comments/' + params['game_comment_id'] + '/highlight', {
+            method: 'get',
+            onSuccess: function(res) {
+              $$('.top_comments .comment_list').first().insert({top: res.responseText});
             }
           });
         }
       }
     });
 
-  document.observe('fold,loaded', function() {
+  document.observe('fold:loaded', function() {
     if(holodeck.ready) {
       holodeck.loadDiscussions();
     } else {
-      document.observe('holodeck,ready', holodeck.loadDiscussions.bind(holodeck));
+      document.observe('holodeck:ready', holodeck.loadDiscussions.bind(holodeck));
     }
   });
-  document.observe('fold,loaded', function(e) {
+  document.observe('fold:loaded', function(e) {
     active_user.addRunWhenAuthenticatedObserver(function() {
       new Ajax.Request('/cinematic_bug_counters/check_eligibility?game_id=227576', {
-        method, 'get',
-        onSuccess, function(t) {
+        method: 'get',
+        onSuccess: function(t) {
           if (t.responseJSON['eligible']) {
             $('cinematic_bug_report').show();
           }
@@ -2378,9 +2378,9 @@ if (!active_user.isPremium()) {
   new Ajax.Request(
     "/games/iouRPG/idle-online-universe" +
     '/show_below_fold' +
-    (access_key ? '?guest_access_key=' + access_key , ''), {
-    method, 'GET',
-    onSuccess, function(response) {
+    (access_key ? '?guest_access_key=' + access_key : ''), {
+    method: 'GET',
+    onSuccess: function(response) {
       $('below_fold_content').update(response.responseText);
       if(Prototype.Browser.IE7) {
         $('sane_browser_gamespotlight').remove();
@@ -2392,10 +2392,10 @@ if (!active_user.isPremium()) {
         $('kong_game_bf_300x250_2_holder').appendChild($('ie7_kong_game_bf_300x250_2'));
       }
     },
-    onComplete, function(response) {
+    onComplete: function(response) {
       below_fold_loaded = true;
       if (!active_user.animationThrowdownSteam()) {
-        $('below_fold_content').fire('fold,loaded', {});
+        $('below_fold_content').fire('fold:loaded', {});
       }
     }
   });
@@ -2415,17 +2415,17 @@ if (!active_user.isPremium()) {
       lightbox.prototype.initializeKredVerificationFrame();
     }
   });
-  DynamicScriptLoader.load('https,//api.cloudsponge.com/address_books.js', true);
+  DynamicScriptLoader.load('https://api.cloudsponge.com/address_books.js', true);
 
   activateCloudspongeChooser = function(element_id) {
     var ele = $(element_id);
     ele.value = '';
     ele.removeClassName('hinted_value');
     cloudsponge.init({
-      domain_key, "SQRCDUVTMR37TSPHRSTZ",
-      textarea_id, element_id,
-      floatbox,{
-        zIndex,1000005
+      domain_key: "SQRCDUVTMR37TSPHRSTZ",
+      textarea_id: element_id,
+      floatbox:{
+        zIndex:1000005
       }
     });
     cloudsponge.launch();
@@ -2438,7 +2438,7 @@ if (!active_user.isPremium()) {
   var navigation = new Navigation(active_user, 'games');
 
   var flash_messages = new FlashMessages(),
-      tracking_code_service = new TrackingCodeService({dataProvider, flash_messages.data.bind(flash_messages), metricTracker, metricTracker});
+      tracking_code_service = new TrackingCodeService({dataProvider: flash_messages.data.bind(flash_messages), metricTracker: metricTracker});
 
   if(metricTracker) {
     metricTracker.setCustomVariable(1, 'Registered', String(active_user.isAuthenticated()), 2);

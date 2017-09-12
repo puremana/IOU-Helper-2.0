@@ -1,14 +1,14 @@
-function Player(kongUsername, kongID, kongToken) {
+function Player(kongUsername, kongID, kongToken, code, gameVersion, rayVersion) {
     this.kongUsername = kongUsername;
     this.kongID = kongID;
     this.kongToken = kongToken;
     
-    this.gameCode = getGameCode();
-    this.gameVersion = getGameVersion();
-    this.rayVersion = getRayVersion();
+    this.gameCode = code;
+    this.gameVersion = gameVersion;
+    this.rayVersion = rayVersion;
     
 	this.getUsername = function() {
-		return this.gameCode;
+		return this.kongUsername;
 	}
 	
     this.getUrl = function() {

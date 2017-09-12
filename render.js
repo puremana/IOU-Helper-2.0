@@ -32,7 +32,8 @@ window.onload = function() {
         ri.setZoomFactor(0.5);
     }
 	
-    function setVersions() {
+    var setVersions = new Promise(
+        function (resolve, reject) {
         var http = require('http');
 
         var options = {
@@ -45,32 +46,22 @@ window.onload = function() {
                 data += chunk;
             });
             res.on('end', function () {
-                var dataArray = data.split("_");
-                for (d in dataArray) {
-                    if (d == 1390) {
-                        var as = dataArray[d].split(".");
-                        gameCode = as[0];
-                    }  
-                }
+                gameCode = data.substring(data.indexOf('API_AS3_') + 8, data.indexOf('.swf\",\"preview\"'));
+                gameVersion = data.substring(data.indexOf('\"game_version\":') + 15, data.indexOf(',\"flash_var_prefix\"'));
                 
-                var infoArray = data.split(":");
-                for (i in infoArray) {
-                    if (i == 541) {
-                        var sa = infoArray[i].split(",");
-                        gameVersion = sa[0];
-                    }
-                }
-                alert(gameCode + ", " + gameVersion);
+                resolve(gameCode + "," + gameVersion);
             });
         });
         request.on('error', function (e) {
-            alert(e.message);
+            reject(e.message);
         });
         request.end();
         
     }
+    );
     
-    function setRayVersion() {
+    var setRayVersion = new Promise(
+        function (resolve, reject) {
         var ranHost = "/v.txt?d=506" + Math.floor((Math.random() * 1000) + 1);
         
         var http = require('http');
@@ -85,14 +76,15 @@ window.onload = function() {
                 data += chunk;
             });
             res.on('end', function () {
-                rayVersion = data;
+                resolve(data);
             });
         });
         request.on('error', function (e) {
-            alert(e.message);
+            reject(e.message);
         });
         request.end();
     }
+    );
     
     function saveJSON() {
         fs.writeFile("test.txt", infoArray, function(err) {
@@ -104,19 +96,23 @@ window.onload = function() {
         }); 
     }
     
-    setVersions();
-    setRayVersion();
+    Promise.all([setVersions, setRayVersion]).then(values => { 
+        var vers = values[0].split(",");
+        vers.push(values[1]);
     
-    function loadPlayers() {
-        var jack = new Player("asd", "sad", "das");
-        var url = jack.getUsername();
-        alert(gameCode);
-
+        loadPlayers(vers);
+    });
+    
+    function loadPlayers(versionArray) {
+        alert("hi");
+        var player = new Player("", "", "", versionArray[0], versionArray[1], versionArray[2]);
+        alert("hi");
+        alert(player.getUsername());
+        
         let tabGroup = new TabGroup();
         let tab = tabGroup.addTab({
-            title: "Electron",
-            //src: "http://chat.kongregate.com/gamez/0022/7576/live/iou.swf?adroll_pix_id='K4TGNDGRN5BBLEIDMF2Q6O&v=0.1.33&kongregate_username=Level1Pro&kongregate_user_id=23483082&kongregate_game_auth_token=77080b261b7f66b0e982e05670ac9f0ecca4391bbd3e2a830b3c0f13dc264843&kongregate_api_path=http:%2F%2Fchat.kongregate.com%2Fflash%2FAPI_AS3_9dd7566dd62ffc3204bfbf6e2781ce2e.swf",
-            src: "http://www.google.com",
+            title: player.getUsername(),
+            src: player.getUrl(),
             visible: true,
             active: true,
             webviewAttributes: {
@@ -124,19 +120,4 @@ window.onload = function() {
             }
         });
     }
-    
-    
-
-}
-
-function getGameCode() {
-    return gameCode;
-}
-
-function getGameVersion() {
-    return gameVersion;
-}
-
-function getRayVersion() {
-    return rayVersion;
 }
