@@ -7,6 +7,7 @@ window.onload = function() {
     const {remote} = require('electron');
     const TabGroup = require("electron-tabs");
     var fs = require('fs');
+    var accounts = require('./storage/accounts.json');
     const {BrowserWindow} = remote;
     const win = BrowserWindow.getFocusedWindow();
     
@@ -104,20 +105,20 @@ window.onload = function() {
     });
     
     function loadPlayers(versionArray) {
-        alert("hi");
-        var player = new Player("", "", "", versionArray[0], versionArray[1], versionArray[2]);
-        alert("hi");
-        alert(player.getUsername());
-        
         let tabGroup = new TabGroup();
-        let tab = tabGroup.addTab({
-            title: player.getUsername(),
-            src: player.getUrl(),
-            visible: true,
-            active: true,
-            webviewAttributes: {
-                plugins: true
-            }
-        });
+        
+        for (acc in accounts) {
+            var player = new Player(acc, accounts[acc][0], accounts[acc][1], versionArray[0], versionArray[1], versionArray[2]);
+        
+            let tab = tabGroup.addTab({
+                title: player.getUsername(),
+                src: player.getUrl(),
+                visible: true,
+                active: true,
+                webviewAttributes: {
+                    plugins: true
+                }
+            });
+        }  
     }
 }
