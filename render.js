@@ -8,6 +8,7 @@ window.onload = function() {
     const TabGroup = require("electron-tabs");
     var fs = require('fs');
     var accounts = require('./storage/accounts.json');
+    const opn = require('opn');
     const {BrowserWindow} = remote;
     const win = BrowserWindow.getFocusedWindow();
     
@@ -32,7 +33,30 @@ window.onload = function() {
         var ri = document.getElementById("right-interface");
         ri.setZoomFactor(0.5);
     }
-	
+    
+    //Links
+    document.getElementById("liou-helper").onclick = function() {
+        opn('http://www.iouhelper.com/');
+    }
+    document.getElementById("liou-helper-discord").onclick = function() {
+        opn('https://discord.gg/wczWVmZ');
+    }
+    document.getElementById("lmulticalc").onclick = function() {
+        opn('https://docs.google.com/spreadsheets/d/1QGBm6KtcOZraqSkLWVuqTF16vUD7rrOvIpdh59bFLmg/edit#gid=357923173');
+    }    
+    document.getElementById("liou-discord").onclick = function() {
+        opn('https://discord.gg/zynuQcP');
+    }
+    document.getElementById("liou-forum").onclick = function() {
+        opn('https://iourpg.com/forum/');
+    }
+    document.getElementById("liou-wiki").onclick = function() {
+        opn('http://iourpg.wikia.com/wiki/Idle_Online_Universe_Wiki');
+    }
+    document.getElementById("lcard-calculator").onclick = function() {
+        opn('http://iouhelper.com/cards.html');
+    }
+    
     var setVersions = new Promise(
         function (resolve, reject) {
         var http = require('http');
