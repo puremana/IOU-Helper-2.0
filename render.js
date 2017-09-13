@@ -11,6 +11,8 @@ window.onload = function() {
     const opn = require('opn');
     const {BrowserWindow} = remote;
     const win = BrowserWindow.getFocusedWindow();
+    var dialog = remote.require('dialog');
+    var tabGroup = new TabGroup();
     
     document.getElementById("exit").onclick = function() {
         win.close();
@@ -32,6 +34,57 @@ window.onload = function() {
     function zoomOut() {
         var ri = document.getElementById("right-interface");
         ri.setZoomFactor(0.5);
+    }
+    
+    //File
+    document.getElementById("iiourpg").onclick = function() {
+        let tab = tabGroup.addTab({
+                title: "IOURPG",
+                src: "http://d2452urjrn3oas.cloudfront.net/iou.swf?",
+                visible: true,
+                active: true,
+                webviewAttributes: {
+                    plugins: true
+                }
+        });
+    }
+    document.getElementById("ikong").onclick = function() {
+        mainWindow = new BrowserWindow({
+        'width': 400,
+        'height': 500,
+        'frame': false
+      });
+      mainWindow.loadURL(`file://${__dirname}/kong.html`);
+    }
+    function submit() {
+        alert("hi");
+    }
+    function test() {
+        alert("hi");
+    }
+    
+    document.getElementById("itest-client").onclick = function() {
+        let tab = tabGroup.addTab({
+                title: "IOURPG",
+                src: "http://d2452urjrn3oas.cloudfront.net/iou.swf?",
+                visible: true,
+                active: true,
+                webviewAttributes: {
+                    plugins: true
+                }
+        });
+    }
+    document.getElementById("isave").onclick = function() {
+        saveAccounts();
+    }
+    document.getElementById("isave-as").onclick = function() {
+        alert("hi");
+        require('electron').remote.dialog.showSaveDialog(function (fileName) {
+            alert(fileName);
+        }); 
+    }
+    document.getElementById("iload").onclick = function() {
+
     }
     
     //Links
@@ -111,13 +164,12 @@ window.onload = function() {
     }
     );
     
-    function saveJSON() {
-        fs.writeFile("test.txt", infoArray, function(err) {
+    function saveAccounts() {
+        fs.writeFile("./storage/accounts.json", accounts, function(err) {
             if(err) {
-                return console.log(err);
+                alert(console.log(err));
             }
-
-            //alert("The file was saved!");
+            alert("Accounts were saved.");
         }); 
     }
     
@@ -129,8 +181,6 @@ window.onload = function() {
     });
     
     function loadPlayers(versionArray) {
-        let tabGroup = new TabGroup();
-        
         for (acc in accounts) {
             var player = new Player(acc, accounts[acc][0], accounts[acc][1], versionArray[0], versionArray[1], versionArray[2]);
         
