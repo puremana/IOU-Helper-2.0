@@ -25,8 +25,12 @@ window.onload = function() {
         var kongUser = document.getElementById('kkong-user').value;
         var kongID = document.getElementById('kkong-id').value;
         var kongToken = document.getElementById('kkong-token').value;
-        alert("ss");
-        ipc.send('subKong', kongUser);
+        var jsonDetails = {
+            "user": kongUser,
+            "id": kongID,
+            "token": kongToken
+        }
+        ipc.send('subKong', jsonDetails);
         win.close();
     }
 }

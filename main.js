@@ -49,6 +49,6 @@ app.on('ready', function() {
 
 const {ipcMain} = require('electron')
 ipcMain.on('subKong', (event, arg) => {
-  mainWindow.webContents.send('asd' , {msg:'hello from main process'});
+  mainWindow.webContents.send('sendKong' , arg);
 })
 

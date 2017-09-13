@@ -14,6 +14,7 @@ window.onload = function() {
     const win = BrowserWindow.getFocusedWindow();
     var dialog = remote.require('dialog');
     var tabGroup = new TabGroup();
+    var vers = [];
     
     document.getElementById("exit").onclick = function() {
         win.close();
@@ -58,9 +59,21 @@ window.onload = function() {
         mainWindow.loadURL(`file://${__dirname}/kong.html`);
     }
 
-    ipc.on("asd", function(event, message){
-        console.log(message);
-      alert(message) // prints "pong"
+    ipc.on("sendKong", function(event, message){
+        var pJson = [message.id, message.token];
+        accounts[message.user] = pJson;
+        saveAccounts();
+        var player2 = new Player(message.user, message.id, message.token, vers[0], vers[1], vers[2]);
+        alert(player.getUsername);
+        let tab = tabGroup.addTab({
+                title: message.user,
+                src: player.getUrl,
+                visible: true,
+                active: true,
+                webviewAttributes: {
+                    plugins: true
+                }
+        });
     })
     
     document.getElementById("itest-client").onclick = function() {
@@ -76,6 +89,7 @@ window.onload = function() {
     }
     document.getElementById("isave").onclick = function() {
         saveAccounts();
+        alert("Accounts saved!");
     }
     document.getElementById("isave-as").onclick = function() {
         alert("hi");
@@ -165,16 +179,11 @@ window.onload = function() {
     );
     
     function saveAccounts() {
-        fs.writeFile("./storage/accounts.json", accounts, function(err) {
-            if(err) {
-                alert(console.log(err));
-            }
-            alert("Accounts were saved.");
-        }); 
+        fs.writeFile("storage/accounts.json", JSON.stringify(accounts), "utf8");
     }
     
     Promise.all([setVersions, setRayVersion]).then(values => { 
-        var vers = values[0].split(",");
+        vers = values[0].split(",");
         vers.push(values[1]);
     
         loadPlayers(vers);
