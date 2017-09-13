@@ -20,6 +20,7 @@
 	  crossorigin="anonymous"></script>
 	<script src="jquery-3.2.1.min.js"></script>
 	<script src="semantic.min.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 
 	
 	<!-- Electron Styles -->
@@ -29,7 +30,7 @@
     <link rel="stylesheet" href="style.css" />
 	
 	<!-- Custom JS -->
-	<script src="render.js"></script>
+	<script src="kongRender.js"></script>
     <script src="player.js"></script>
 	
     <!-- Custom Fonts -->
@@ -39,25 +40,47 @@
 
 
 </head>
-<body>
+<script>
+    document.getElementById("submitKong").onclick = function() {
+        var kongUser = document.getElementById(kkong-user).value;
+        var kongID = document.getElementById(kkong-id).value;
+        var kongID = document.getElementById(kkong-token).value;
+        alert("kongUser");
+        win.close();
+    }    
+</script>
+<body class="kong-background">
 <div class="ui fixed inverted menu iHeader">
-</div>
+                <div class="menu">
+                    <div class="item">
+                        Kongregate Account
+                    </div>
+                </div>
+                <div class="right menu right-menu">
+					<div class="item">
+						<div id="min"><i class="fa fa-window-minimize icon-red cmin" aria-hidden="true"></i>
+                        </div>
+						<div id="max"><i class="fa fa-window-maximize icon-red cmax" aria-hidden="true"></i></div>
+                        <div>
+						<i id="exit" class="fa fa-times icon-red cclose" aria-hidden="true"></i></div>
+					</div>
+				</div>
+  </div>
     
 <form class="ui form kong-form">
   <div class="field">
     <label>Kongregate Username</label>
-    <input type="text" name="first-name" placeholder="First Name">
+    <input type="text" name="kong-user" placeholder="Level1Pro" id="kkong-user">
   </div>
   <div class="field">
     <label>Kongregate ID</label>
-    <input type="text" name="last-name" placeholder="Last Name">
+    <input type="text" name="kong-id" placeholder="24952154" id="kkong-id">
   </div>
     <div class="field">
     <label>Kongregate Token</label>
-    <input type="text" name="last-name" placeholder="Last Name">
+    <input type="text" id="kkong-token" name="kong-token" placeholder="66802c372b7f76b0e982e056704drhgrcac3381eer2r2a730b3c0f24ec364843">
   </div>
-  <button class="ui button" type="submit" onclick="submit()">Submit</button>
+  <button class="ui button teal" type="submit" id="submitKong">Start Client</button>
 </form>
-    <a onclick="console.log('asdasdasd')">asd</a>
 </body>
 </html>

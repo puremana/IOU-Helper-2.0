@@ -79,3 +79,9 @@ body, html {
 .right-menu {
     height: 40px !important;
 }
+.kong-form {
+    padding: 60px 40px 40px 40px;
+}
+.kong-background {
+    background-color: #F8F9F9;
+}

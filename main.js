@@ -1,5 +1,6 @@
 const {app, BrowserWindow} = require('electron');
 const path = require('path');
+const ipc = require('electron').ipcMain;
 
 let mainWindow;
 
@@ -29,7 +30,7 @@ app.commandLine.appendSwitch('ppapi-flash-version', '25.0.0.127');
 
 app.on('ready', function() {
   mainWindow = new BrowserWindow({
-    'width': 800,
+    'width': 750,
     'height': 600,
 	'frame': false,
     'webPreferences': {'plugins': true, 'allowRunningInsecureContent': true}
@@ -42,6 +43,12 @@ app.on('ready', function() {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+    
 });
 
+
+const {ipcMain} = require('electron')
+ipcMain.on('subKong', (event, arg) => {
+  mainWindow.webContents.send('asd' , {msg:'hello from main process'});
+})
 

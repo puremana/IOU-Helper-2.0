@@ -6,6 +6,7 @@ window.onload = function() {
 	
     const {remote} = require('electron');
     const TabGroup = require("electron-tabs");
+    const ipc = require('electron').ipcRenderer;
     var fs = require('fs');
     var accounts = require('./storage/accounts.json');
     const opn = require('opn');
@@ -50,18 +51,17 @@ window.onload = function() {
     }
     document.getElementById("ikong").onclick = function() {
         mainWindow = new BrowserWindow({
-        'width': 400,
-        'height': 500,
-        'frame': false
-      });
-      mainWindow.loadURL(`file://${__dirname}/kong.html`);
+            'width': 400,
+            'height': 400,
+            'frame': false
+        });
+        mainWindow.loadURL(`file://${__dirname}/kong.html`);
     }
-    function submit() {
-        alert("hi");
-    }
-    function test() {
-        alert("hi");
-    }
+
+    ipc.on("asd", function(event, message){
+        console.log(message);
+      alert(message) // prints "pong"
+    })
     
     document.getElementById("itest-client").onclick = function() {
         let tab = tabGroup.addTab({
@@ -195,4 +195,5 @@ window.onload = function() {
             });
         }  
     }
+    
 }

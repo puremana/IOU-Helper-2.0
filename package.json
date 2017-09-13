@@ -9,6 +9,7 @@
   "author": "Level",
   "dependencies": {
     "electron-tabs": "^0.6.0",
+    "electron-window-manager": "^1.0.4",
     "fs": "0.0.1-security",
     "opn": "^5.1.0"
   },
