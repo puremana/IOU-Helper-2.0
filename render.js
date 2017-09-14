@@ -89,16 +89,45 @@ window.onload = function() {
     }
     document.getElementById("isave").onclick = function() {
         saveAccounts();
-        alert("Accounts saved!");
+        
     }
     document.getElementById("isave-as").onclick = function() {
-        alert("hi");
-        require('electron').remote.dialog.showSaveDialog(function (fileName) {
-            alert(fileName);
-        }); 
+        require('electron').remote.dialog.showSaveDialog( { defaultPath: "accounts.json" }, function(fileName) { 
+            fs.writeFile(fileName, JSON.stringify(accounts), "utf8");
+            alert("Accounts saved.");
+        });
+        
     }
     document.getElementById("iload").onclick = function() {
-
+        var prom = loadJson();
+        prom.then((msg) => {
+            var accounts2 = JSON.parse(msg);
+                for (acc in accounts2) {
+                    var player2 = new Player(acc, accounts2[acc][0], accounts2[acc][1], vers[0], vers[1], vers[2]);
+                    let tab = tabGroup.addTab({
+                        title: player2.getUsername(),
+                        src: player2.getUrl(),
+                        visible: true,
+                        active: true,
+                        webviewAttributes: {
+                            plugins: true
+                        }
+                    });
+                }
+            });
+        }
+    
+    function loadJson() {
+        return new Promise((resolve, reject) => {
+                require('electron').remote.dialog.showOpenDialog( { defaultPath: "accounts.json" }, function(fileName) { 
+                fs.readFile(fileName.toString(), 'utf8', function (err, data) {
+                    if (err) {
+                        reject(err);
+                    }
+                    resolve(data);
+                });  
+            });
+        });
     }
     
     //Links
