@@ -77,15 +77,34 @@ window.onload = function() {
     })
     
     document.getElementById("itest-client").onclick = function() {
-        let tab = tabGroup.addTab({
-                title: "IOURPG",
-                src: "http://d2452urjrn3oas.cloudfront.net/iou.swf?",
-                visible: true,
-                active: true,
-                webviewAttributes: {
-                    plugins: true
-                }
-        });
+        var username = tabGroup.getActiveTab().getTitle();
+        if ((username == null) || username == "IOURPG") {
+            let tab = tabGroup.addTab({
+                    title: "IOURPG Test",
+                    src: "http://iourpg.com/test.swf",
+                    visible: true,
+                    active: true,
+                    webviewAttributes: {
+                        plugins: true
+                    }
+            });
+        }
+        else {
+            for (acc in accounts) {
+            if (acc == username) {
+                var player3 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
+                let tab = tabGroup.addTab({
+                        title: player3.getUsername() + " Test",
+                        src: player3.getTestUrl(),
+                        visible: true,
+                        active: true,
+                        webviewAttributes: {
+                            plugins: true
+                        }
+                });
+            }
+        }
+        }
     }
     document.getElementById("isave").onclick = function() {
         saveAccounts();
@@ -104,6 +123,8 @@ window.onload = function() {
             var accounts2 = JSON.parse(msg);
                 for (acc in accounts2) {
                     var player2 = new Player(acc, accounts2[acc][0], accounts2[acc][1], vers[0], vers[1], vers[2]);
+                    var aJson = [accounts2[acc][0], accounts2[acc][1]];
+                    accounts[acc] = aJson;
                     let tab = tabGroup.addTab({
                         title: player2.getUsername(),
                         src: player2.getUrl(),
@@ -115,7 +136,7 @@ window.onload = function() {
                     });
                 }
             });
-        }
+    }
     
     function loadJson() {
         return new Promise((resolve, reject) => {
