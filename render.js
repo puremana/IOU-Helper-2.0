@@ -308,4 +308,28 @@ window.onload = function() {
             }
         }
     }
+    document.getElementById("body").onkeydown = function(e){
+        switch (e.which) {
+            case 112: //f1
+                alert("f1");
+                break;
+            case 113: //f2
+                alert("f2");
+                break;
+            case 114: //f3
+                alert("f3");
+                break;
+            case 115: //f4
+                alert("f4");
+                break;
+            case 116: //f5
+                singleRefresh();
+                break;
+            case 117: //f5
+                refreshAll();
+                break;
+            default:
+                break;
+        }
+    }
 }
