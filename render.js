@@ -15,6 +15,7 @@ window.onload = function() {
     var dialog = remote.require('dialog');
     var tabGroup = new TabGroup();
     var vers = [];
+    var tabList = [];
     
     document.getElementById("exit").onclick = function() {
         win.close();
@@ -49,6 +50,7 @@ window.onload = function() {
                     plugins: true
                 }
         });
+        tabList.push(tab);
     }
     document.getElementById("ikong").onclick = function() {
         mainWindow = new BrowserWindow({
@@ -74,6 +76,7 @@ window.onload = function() {
                     plugins: true
                 }
         });
+        tabList.push(tab);
     })
     
     document.getElementById("itest-client").onclick = function() {
@@ -88,6 +91,7 @@ window.onload = function() {
                         plugins: true
                     }
             });
+            tabList.push(tab);
         }
         else {
             for (acc in accounts) {
@@ -102,6 +106,7 @@ window.onload = function() {
                             plugins: true
                         }
                 });
+                tabList.push(tab);
             }
         }
         }
@@ -134,6 +139,7 @@ window.onload = function() {
                             plugins: true
                         }
                     });
+                    tabList.push(tab);
                 }
             });
     }
@@ -252,7 +258,54 @@ window.onload = function() {
                     plugins: true
                 }
             });
+            tabList.push(tab);
         }  
     }
     
+    //Tools
+    document.getElementById("trefresh").onclick = function() {
+        singleRefresh();
+    }
+    
+    function singleRefresh() {
+        var aTab = tabGroup.getActiveTab();
+        if (aTab.getTitle() == "IOURPG") {
+            aTab.webview.loadURL("http://d2452urjrn3oas.cloudfront.net/iou.swf?");
+        }
+        else if (aTab.getTitle() == "IOURPG Test") {
+            aTab.webview.loadURL("http://iourpg.com/test.swf");
+        }
+        else {
+            for (acc in accounts) {
+                if (aTab.getTitle() == acc) {
+                    var player4 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
+                    aTab.webview.loadURL(player4.getUrl());
+                }
+            }
+        }
+    }
+    
+    document.getElementById("trefresh-all").onclick = function() {
+        refreshAll();
+    }
+    
+    function refreshAll() {
+        var tabs = tabGroup.getTabs();
+        for (gTab in tabList) {
+            if (tabList[gTab].getTitle() == "IOURPG") {
+                tabList[gTab].webview.loadURL("http://d2452urjrn3oas.cloudfront.net/iou.swf?");
+            }
+            else if (tabList[gTab].getTitle() == "IOURPG Test") {
+                tabList[gTab].webview.loadURL("http://iourpg.com/test.swf");
+            }
+            else {
+                 for (acc in accounts) {
+                    if (tabList[gTab].getTitle() == acc) {
+                        var player5 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
+                        tabList[gTab].webview.loadURL(player5.getUrl());
+                    }
+                }
+            }
+        }
+    }
 }
