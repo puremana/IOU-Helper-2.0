@@ -8,6 +8,7 @@
   },
   "author": "Level",
   "dependencies": {
+    "dragula": "^3.7.2",
     "electron-tabs": "^0.6.0",
     "electron-window-manager": "^1.0.4",
     "fs": "0.0.1-security",

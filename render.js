@@ -7,13 +7,20 @@ window.onload = function() {
     const {remote} = require('electron');
     const TabGroup = require("electron-tabs");
     const ipc = require('electron').ipcRenderer;
+    const dragula = require("dragula");
     var fs = require('fs');
     var accounts = require('./storage/accounts.json');
     const opn = require('opn');
     const {BrowserWindow} = remote;
     const win = BrowserWindow.getFocusedWindow();
     var dialog = remote.require('dialog');
-    var tabGroup = new TabGroup();
+    var tabGroup = new TabGroup({
+        ready: function (tabGroup) {
+            dragula([tabGroup.tabContainer], {
+                direction: "horizontal"
+            });
+        }
+    });
     var vers = [];
     var tabList = [];
     
