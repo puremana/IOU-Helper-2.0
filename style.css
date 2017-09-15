@@ -1,16 +1,15 @@
 .iHeader {
 	-webkit-app-region: drag;
 	border-radius: 0px !important;
-	margin-bottom: 100px !important;
 }
 .item, .iNoDrag {
 	-webkit-app-region: no-drag;
 }
 .containerHeader {
-    margin-bottom: 3%;
+    
 }
 .etabs-tabgroup {
-	margin-top: 16px;
+	margin-top: 37.5px;
 	background-color: #B7B7B7;
     padding-bottom: 1%;
 	height: 6%;
@@ -57,7 +56,7 @@ body, html {
 .left-flex {
 	flex: 1;
 	display: flex;
-	height: 91%;
+	height: calc(94.2% - 40px);
 }
 .icon-red {
     color: #AFB0B2;
