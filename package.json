@@ -8,6 +8,7 @@
   },
   "author": "Level",
   "dependencies": {
+    "copy-to-clipboard": "^3.0.8",
     "dragula": "^3.7.2",
     "electron-tabs": "^0.6.0",
     "electron-window-manager": "^1.0.4",

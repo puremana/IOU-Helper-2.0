@@ -7,6 +7,7 @@ window.onload = function() {
     const {remote} = require('electron');
     const TabGroup = require("electron-tabs");
     const ipc = require('electron').ipcRenderer;
+    const copy = require('copy-to-clipboard');
     const dragula = require("dragula");
     var fs = require('fs');
     var accounts = require('./storage/accounts.json');
@@ -63,7 +64,9 @@ window.onload = function() {
         mainWindow = new BrowserWindow({
             'width': 400,
             'height': 400,
-            'frame': false
+            'frame': false,
+            'icon': __dirname + '/settings.png',
+            'title': 'Kongregate Account'
         });
         mainWindow.loadURL(`file://${__dirname}/kong.html`);
     }
@@ -173,7 +176,9 @@ window.onload = function() {
          mainWindow = new BrowserWindow({
             'width': 400,
             'height': 400,
-            'frame': false
+            'frame': false,
+            'icon': __dirname + '/settings.png',
+            'title': 'Settings'
         });
         mainWindow.loadURL(`file://${__dirname}/settings.html`);
     }
@@ -343,6 +348,43 @@ window.onload = function() {
                     }
                 }
             }
+        }
+    }
+    
+    document.getElementById("tcopy-details").onclick = function() {
+        var a = tabGroup.getActiveTab().getTitle();
+        if ((a != "IOURPG") && (a != "IOURPG Test")) {
+            for (acc in accounts) {
+                if (a == acc) {
+                    var player6 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
+                    copy(player6.getDetails());
+                    alert("Copied account details to clipboard.");
+                }
+            }
+        }
+        else {
+            alert("You cannot copy these account details.");
+        }
+    }
+    
+    document.getElementById("tcopy-url").onclick = function() {
+        var a = tabGroup.getActiveTab().getTitle();
+        if ((a != "IOURPG") && (a != "IOURPG Test")) {
+            for (acc in accounts) {
+                if (a == acc) {
+                    var player6 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
+                    copy(player6.getUrl());
+                    alert("Copied account URL to clipboard.");
+                }
+                else if (a == acc + " Test") {
+                    var player6 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
+                    copy(player6.getTestUrl());
+                    alert("Copied test account URL to clipboard.");
+                }
+            }
+        }
+        else {
+            alert("You cannot copy these account details.");
         }
     }
     

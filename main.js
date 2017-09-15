@@ -33,7 +33,10 @@ app.on('ready', function() {
     'width': 750,
     'height': 600,
 	'frame': false,
-    'webPreferences': {'plugins': true, 'allowRunningInsecureContent': true}
+    'icon': __dirname + '/icon.png',
+    'title': 'IOU Helper 2.0',
+    'webPreferences': {'plugins': true, 'allowRunningInsecureContent': true,
+    }
   });
   mainWindow.loadURL(`file://${__dirname}/index.html`);
   
