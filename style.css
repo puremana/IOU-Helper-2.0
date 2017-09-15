@@ -78,9 +78,13 @@ body, html {
 .right-menu {
     height: 40px !important;
 }
-.kong-form {
+.kong-form, .settings-form {
     padding: 60px 40px 40px 40px;
 }
-.kong-background {
+.kong-background, .settings-background {
     background-color: #F8F9F9;
+}
+.noSettings {
+    padding-top: 30%;
+    padding-bottom: 30%;
 }

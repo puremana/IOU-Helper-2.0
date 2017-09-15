@@ -4,11 +4,11 @@ window.onload = function() {
     const win = BrowserWindow.getFocusedWindow();
     const ipc = require('electron').ipcRenderer;
     
-    document.getElementById("exit").onclick = function() {
+    document.getElementById("kong-exit").onclick = function() {
         win.close();
     }
 
-    document.getElementById("max").onclick = function() {
+    document.getElementById("kong-max").onclick = function() {
         if (win.isMaximized()) {
             win.unmaximize();
         }
@@ -17,7 +17,7 @@ window.onload = function() {
         }
     }
 
-    document.getElementById("min").onclick = function() {
+    document.getElementById("kong-min").onclick = function() {
         win.minimize();
     }
     

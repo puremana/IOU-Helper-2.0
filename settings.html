@@ -30,41 +30,34 @@
     <link rel="stylesheet" href="style.css" />
 	
 	<!-- Custom JS -->
-	<script src="kongRender.js"></script>
+	<script src="settingsRender.js"></script>
+    <script src="player.js"></script>
 
 </head>
-<body class="kong-background">
+<body class="settings-background">
 <div class="ui fixed inverted menu iHeader">
                 <div class="menu">
                     <div class="item">
-                        Kongregate Account
+                        Settings
                     </div>
                 </div>
                 <div class="right menu right-menu">
 					<div class="item">
-						<div id="kong-min"><i class="fa fa-window-minimize icon-red cmin" aria-hidden="true"></i>
+						<div id="settings-min"><i class="fa fa-window-minimize icon-red cmin" aria-hidden="true"></i>
                         </div>
-						<div id="kong-max"><i class="fa fa-window-maximize icon-red cmax" aria-hidden="true"></i></div>
+						<div id="settings-max"><i class="fa fa-window-maximize icon-red cmax" aria-hidden="true"></i></div>
                         <div>
-						<i id="kong-exit" class="fa fa-times icon-red cclose" aria-hidden="true"></i></div>
+						<i id="settings-exit" class="fa fa-times icon-red cclose" aria-hidden="true"></i></div>
 					</div>
 				</div>
   </div>
     
-<form class="ui form kong-form">
-  <div class="field">
-    <label>Kongregate Username</label>
-    <input type="text" name="kong-user" placeholder="Level1Pro" id="kkong-user">
-  </div>
-  <div class="field">
-    <label>Kongregate ID</label>
-    <input type="text" name="kong-id" placeholder="24952154" id="kkong-id">
-  </div>
-    <div class="field">
-    <label>Kongregate Token</label>
-    <input type="text" id="kkong-token" name="kong-token" placeholder="66802c372b7f76b0e982e056704drhgrcac3381eer2r2a730b3c0f24ec364843">
-  </div>
-  <button class="ui button teal" type="submit" id="submitKong">Start Client</button>
+<div class="settings-container">
+<form class="ui form settings-form">
+    <p class="noSettings">No settings here yet sorry :(</p>
+    <button class="ui button teal" type="submit" id="saveSettings">Save Settings</button>
 </form>
+    
+</div>
 </body>
 </html>

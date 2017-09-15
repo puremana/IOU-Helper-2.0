@@ -86,6 +86,10 @@ window.onload = function() {
         tabList.push(tab);
     })
     
+    ipc.on("sendSettings", function(event, message){
+        alert("Settings Saved.");
+    });
+    
     document.getElementById("itest-client").onclick = function() {
         var username = tabGroup.getActiveTab().getTitle();
         if ((username == null) || username == "IOURPG") {
@@ -162,6 +166,16 @@ window.onload = function() {
                 });  
             });
         });
+    }
+    
+    //Settings
+    document.getElementById("ssettings").onclick = function() {
+         mainWindow = new BrowserWindow({
+            'width': 400,
+            'height': 400,
+            'frame': false
+        });
+        mainWindow.loadURL(`file://${__dirname}/settings.html`);
     }
     
     //Links
