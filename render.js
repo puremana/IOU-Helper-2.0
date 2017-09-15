@@ -238,6 +238,19 @@ window.onload = function() {
         fs.writeFile("storage/accounts.json", JSON.stringify(accounts), "utf8");
     }
     
+    function saveAccountsFromTab() {
+        var aJson = {};
+        for (acc in accounts) {
+            for (gTab in tabList) {
+                if (acc == tabList[gTab].getTitle()) {
+                    aJson[acc] = [accounts[acc][0], accounts[acc][1]];
+                }
+            }   
+        }
+        accounts = aJson;
+        saveAccounts();
+    }
+    
     Promise.all([setVersions, setRayVersion]).then(values => { 
         vers = values[0].split(",");
         vers.push(values[1]);
@@ -261,6 +274,10 @@ window.onload = function() {
             tabList.push(tab);
         }  
     }
+    
+    tabGroup.on("tab-removed", (tab, tabGroup) => {
+        saveAccountsFromTab();
+    });
     
     //Tools
     document.getElementById("trefresh").onclick = function() {
@@ -290,7 +307,6 @@ window.onload = function() {
     }
     
     function refreshAll() {
-        var tabs = tabGroup.getTabs();
         for (gTab in tabList) {
             if (tabList[gTab].getTitle() == "IOURPG") {
                 tabList[gTab].webview.loadURL("http://d2452urjrn3oas.cloudfront.net/iou.swf?");
@@ -308,6 +324,7 @@ window.onload = function() {
             }
         }
     }
+    
     document.getElementById("body").onkeydown = function(e){
         switch (e.which) {
             case 112: //f1
