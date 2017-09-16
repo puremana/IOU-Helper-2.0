@@ -1,24 +1,30 @@
 {
   "name": "iou-helper2.0",
+  "productName": "IOU Helper 2.0",
   "version": "0.1.0",
   "description": "IOU Helper 2.0 client made with Electron.",
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js"
+    "start": "electron main.js",
+	"package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+	"package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=icon.png --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"IOU Helper 2.0\"",
+	"package-linux" : "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
   },
   "author": "Level",
   "dependencies": {
     "copy-to-clipboard": "^3.0.8",
+    "dialog": "^0.3.1",
     "dragula": "^3.7.2",
     "electron-tabs": "^0.6.0",
-    "electron-window-manager": "^1.0.4",
     "fs": "0.0.1-security",
-    "keypress": "^0.2.1",
     "opn": "^5.1.0",
+    "path": "^0.12.7",
     "robotjs": "^0.4.7"
   },
   "devDependencies": {
     "devtron": "^1.4.0",
+    "electron": "^1.7.6",
+    "electron-packager": "^9.0.1",
     "electron-rebuild": "^1.6.0"
   }
 }

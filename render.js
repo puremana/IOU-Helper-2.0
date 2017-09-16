@@ -10,10 +10,25 @@ window.onload = function() {
     const copy = require('copy-to-clipboard');
     const dragula = require("dragula");
     var fs = require('fs');
-    var accounts = require('./storage/accounts.json');
+    var accounts;
+    function loadAccounts() {
+        return new Promise((resolve, reject) => {
+            fs.readFile(__dirname + '/storage/accounts.json', 'utf8', function (err, data) {
+                if (err) {
+                    reject(err);
+                }
+                resolve(data);
+            });  
+        });
+    }
+    var promise = loadAccounts();
+    promise.then((msg) => {
+        accounts = JSON.parse(msg);
+    });
+    //var accounts = require('./storage/accounts.json');
     const opn = require('opn');
     const {BrowserWindow} = remote;
-    const win = BrowserWindow.getFocusedWindow();
+    const win = remote.getCurrentWindow();
     var dialog = remote.require('dialog');
     var tabGroup = new TabGroup({
         ready: function (tabGroup) {
@@ -76,10 +91,9 @@ window.onload = function() {
         accounts[message.user] = pJson;
         saveAccounts();
         var player2 = new Player(message.user, message.id, message.token, vers[0], vers[1], vers[2]);
-        alert(player.getUsername);
         let tab = tabGroup.addTab({
                 title: message.user,
-                src: player.getUrl,
+                src: player2.getUrl(),
                 visible: true,
                 active: true,
                 webviewAttributes: {
@@ -312,19 +326,24 @@ window.onload = function() {
     
     function singleRefresh() {
         var aTab = tabGroup.getActiveTab();
-        if (aTab.getTitle() == "IOURPG") {
-            aTab.webview.loadURL("http://d2452urjrn3oas.cloudfront.net/iou.swf?");
-        }
-        else if (aTab.getTitle() == "IOURPG Test") {
-            aTab.webview.loadURL("http://iourpg.com/test.swf");
-        }
-        else {
-            for (acc in accounts) {
-                if (aTab.getTitle() == acc) {
-                    var player4 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
-                    aTab.webview.loadURL(player4.getUrl());
+        if (aTab.getTitle() != null) {
+            if (aTab.getTitle() == "IOURPG") {
+                aTab.webview.loadURL("http://d2452urjrn3oas.cloudfront.net/iou.swf?");
+            }
+            else if (aTab.getTitle() == "IOURPG Test") {
+                aTab.webview.loadURL("http://iourpg.com/test.swf");
+            }
+            else {
+                for (acc in accounts) {
+                    if (aTab.getTitle() == acc) {
+                        var player4 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
+                        aTab.webview.loadURL(player4.getUrl());
+                    }
                 }
             }
+        }
+        else {
+            alert("You can't refresh with zero tabs.");
         }
     }
     
@@ -333,27 +352,32 @@ window.onload = function() {
     }
     
     function refreshAll() {
-        for (gTab in tabList) {
-            if (tabList[gTab].getTitle() == "IOURPG") {
-                tabList[gTab].webview.loadURL("http://d2452urjrn3oas.cloudfront.net/iou.swf?");
-            }
-            else if (tabList[gTab].getTitle() == "IOURPG Test") {
-                tabList[gTab].webview.loadURL("http://iourpg.com/test.swf");
-            }
-            else {
-                 for (acc in accounts) {
-                    if (tabList[gTab].getTitle() == acc) {
-                        var player5 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
-                        tabList[gTab].webview.loadURL(player5.getUrl());
+        if (tabList.length > 0) {
+            for (gTab in tabList) {
+                if (tabList[gTab].getTitle() == "IOURPG") {
+                    tabList[gTab].webview.loadURL("http://d2452urjrn3oas.cloudfront.net/iou.swf?");
+                }
+                else if (tabList[gTab].getTitle() == "IOURPG Test") {
+                    tabList[gTab].webview.loadURL("http://iourpg.com/test.swf");
+                }
+                else {
+                     for (acc in accounts) {
+                        if (tabList[gTab].getTitle() == acc) {
+                            var player5 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
+                            tabList[gTab].webview.loadURL(player5.getUrl());
+                        }
                     }
                 }
             }
         }
+        else {
+            alert("You can't refresh with zero tabs.");
+        }  
     }
     
     document.getElementById("tcopy-details").onclick = function() {
         var a = tabGroup.getActiveTab().getTitle();
-        if ((a != "IOURPG") && (a != "IOURPG Test")) {
+        if ((a != "IOURPG") && (a != "IOURPG Test") && (a != null)) {
             for (acc in accounts) {
                 if (a == acc) {
                     var player6 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
@@ -369,7 +393,7 @@ window.onload = function() {
     
     document.getElementById("tcopy-url").onclick = function() {
         var a = tabGroup.getActiveTab().getTitle();
-        if ((a != "IOURPG") && (a != "IOURPG Test")) {
+        if ((a != "IOURPG") && (a != "IOURPG Test") && (a != null)) {
             for (acc in accounts) {
                 if (a == acc) {
                     var player6 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
@@ -391,16 +415,16 @@ window.onload = function() {
     document.getElementById("body").onkeydown = function(e){
         switch (e.which) {
             case 112: //f1
-                alert("f1");
+                //alert("f1");
                 break;
             case 113: //f2
-                alert("f2");
+                //alert("f2");
                 break;
             case 114: //f3
-                alert("f3");
+                //alert("f3");
                 break;
             case 115: //f4
-                alert("f4");
+                //alert("f4");
                 break;
             case 116: //f5
                 singleRefresh();
