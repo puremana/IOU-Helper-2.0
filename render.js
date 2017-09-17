@@ -275,7 +275,7 @@ window.onload = function() {
     );
     
     function saveAccounts() {
-        fs.writeFile("storage/accounts.json", JSON.stringify(accounts), "utf8");
+        fs.writeFile(__dirname + "/storage/accounts.json", JSON.stringify(accounts), "utf8");
     }
     
     function saveAccountsFromTab() {
@@ -415,7 +415,7 @@ window.onload = function() {
     document.getElementById("body").onkeydown = function(e){
         switch (e.which) {
             case 112: //f1
-                //alert("f1");
+                //click.forever();
                 break;
             case 113: //f2
                 //alert("f2");

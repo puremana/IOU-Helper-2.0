@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Meta Elements -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Level">
+
+    <title>IOU Helper 2.0</title>
+	
+	<!-- Semantic UI Links -->
+	<link rel="stylesheet" type="text/css" href="semantic.min.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="semantic.min.js"></script>
+
+	
+	<!-- Electron Styles -->
+	<link rel="stylesheet" href="node_modules/electron-tabs/electron-tabs.css">
+    <link rel="stylesheet" href="node_modules/dragula/dist/dragula.css">
+    <script src="https://wzrd.in/standalone/copy-to-clipboard@latest" async></script>
+	
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	
+	<!-- Custom JS -->
+	<script src="render.js"></script>
+    <script src="player.js"></script>
+	
+    <!-- Custom Fonts -->
+	<!--<script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />-->
+
+
+</head>
+<body id="body">
+<div class="global">
+  	<div class="containerHeader">
+			<div class="ui fixed inverted menu iHeader">
+                <div class="ui container">
+                    <div class="ui simple dropdown item">
+                    IOU Helper <i class="dropdown icon"></i>
+                    <div class="menu">
+                      <div class="item">
+                        <i class="dropdown icon"></i>
+                        New
+                        <div class="menu">
+                            <a class="item" id="iiourpg">IOURPG.com</a>
+                            <a class="item" id="ikong">Kongregate</a>
+                            <a class="item" id="itest-client">Test Client</a>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <i class="dropdown icon"></i>
+                        Save
+                        <div class="menu">
+                            <a class="item" id="isave">Save</a>
+                            <a class="item" id="isave-as">Save As</a>
+                        </div>
+                      </div>
+                    <a class="item" id="iload">Load</a>
+                    </div>
+                  </div>
+                  <a id="ssettings" class="item">
+                    Settings
+                  </a>
+                  <div class="ui simple dropdown item">
+                    Links <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a class="item" id="liou-helper">IOU Helper</a>
+                        <a class="item" id="liou-helper-discord">IOU Helper Discord</a>
+                        <a class="item" id="lmulticalc">Multicalc</a>
+                        <a class="item" id="liou-discord">IOU Discord</a>
+                        <a class="item" id="liou-forum">IOU Forum</a>
+                        <a class="item" id="liou-wiki">IOU Wiki</a>
+                        <a class="item" id="lcard-calculator">Card Calculator</a>
+                    </div>
+                  </div>
+                    <div class="ui simple dropdown item">
+                    Tools <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a class="item" id="trefresh">Refresh (F5)</a>
+                        <a class="item" id="trefresh-all">Refresh All (F6)</a>
+                        <a class="item" id="tcopy-details">Copy Acc Info</a>
+                        <a class="item" id="tcopy-url">Copy Acc URL</a>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="right menu right-menu">
+					<div class="item">
+						<div id="min"><i class="fa fa-window-minimize icon-red cmin" aria-hidden="true"></i>
+                        </div>
+						<div id="max"><i class="fa fa-window-maximize icon-red cmax" aria-hidden="true"></i></div>
+                        <div>
+						<i id="exit" class="fa fa-times icon-red cclose" aria-hidden="true"></i></div>
+					</div>
+				</div>
+  </div>
+
+
+				
+				
+  </div>
+  <div class="container">
+    <div id="left-panel" class="left-panel">
+		<div class="etabs-tabgroup">
+			<div class="etabs-tabs"></div>
+			<div class="etabs-buttons"></div>
+		</div>
+	<div class="left-flex">
+		<div class="etabs-views"></div>
+    </div>
+		</div>
+    <!--<div id="right-panel" class="right-panel">
+		<webview id="right-interface" src="https://discord.gg/WfcvtZm" style="width:100%; height:100%"></webview>
+		<!--<webview id="right-interface" src="https://www.google.com" style="width:100%; height:100%"></webview>-->
+    <!--</div>-->
+  </div>
+</div>
+</body>
+
+</html>

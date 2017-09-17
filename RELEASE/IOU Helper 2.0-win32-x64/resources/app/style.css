@@ -1,0 +1,90 @@
+.iHeader {
+	-webkit-app-region: drag;
+	border-radius: 0px !important;
+}
+.item, .iNoDrag {
+	-webkit-app-region: no-drag;
+}
+.containerHeader {
+    
+}
+.etabs-tabgroup {
+	margin-top: 37.5px;
+	background-color: #B7B7B7;
+    padding-bottom: 1%;
+	height: 6%;
+	width: 100%;
+}
+.etabs-views {
+	height: 100%;
+	width: 100%;
+}
+.etabs-tabs {
+    background-color: #FFFFFF !important;
+	height: 100%;
+	border: none;
+}
+.active {
+    /*background-color: red !important;*/
+}
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+.global {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.container {
+  flex: 1;
+  display: flex;
+  height: 100%;
+}
+.left-panel, .right-panel {
+  flex: 1;
+}
+.left-panel {
+  background: #6E6B6B;
+  flex: 4 0 auto;
+}
+.right-panel {
+  background: #5C5A5A;
+  flex: 1 0 auto;
+}
+.left-flex {
+	flex: 1;
+	display: flex;
+	height: calc(94.2% - 40px);
+}
+.icon-red {
+    color: #AFB0B2;
+    padding: 0 5px 0 5px;
+    cursor: pointer;
+}
+.icon-red:hover {
+    color: #FF695E;
+}
+.cmin {
+    font-size: 1.2em !important;
+}
+.cmax {
+    font-size: 1.2em !important;
+}
+.cclose {
+    font-size: 1.7em !important; 
+}
+.right-menu {
+    height: 40px !important;
+}
+.kong-form, .settings-form {
+    padding: 60px 40px 40px 40px;
+}
+.kong-background, .settings-background {
+    background-color: #F8F9F9;
+}
+.noSettings {
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
