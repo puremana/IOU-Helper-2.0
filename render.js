@@ -220,15 +220,15 @@ window.onload = function() {
         opn('http://iouhelper.com/cards.html');
     }
     
-    var setVersions = new Promise(
-        function (resolve, reject) {
-        var http = require('http');
+    const setVersions = new Promise((resolve, reject) => {
+        var https = require('https');
 
-        var options = {
+        const options = {
+            followAllRedirects: true,
             host: 'www.kongregate.com',
             path: '/games/iouRPG/idle-online-universe'
         }
-        var request = http.request(options, function (res) {
+        var request = https.request(options, function (res) {
             var data = '';
             res.on('data', function (chunk) {
                 data += chunk;

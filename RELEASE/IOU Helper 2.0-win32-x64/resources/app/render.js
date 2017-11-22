@@ -25,23 +25,6 @@ window.onload = function() {
     promise.then((msg) => {
         accounts = JSON.parse(msg);
     });
-    var iourpgAccounts;
-    var iouCount;
-    function loadIourpgAccounts() {
-        return new Promise((resolve, reject) => {
-            fs.readFile(__dirname + '/storage/iourpgaccounts.json', 'utf8', function (err, data) {
-                if (err) {
-                    reject(err);
-                }
-                resolve(data);
-            });  
-        });
-    }
-    var promise = loadIourpgAccounts();
-    promise.then((msg) => {
-        iourpgAccounts = JSON.parse(msg);
-        iouCount = iourpgAccounts.iourpg;
-    });
     //var accounts = require('./storage/accounts.json');
     const opn = require('opn');
     const {BrowserWindow} = remote;
@@ -90,8 +73,6 @@ window.onload = function() {
                     plugins: true
                 }
         });
-        iouCount++;
-        saveIOU();
         tabList.push(tab);
     }
     document.getElementById("ikong").onclick = function() {
@@ -239,15 +220,15 @@ window.onload = function() {
         opn('http://iouhelper.com/cards.html');
     }
     
-    var setVersions = new Promise(
-        function (resolve, reject) {
-        var http = require('http');
+    const setVersions = new Promise((resolve, reject) => {
+        var https = require('https');
 
-        var options = {
+        const options = {
+            followAllRedirects: true,
             host: 'www.kongregate.com',
             path: '/games/iouRPG/idle-online-universe'
         }
-        var request = http.request(options, function (res) {
+        var request = https.request(options, function (res) {
             var data = '';
             res.on('data', function (chunk) {
                 data += chunk;
@@ -297,27 +278,17 @@ window.onload = function() {
         fs.writeFile(__dirname + "/storage/accounts.json", JSON.stringify(accounts), "utf8");
     }
     
-    function saveIOU() {
-        iourpgAccounts["iourpg"] = iouCount;
-        fs.writeFile(__dirname + "/storage/iourpgaccounts.json", JSON.stringify(iourpgAccounts), "utf8");
-    }
-    
     function saveAccountsFromTab() {
         var aJson = {};
-        iouCount = 0;
         for (acc in accounts) {
             for (gTab in tabList) {
                 if (acc == tabList[gTab].getTitle()) {
                     aJson[acc] = [accounts[acc][0], accounts[acc][1]];
                 }
-                else if ("IOURPG" == tabList[gTab].getTitle()) {
-                    iouCount++;
-                }
             }   
         }
         accounts = aJson;
         saveAccounts();
-        saveIOU();
     }
     
     Promise.all([setVersions, setRayVersion]).then(values => { 
@@ -328,7 +299,6 @@ window.onload = function() {
     });
     
     function loadPlayers(versionArray) {
-        //kong
         for (acc in accounts) {
             var player = new Player(acc, accounts[acc][0], accounts[acc][1], versionArray[0], versionArray[1], versionArray[2]);
         
@@ -342,20 +312,7 @@ window.onload = function() {
                 }
             });
             tabList.push(tab);
-        }
-        //iourpg
-        for(i = 0; i < iouCount; i++) {
-            let tab = tabGroup.addTab({
-                title: "IOURPG",
-                src: "http://d2452urjrn3oas.cloudfront.net/iou.swf?",
-                visible: true,
-                active: true,
-                webviewAttributes: {
-                    plugins: true
-                }
-            });
-            tabList.push(tab);
-        }
+        }  
     }
     
     tabGroup.on("tab-removed", (tab, tabGroup) => {
