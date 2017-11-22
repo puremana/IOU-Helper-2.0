@@ -1,3 +1,5 @@
 storage/*
 release-builds/*
 IOU Helper 2.0-win32-x64/*
+node_modules/*
+RELEASE/*
