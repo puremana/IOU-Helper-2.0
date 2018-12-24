@@ -6,7 +6,7 @@ function Player(kongUsername, kongID, kongToken, code, gameVersion, rayVersion) 
     this.gameCode = code;
     this.gameVersion = gameVersion;
     this.rayVersion = rayVersion;
-    
+
 	this.getUsername = function() {
 		return this.kongUsername;
 	}
@@ -20,6 +20,6 @@ function Player(kongUsername, kongID, kongToken, code, gameVersion, rayVersion) 
     }; 
     
     this.getTestUrl = function() {
-        return "http://iourpg.com/test.swf?" + "&v=" + this.rayVersion + "&kongregate_username=" + this.kongUsername + "&kongregate_user_id=" + this.kongID + "&kongregate_game_auth_token=" + this.kongToken + "&kongregate_api_path=http%3A%2F%2Fchat.kongregate.com%2Fflash%2FAPI_AS3_" + this.gameCode + ".swf";
+        return "http://d2452urjrn3oas.cloudfront.net/test.swf?" + "v=" + this.rayVersion + "&kongregate_username=" + this.kongUsername + "&kongregate_user_id=" + this.kongID + "&kongregate_game_auth_token=" + this.kongToken + "&kongregate_api_path=http%3A%2F%2Fchat.kongregate.com%2Fflash%2FAPI_AS3_" + this.gameCode + ".swf";
     }; 
 }
