@@ -42,7 +42,7 @@ var tabList = [];
 
 document.getElementById("exit").onclick = function() {
     win.close();
-}
+}   
 
 document.getElementById("max").onclick = function() {
     if (win.isMaximized()) {

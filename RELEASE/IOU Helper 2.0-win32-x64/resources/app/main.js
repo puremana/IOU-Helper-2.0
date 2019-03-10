@@ -33,7 +33,7 @@ app.on('ready', function() {
   mainWindow = new BrowserWindow({
     'width': 750,
     'height': 600,
-	'frame': false,
+	  'frame': false,
     'icon': __dirname + '/icon.png',
     'title': 'IOU Helper 2.0',
     'webPreferences': {'plugins': true, 'allowRunningInsecureContent': true,
