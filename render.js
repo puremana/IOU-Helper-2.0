@@ -1,7 +1,3 @@
-var gameCode = "";
-var gameVersion = "";
-var rayVersion = "";
-
 window.onload = function() {
 
 const {remote} = require('electron');
@@ -42,7 +38,7 @@ var tabList = [];
 
 document.getElementById("exit").onclick = function() {
     win.close();
-}
+}   
 
 document.getElementById("max").onclick = function() {
     if (win.isMaximized()) {
@@ -56,7 +52,7 @@ document.getElementById("max").onclick = function() {
 document.getElementById("min").onclick = function() {
     win.minimize();
 }
-  
+    
 function zoomOut() {
     var ri = document.getElementById("right-interface");
     ri.setZoomFactor(0.5);
@@ -64,16 +60,20 @@ function zoomOut() {
 
 //File
 document.getElementById("iiourpg").onclick = function() {
-    let tab = tabGroup.addTab({
+    Promise.all([setRayVersion]).then(values => { 
+        vers[2] = values[0];
+        alert(values);
+        let tab = tabGroup.addTab({
             title: "IOURPG",
-            src: "http://d2452urjrn3oas.cloudfront.net/iou.swf?v=" + rayVersion,
+            src: "http://d2452urjrn3oas.cloudfront.net/iou.swf?v=" + vers[2],
             visible: true,
             active: true,
             webviewAttributes: {
                 plugins: true
             }
+        });
+        tabList.push(tab);
     });
-    tabList.push(tab);
 }
 document.getElementById("ikong").onclick = function() {
     mainWindow = new BrowserWindow({
@@ -87,32 +87,16 @@ document.getElementById("ikong").onclick = function() {
 }
 
 ipc.on("sendKong", function(event, message){
-    var pJson = [message.id, message.token];
-    accounts[message.user] = pJson;
-    saveAccounts();
-    var player2 = new Player(message.user, message.id, message.token, vers[0], vers[1], vers[2]);
-    let tab = tabGroup.addTab({
-            title: message.user,
-            src: player2.getUrl(),
-            visible: true,
-            active: true,
-            webviewAttributes: {
-                plugins: true
-            }
-    });
-    tabList.push(tab);
-})
-
-ipc.on("sendSettings", function(event, message){
-    alert("Settings Saved.");
-});
-
-document.getElementById("itest-client").onclick = function() {
-    var username = tabGroup.getActiveTab().getTitle();
-    if ((username == null) || username == "IOURPG") {
+    Promise.all([setVersions, setRayVersion]).then(values => { 
+        vers = values[0].split(",");
+        vers.push(values[1]);
+        var pJson = [message.id, message.token];
+        accounts[message.user] = pJson;
+        saveAccounts();
+        var player2 = new Player(message.user, message.id, message.token, vers[0], vers[1], vers[2]);
         let tab = tabGroup.addTab({
-                title: "IOURPG Test",
-                src: "http://d2452urjrn3oas.cloudfront.net/test.swf?v=" + rayVersion,
+                title: message.user,
+                src: player2.getUrl(),
                 visible: true,
                 active: true,
                 webviewAttributes: {
@@ -120,14 +104,22 @@ document.getElementById("itest-client").onclick = function() {
                 }
         });
         tabList.push(tab);
-    }
-    else {
-        for (acc in accounts) {
-        if (acc == username) {
-            var player3 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
+    });
+})
+
+ipc.on("sendSettings", function(event, message){
+    alert("Settings Saved.");
+});
+
+document.getElementById("itest-client").onclick = function() {
+    Promise.all([setVersions, setRayVersion]).then(values => { 
+        vers = values[0].split(",");
+        vers.push(values[1]);
+        var username = tabGroup.getActiveTab().getTitle();
+        if ((username == null) || username == "IOURPG") {
             let tab = tabGroup.addTab({
-                    title: player3.getUsername() + " Test",
-                    src: player3.getTestUrl(),
+                    title: "IOURPG Test",
+                    src: "http://d2452urjrn3oas.cloudfront.net/test.swf?v=" + vers[2],
                     visible: true,
                     active: true,
                     webviewAttributes: {
@@ -136,12 +128,27 @@ document.getElementById("itest-client").onclick = function() {
             });
             tabList.push(tab);
         }
-    }
-    }
+        else {
+            for (acc in accounts) {
+            if (acc == username) {
+                var player3 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
+                let tab = tabGroup.addTab({
+                        title: player3.getUsername() + " Test",
+                        src: player3.getTestUrl(),
+                        visible: true,
+                        active: true,
+                        webviewAttributes: {
+                            plugins: true
+                        }
+                });
+                tabList.push(tab);
+            }
+        }
+        }
+    });
 }
 document.getElementById("isave").onclick = function() {
     saveAccounts();
-    
 }
 document.getElementById("isave-as").onclick = function() {
     require('electron').remote.dialog.showSaveDialog( { defaultPath: "accounts.json" }, function(fileName) { 
@@ -153,7 +160,10 @@ document.getElementById("isave-as").onclick = function() {
 document.getElementById("iload").onclick = function() {
     var prom = loadJson();
     prom.then((msg) => {
-        var accounts2 = JSON.parse(msg);
+        Promise.all([setVersions, setRayVersion]).then(values => { 
+            vers = values[0].split(",");
+            vers.push(values[1]);
+            var accounts2 = JSON.parse(msg);
             for (acc in accounts2) {
                 var player2 = new Player(acc, accounts2[acc][0], accounts2[acc][1], vers[0], vers[1], vers[2]);
                 var aJson = [accounts2[acc][0], accounts2[acc][1]];
@@ -170,6 +180,7 @@ document.getElementById("iload").onclick = function() {
                 tabList.push(tab);
             }
         });
+    });
 }
 
 function loadJson() {
@@ -187,7 +198,7 @@ function loadJson() {
 
 //Settings
 document.getElementById("ssettings").onclick = function() {
-     mainWindow = new BrowserWindow({
+        mainWindow = new BrowserWindow({
         'width': 400,
         'height': 400,
         'frame': false,
@@ -234,8 +245,8 @@ const setVersions = new Promise((resolve, reject) => {
             data += chunk;
         });
         res.on('end', function () {
-            gameCode = data.substring(data.indexOf('API_AS3_') + 8, data.indexOf('.swf\",\"preview\"'));
-            gameVersion = data.substring(data.indexOf('\"game_version\":') + 15, data.indexOf(',\"flash_var_prefix\"'));
+            let gameCode = data.substring(data.indexOf('API_AS3_') + 8, data.indexOf('.swf\",\"preview\"'));
+            let gameVersion = data.substring(data.indexOf('\"game_version\":') + 15, data.indexOf(',\"flash_var_prefix\"'));
             
             resolve(gameCode + "," + gameVersion);
         });
@@ -300,8 +311,10 @@ Promise.all([setVersions, setRayVersion]).then(values => {
 
 function loadPlayers(versionArray) {
     for (acc in accounts) {
+        for (let v in versionArray) {
+            alert(versionArray[v]);
+        }
         var player = new Player(acc, accounts[acc][0], accounts[acc][1], versionArray[0], versionArray[1], versionArray[2]);
-    
         let tab = tabGroup.addTab({
             title: player.getUsername(),
             src: player.getUrl(),
@@ -332,10 +345,10 @@ function singleRefresh() {
         var aTab = tabGroup.getActiveTab();
         if (aTab.getTitle() != null) {
             if (aTab.getTitle() == "IOURPG") {
-                aTab.webview.loadURL("http://d2452urjrn3oas.cloudfront.net/iou.swf?v=" + rayVersion);
+                aTab.webview.loadURL("http://d2452urjrn3oas.cloudfront.net/iou.swf?v=" + vers[2]);
             }
             else if (aTab.getTitle() == "IOURPG Test") {
-                aTab.webview.loadURL("http://d2452urjrn3oas.cloudfront.net/test.swf?v=" + rayVersion);
+                aTab.webview.loadURL("http://d2452urjrn3oas.cloudfront.net/test.swf?v=" + vers[2]);
             }
             else {
                 for (acc in accounts) {
@@ -365,13 +378,13 @@ function refreshAll() {
         if (tabList.length > 0) {
             for (gTab in tabList) {
                 if (tabList[gTab].getTitle() == "IOURPG") {
-                    tabList[gTab].webview.loadURL("http://d2452urjrn3oas.cloudfront.net/iou.swf?v=" + rayVersion);
+                    tabList[gTab].webview.loadURL("http://d2452urjrn3oas.cloudfront.net/iou.swf?v=" + vers[2]);
                 }
                 else if (tabList[gTab].getTitle() == "IOURPG Test") {
-                    tabList[gTab].webview.loadURL("http://d2452urjrn3oas.cloudfront.net/test.swf?v=" + rayVersion);
+                    tabList[gTab].webview.loadURL("http://d2452urjrn3oas.cloudfront.net/test.swf?v=" + vers[2]);
                 }
                 else {
-                     for (acc in accounts) {
+                        for (acc in accounts) {
                         if (tabList[gTab].getTitle() == acc) {
                             var player5 = new Player(acc, accounts[acc][0], accounts[acc][1], vers[0], vers[1], vers[2]);
                             tabList[gTab].webview.loadURL(player5.getUrl());
