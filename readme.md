@@ -1,6 +1,14 @@
-# IOU Helper 2.0
+# Deprecated
 
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+IOURPG has released an [offical unity client](https://iourpg.com/download.html) and as of 21/1/2020, annouced an IOU Multi-Launcher which should be released on 3/2/2020.
+
+I made IOU Helper so people could more easily run the game by providing features such as running multiple accounts but when there is an official client who can fix bugs immediately and provide the same much needed features, there's no reason for me to continue to work on this project when the developers themselves are furfilling this role.
+
+I will no longer but fixing any bugs, making any changes to the code or accepting pull requests. But feel free to open up the [app](https://github.com/puremana/IOU-Helper-2.0/tree/master/RELEASE/IOU%20Helper%202.0-win32-x64/resources/app) folder yourself if you wish to make changes and keep it updated.
+
+Thank you all for supporting me through the development of these projects. I certainly wouldn't have done this without you.
+
+## IOU Helper 2.0
 
 IOU Helper 2.0 is a wrapper for the popular online game [IOURPG](https://iourpg.com).
 
@@ -15,9 +23,7 @@ Download link and guide can be found on [https://iouhelper.com](https://iouhelpe
 
 ## Contributing
 
-We welcome all types of contributions to IOU Helper 2.0. If you have a bug to report or feature to suggest, please create an issue on this Github repo.
-
-If you wish to contribute to the code base, please fork the repo and send a pull request for each feature you are intending to add.
+I am no longer taking pull requests as this project is deprecated.
 
 ### Commands
 
